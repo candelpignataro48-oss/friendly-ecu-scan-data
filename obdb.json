@@ -34,7 +34,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-MX-5, 21 risposte vere (2016-2026)"
+     "source": "OBDb Mazda-MX-5, 22 risposte vere (2016-2026)"
     }
    ]
   },
@@ -968,11 +968,11 @@
      {
       "label": "Contachilometri",
       "unit": "km",
-      "did": "295A",
-      "formula": "byte(0)*65536+byte(1)*256+byte(2)",
-      "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
+      "did": "10E0",
+      "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
+      "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
       "slow": true,
-      "source": "OBDb Audi-A5, 19 risposte vere (2017-2023)"
+      "source": "OBDb Audi-S5, 23 risposte vere (2017-2024)"
      },
      {
       "label": "Livello carburante",
@@ -1004,7 +1004,7 @@
       "did": "1150",
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
-      "source": "OBDb Audi-S5, 9 risposte vere (2017-2024)"
+      "source": "OBDb Audi-S5, 11 risposte vere (2017-2024)"
      },
      {
       "label": "Mancate accensioni cil. 4",
@@ -1012,7 +1012,7 @@
       "did": "1151",
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
-      "source": "OBDb Audi-S5, 9 risposte vere (2017-2024)"
+      "source": "OBDb Audi-S5, 10 risposte vere (2017-2024)"
      },
      {
       "label": "Pressione turbo",
@@ -1078,7 +1078,7 @@
       "formula": "byte(0)*65536+byte(1)*256+byte(2)",
       "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
       "slow": true,
-      "source": "OBDb Audi-S5, 3 risposte vere (2022-2022)"
+      "source": "OBDb Audi-S5, 8 risposte vere (2022-2022)"
      },
      {
       "label": "Temperatura olio cambio",
@@ -1095,7 +1095,7 @@
       "formula": "(byte(0)*256+byte(1))/10",
       "valid": "(byte(0)*256+byte(1))/10<=1000",
       "decimals": 1,
-      "source": "OBDb Audi-A5, 14 risposte vere (2012-2021)"
+      "source": "OBDb Audi-S5, 17 risposte vere (2017-2024)"
      },
      {
       "label": "Velocità ruota ant. SX",
@@ -1104,7 +1104,7 @@
       "formula": "(byte(0)*256+byte(1))/10",
       "valid": "(byte(0)*256+byte(1))/10<=1000",
       "decimals": 1,
-      "source": "OBDb Audi-A5, 14 risposte vere (2012-2021)"
+      "source": "OBDb Audi-S5, 17 risposte vere (2017-2024)"
      },
      {
       "label": "Velocità ruota post. DX",
@@ -3582,7 +3582,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-2-Series, 21 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 22 risposte vere (2015-2016)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -3614,7 +3614,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-2-Series, 20 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 21 risposte vere (2015-2016)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -3793,7 +3793,7 @@
       "formula": "(byte(0)*256+byte(1))/50",
       "valid": "(byte(0)*256+byte(1))/50<=1310",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 22 risposte vere (2016-2024)"
+      "source": "OBDb BMW-3-Series, 23 risposte vere (2016-2024)"
      },
      {
       "label": "Pressione olio motore",
@@ -3883,7 +3883,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 55 risposte vere (2014-2018)"
+      "source": "OBDb BMW-3-Series, 56 risposte vere (2014-2018)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -3917,7 +3917,7 @@
       "did": "DC98",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-3-Series, 55 risposte vere (2014-2018)"
+      "source": "OBDb BMW-3-Series, 56 risposte vere (2014-2018)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -4119,7 +4119,7 @@
       "formula": "(byte(0)*256+byte(1))/50",
       "valid": "(byte(0)*256+byte(1))/50<=1310",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 22 risposte vere (2016-2024)"
+      "source": "OBDb BMW-3-Series, 23 risposte vere (2016-2024)"
      },
      {
       "label": "Pressione olio motore",
@@ -4219,7 +4219,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 36 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 37 risposte vere (2020-2026)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -4228,7 +4228,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 34 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 35 risposte vere (2020-2026)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -4731,7 +4731,7 @@
       "formula": "(byte(0)*256+byte(1))/128",
       "valid": "(byte(0)*256+byte(1))/128<=511.99",
       "decimals": 1,
-      "source": "OBDb BMW-5-Series, 25 risposte vere (2014-2022)"
+      "source": "OBDb BMW-5-Series, 26 risposte vere (2012-2022)"
      },
      {
       "label": "Temperatura olio motore",
@@ -4739,7 +4739,7 @@
       "did": "4506",
       "formula": "byte(0)",
       "valid": "byte(0)<=200",
-      "source": "OBDb BMW-5-Series, 20 risposte vere (2014-2022)"
+      "source": "OBDb BMW-5-Series, 21 risposte vere (2012-2022)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -5371,7 +5371,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X1, 11 risposte vere (2017-2021)"
+      "source": "OBDb BMW-X1, 10 risposte vere (2017-2021)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -5406,7 +5406,7 @@
       "did": "DC99",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-X1, 11 risposte vere (2017-2021)"
+      "source": "OBDb BMW-X1, 10 risposte vere (2017-2021)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -5938,7 +5938,7 @@
       "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
       "slow": true,
-      "source": "OBDb BMW-X3, 64 risposte vere (2011-2024)"
+      "source": "OBDb BMW-X3, 63 risposte vere (2011-2024)"
      },
      {
       "label": "Temperatura esterna",
@@ -6088,7 +6088,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X3, 33 risposte vere (2023-2025)"
+      "source": "OBDb BMW-X3, 29 risposte vere (2023-2025)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -6097,7 +6097,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X3, 34 risposte vere (2023-2025)"
+      "source": "OBDb BMW-X3, 35 risposte vere (2023-2025)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -6106,7 +6106,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X3, 35 risposte vere (2023-2025)"
+      "source": "OBDb BMW-X3, 36 risposte vere (2023-2025)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -6115,7 +6115,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X3, 35 risposte vere (2023-2025)"
+      "source": "OBDb BMW-X3, 31 risposte vere (2023-2025)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -6190,7 +6190,7 @@
       "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
       "slow": true,
-      "source": "OBDb BMW-X3, 64 risposte vere (2011-2024)"
+      "source": "OBDb BMW-X3, 63 risposte vere (2011-2024)"
      },
      {
       "label": "Temperatura esterna",
@@ -6349,7 +6349,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X4, 9 risposte vere (2019-2024)"
+      "source": "OBDb BMW-X4, 8 risposte vere (2019-2024)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -6358,7 +6358,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X4, 14 risposte vere (2019-2024)"
+      "source": "OBDb BMW-X4, 13 risposte vere (2019-2024)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -6367,7 +6367,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-X4, 20 risposte vere (2019-2024)"
+      "source": "OBDb BMW-X4, 16 risposte vere (2019-2024)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -6391,7 +6391,7 @@
       "did": "DC9B",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-X4, 19 risposte vere (2019-2024)"
+      "source": "OBDb BMW-X4, 18 risposte vere (2019-2024)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -6399,7 +6399,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-X4, 24 risposte vere (2019-2024)"
+      "source": "OBDb BMW-X4, 21 risposte vere (2019-2024)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -6542,7 +6542,7 @@
       "formula": "(byte(0)*256+byte(1))/1000",
       "valid": "(byte(0)*256+byte(1))/1000<=65.535",
       "decimals": 2,
-      "source": "OBDb BMW-X5, 37 risposte vere (2011-2023)"
+      "source": "OBDb BMW-X5, 41 risposte vere (2011-2023)"
      }
     ]
    }
@@ -6618,7 +6618,7 @@
       "formula": "(byte(0)*256+byte(1))/1000",
       "valid": "(byte(0)*256+byte(1))/1000<=65.535",
       "decimals": 2,
-      "source": "OBDb BMW-X5, 37 risposte vere (2011-2023)"
+      "source": "OBDb BMW-X5, 41 risposte vere (2011-2023)"
      }
     ]
    }
@@ -6644,7 +6644,7 @@
       "did": "DA25",
       "formula": "s16(byte(0)*256+byte(1))-48",
       "valid": "s16(byte(0)*256+byte(1))-48>=-500 && s16(byte(0)*256+byte(1))-48<=500",
-      "source": "OBDb BMW-X5, 31 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 41 risposte vere (2014-2026)"
      }
     ]
    }
@@ -6663,7 +6663,7 @@
       "formula": "(s16(byte(2)*256+byte(3)))/100",
       "valid": "(s16(byte(2)*256+byte(3)))/100>=-327.68 && (s16(byte(2)*256+byte(3)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota ant. SX",
@@ -6672,7 +6672,7 @@
       "formula": "(s16(byte(0)*256+byte(1)))/100",
       "valid": "(s16(byte(0)*256+byte(1)))/100>=-327.68 && (s16(byte(0)*256+byte(1)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota post. DX",
@@ -6681,7 +6681,7 @@
       "formula": "(s16(byte(6)*256+byte(7)))/100",
       "valid": "(s16(byte(6)*256+byte(7)))/100>=-327.68 && (s16(byte(6)*256+byte(7)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota post. SX",
@@ -6690,7 +6690,7 @@
       "formula": "(s16(byte(4)*256+byte(5)))/100",
       "valid": "(s16(byte(4)*256+byte(5)))/100>=-327.68 && (s16(byte(4)*256+byte(5)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      }
     ]
    }
@@ -6719,7 +6719,7 @@
       "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
       "slow": true,
-      "source": "OBDb BMW-X5, 78 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 85 risposte vere (2014-2026)"
      },
      {
       "label": "Temperatura esterna",
@@ -6728,7 +6728,7 @@
       "formula": "(byte(0))/2-40",
       "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 45 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 50 risposte vere (2014-2026)"
      }
     ]
    }
@@ -6804,7 +6804,7 @@
       "formula": "(byte(0)*256+byte(1))/1000",
       "valid": "(byte(0)*256+byte(1))/1000<=65.535",
       "decimals": 2,
-      "source": "OBDb BMW-X5, 37 risposte vere (2011-2023)"
+      "source": "OBDb BMW-X5, 41 risposte vere (2011-2023)"
      },
      {
       "label": "Temperatura olio motore",
@@ -6813,7 +6813,7 @@
       "formula": "(byte(0)*256+byte(1))/10",
       "valid": "(byte(0)*256+byte(1))/10>=-40 && (byte(0)*256+byte(1))/10<=200",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 17 risposte vere (2020-2024)"
+      "source": "OBDb BMW-X5, 21 risposte vere (2019-2024)"
      }
     ]
    }
@@ -6839,7 +6839,7 @@
       "did": "DA25",
       "formula": "s16(byte(0)*256+byte(1))-48",
       "valid": "s16(byte(0)*256+byte(1))-48>=-500 && s16(byte(0)*256+byte(1))-48<=500",
-      "source": "OBDb BMW-X5, 31 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 41 risposte vere (2014-2026)"
      }
     ]
    }
@@ -6858,7 +6858,7 @@
       "formula": "byte(38)*16777216+byte(39)*65536+byte(40)*256+byte(41)",
       "valid": "byte(38)*16777216+byte(39)*65536+byte(40)*256+byte(41)<=1000000",
       "slow": true,
-      "source": "OBDb BMW-X5, 83 risposte vere (2020-2022)"
+      "source": "OBDb BMW-X5, 96 risposte vere (2019-2022)"
      }
     ]
    }
@@ -6877,7 +6877,7 @@
       "formula": "(s16(byte(2)*256+byte(3)))/100",
       "valid": "(s16(byte(2)*256+byte(3)))/100>=-327.68 && (s16(byte(2)*256+byte(3)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota ant. SX",
@@ -6886,7 +6886,7 @@
       "formula": "(s16(byte(0)*256+byte(1)))/100",
       "valid": "(s16(byte(0)*256+byte(1)))/100>=-327.68 && (s16(byte(0)*256+byte(1)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota post. DX",
@@ -6895,7 +6895,7 @@
       "formula": "(s16(byte(6)*256+byte(7)))/100",
       "valid": "(s16(byte(6)*256+byte(7)))/100>=-327.68 && (s16(byte(6)*256+byte(7)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      },
      {
       "label": "Velocità ruota post. SX",
@@ -6904,7 +6904,7 @@
       "formula": "(s16(byte(4)*256+byte(5)))/100",
       "valid": "(s16(byte(4)*256+byte(5)))/100>=-327.68 && (s16(byte(4)*256+byte(5)))/100<=327.67",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 148 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 155 risposte vere (2014-2026)"
      }
     ]
    }
@@ -6933,7 +6933,7 @@
       "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
       "slow": true,
-      "source": "OBDb BMW-X5, 78 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 85 risposte vere (2014-2026)"
      },
      {
       "label": "Temperatura esterna",
@@ -6942,7 +6942,7 @@
       "formula": "(byte(0))/2-40",
       "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
       "decimals": 1,
-      "source": "OBDb BMW-X5, 45 risposte vere (2014-2026)"
+      "source": "OBDb BMW-X5, 50 risposte vere (2014-2026)"
      }
     ]
    }
@@ -7373,7 +7373,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb BMW-i3, 22 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -7382,7 +7382,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb BMW-i3, 22 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -7391,7 +7391,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb BMW-i3, 26 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 29 risposte vere (2016-2021)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -7400,7 +7400,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb BMW-i3, 23 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -7408,7 +7408,7 @@
       "did": "DC99",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-i3, 22 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -7416,7 +7416,7 @@
       "did": "DC98",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-i3, 22 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -7424,7 +7424,7 @@
       "did": "DC9B",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-i3, 26 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 29 risposte vere (2016-2021)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -7432,7 +7432,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-i3, 23 risposte vere (2016-2021)"
+      "source": "OBDb BMW-i3, 25 risposte vere (2016-2021)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -7983,7 +7983,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-iX3, 22 risposte vere (2021-2022)"
+      "source": "OBDb BMW-iX3, 23 risposte vere (2021-2022)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -7992,7 +7992,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-iX3, 22 risposte vere (2021-2022)"
+      "source": "OBDb BMW-iX3, 23 risposte vere (2021-2022)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -8001,7 +8001,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-iX3, 20 risposte vere (2021-2022)"
+      "source": "OBDb BMW-iX3, 21 risposte vere (2021-2022)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -8010,7 +8010,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-iX3, 22 risposte vere (2021-2022)"
+      "source": "OBDb BMW-iX3, 23 risposte vere (2021-2022)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -8688,7 +8688,7 @@
       "formula": "(byte(0)*256+byte(1))/1000+4",
       "valid": "(byte(0)*256+byte(1))/1000+4<=69",
       "decimals": 2,
-      "source": "OBDb Cupra-Formentor, 86 risposte vere (2022-2026)"
+      "source": "OBDb Cupra-Formentor, 96 risposte vere (2022-2026)"
      }
     ],
     "tx": "710",
@@ -8730,7 +8730,7 @@
       "formula": "(byte(0)*256+byte(1))/100",
       "valid": "(byte(0)*256+byte(1))/100<=655.35",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 13 risposte vere (2022-2025)"
+      "source": "OBDb Cupra-Formentor, 19 risposte vere (2022-2025)"
      },
      {
       "label": "Velocità ruota ant. SX",
@@ -8739,7 +8739,7 @@
       "formula": "(byte(0)*256+byte(1))/100",
       "valid": "(byte(0)*256+byte(1))/100<=655.35",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 12 risposte vere (2022-2025)"
+      "source": "OBDb Cupra-Formentor, 18 risposte vere (2022-2025)"
      },
      {
       "label": "Velocità ruota post. DX",
@@ -8748,7 +8748,7 @@
       "formula": "(byte(0)*256+byte(1))/100",
       "valid": "(byte(0)*256+byte(1))/100<=655.35",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 12 risposte vere (2022-2025)"
+      "source": "OBDb Cupra-Formentor, 19 risposte vere (2022-2025)"
      },
      {
       "label": "Velocità ruota post. SX",
@@ -8757,7 +8757,7 @@
       "formula": "(byte(0)*256+byte(1))/100",
       "valid": "(byte(0)*256+byte(1))/100<=655.35",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 12 risposte vere (2022-2025)"
+      "source": "OBDb Cupra-Formentor, 18 risposte vere (2022-2025)"
      }
     ],
     "tx": "713",
@@ -8778,7 +8778,7 @@
       "formula": "byte(0)*65536+byte(1)*256+byte(2)",
       "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
       "slow": true,
-      "source": "OBDb Cupra-Formentor, 8 risposte vere (2022-2025)"
+      "source": "OBDb Cupra-Formentor, 10 risposte vere (2022-2025)"
      },
      {
       "label": "Temperatura esterna",
@@ -8787,7 +8787,7 @@
       "formula": "(byte(0))/2-50",
       "valid": "(byte(0))/2-50>=-50 && (byte(0))/2-50<=77.5",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 4 risposte vere (2022-2026)"
+      "source": "OBDb Cupra-Formentor, 5 risposte vere (2022-2026)"
      }
     ],
     "tx": "714",
@@ -8820,7 +8820,7 @@
       "formula": "(s16(byte(0)*256+byte(1)))/10",
       "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
       "decimals": 1,
-      "source": "OBDb Cupra-Formentor, 12 risposte vere (2022-2026)"
+      "source": "OBDb Cupra-Formentor, 13 risposte vere (2022-2026)"
      }
     ],
     "tx": "746",
@@ -8854,7 +8854,7 @@
       "valid": "(byte(3)*16777216+byte(2)*65536+byte(1)*256+byte(0))/10<=429496729.5",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Cupra-Formentor, 5 risposte vere (2024-2024)"
+      "source": "OBDb Cupra-Formentor, 8 risposte vere (2023-2024)"
      }
     ],
     "tx": "7E1",
@@ -9332,7 +9332,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-MX-5, 21 risposte vere (2016-2026)"
+     "source": "OBDb Mazda-MX-5, 22 risposte vere (2016-2026)"
     }
    ]
   },
@@ -11241,7 +11241,7 @@
       "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
       "valid": "(byte(0)*256+byte(1))/20<=3276",
       "decimals": 2,
-      "source": "OBDb Ford-Mustang, 7 risposte vere (2016-2026)"
+      "source": "OBDb Ford-Mustang, 6 risposte vere (2016-2026)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -12373,7 +12373,7 @@
       "formula": "byte(43)*65536+byte(44)*256+byte(45)",
       "valid": "byte(43)*65536+byte(44)*256+byte(45)<=16777215",
       "slow": true,
-      "source": "OBDb Honda-Civic, 25 risposte vere (2012-2013)"
+      "source": "OBDb Honda-Civic, 34 risposte vere (2012-2013)"
      },
      {
       "label": "Mancate accensioni cil. 1",
@@ -12381,7 +12381,7 @@
       "did": "2663",
       "formula": "byte(34)*256+byte(35)",
       "valid": "byte(34)*256+byte(35)<=65535",
-      "source": "OBDb Honda-Civic, 22 risposte vere (2012-2013)"
+      "source": "OBDb Honda-Civic, 23 risposte vere (2012-2013)"
      },
      {
       "label": "Mancate accensioni cil. 2",
@@ -12389,7 +12389,7 @@
       "did": "2663",
       "formula": "byte(36)*256+byte(37)",
       "valid": "byte(36)*256+byte(37)<=65535",
-      "source": "OBDb Honda-Civic, 22 risposte vere (2012-2013)"
+      "source": "OBDb Honda-Civic, 23 risposte vere (2012-2013)"
      },
      {
       "label": "Mancate accensioni cil. 3",
@@ -12397,7 +12397,7 @@
       "did": "2663",
       "formula": "byte(38)*256+byte(39)",
       "valid": "byte(38)*256+byte(39)<=65535",
-      "source": "OBDb Honda-Civic, 22 risposte vere (2012-2013)"
+      "source": "OBDb Honda-Civic, 23 risposte vere (2012-2013)"
      },
      {
       "label": "Mancate accensioni cil. 4",
@@ -12405,7 +12405,7 @@
       "did": "2663",
       "formula": "byte(40)*256+byte(41)",
       "valid": "byte(40)*256+byte(41)<=65535",
-      "source": "OBDb Honda-Civic, 22 risposte vere (2012-2013)"
+      "source": "OBDb Honda-Civic, 23 risposte vere (2012-2013)"
      }
     ]
    }
@@ -12450,7 +12450,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 103 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
      }
     ]
    }
@@ -12525,7 +12525,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 103 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
      }
     ]
    }
@@ -12616,7 +12616,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 103 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
      }
     ]
    }
@@ -12748,7 +12748,7 @@
       "formula": "byte(43)*65536+byte(44)*256+byte(45)",
       "valid": "byte(43)*65536+byte(44)*256+byte(45)<=16777215",
       "slow": true,
-      "source": "OBDb Honda-Fit, 8 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 18 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 1",
@@ -12756,7 +12756,7 @@
       "did": "2663",
       "formula": "byte(34)*256+byte(35)",
       "valid": "byte(34)*256+byte(35)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 2",
@@ -12764,7 +12764,7 @@
       "did": "2663",
       "formula": "byte(36)*256+byte(37)",
       "valid": "byte(36)*256+byte(37)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 3",
@@ -12772,7 +12772,7 @@
       "did": "2663",
       "formula": "byte(38)*256+byte(39)",
       "valid": "byte(38)*256+byte(39)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 4",
@@ -12780,7 +12780,7 @@
       "did": "2663",
       "formula": "byte(40)*256+byte(41)",
       "valid": "byte(40)*256+byte(41)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 5",
@@ -12788,7 +12788,7 @@
       "did": "2663",
       "formula": "byte(42)*256+byte(43)",
       "valid": "byte(42)*256+byte(43)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      },
      {
       "label": "Mancate accensioni cil. 6",
@@ -12796,7 +12796,7 @@
       "did": "2663",
       "formula": "byte(44)*256+byte(45)",
       "valid": "byte(44)*256+byte(45)<=65535",
-      "source": "OBDb Honda-Fit, 5 risposte vere (2022-2022)"
+      "source": "OBDb Honda-Fit, 15 risposte vere (2018-2022)"
      }
     ]
    }
@@ -12951,7 +12951,7 @@
     "name": "Scatola fusibili (IGPM)",
     "address": "770",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "770",
     "rx": "778"
    }
@@ -13011,7 +13011,7 @@
     "name": "Climatizzatore",
     "address": "7B3",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "7B3",
     "rx": "7BB"
    }
@@ -13023,7 +13023,7 @@
     "name": "Quadro Strumenti",
     "address": "7C6",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "7C6",
     "rx": "7CE"
    }
@@ -13035,7 +13035,7 @@
     "name": "Servosterzo",
     "address": "7D4",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "7D4",
     "rx": "7DC"
    }
@@ -13079,7 +13079,7 @@
     "name": "Cambio",
     "address": "7E1",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "7E1",
     "rx": "7E9"
    }
@@ -13091,7 +13091,7 @@
     "name": "Batteria di trazione (BMS)",
     "address": "7E4",
     "params": [],
-    "source": "OBDb Hyundai-IONIQ-Electric, Hyundai-Ioniq: risponde su auto vere",
+    "source": "OBDb Hyundai-IONIQ-Electric: risponde su auto vere",
     "tx": "7E4",
     "rx": "7EC"
    }
@@ -13143,7 +13143,7 @@
       "formula": "((byte(9))/5)*0.0689476",
       "valid": "(byte(9))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-5, 179 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 180 risposte vere (2022-2027)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -13152,7 +13152,7 @@
       "formula": "((byte(4))/5)*0.0689476",
       "valid": "(byte(4))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-5, 179 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 180 risposte vere (2022-2027)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -13161,7 +13161,7 @@
       "formula": "((byte(19))/5)*0.0689476",
       "valid": "(byte(19))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-5, 179 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 180 risposte vere (2022-2027)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -13170,7 +13170,7 @@
       "formula": "((byte(14))/5)*0.0689476",
       "valid": "(byte(14))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-5, 179 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 180 risposte vere (2022-2027)"
      }
     ],
     "tx": "7A0",
@@ -13295,7 +13295,7 @@
       "formula": "(byte(31))/2",
       "valid": "(byte(31))/2<=100",
       "decimals": 1,
-      "source": "OBDb Hyundai-IONIQ-5, 365 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 367 risposte vere (2022-2027)"
      },
      {
       "label": "Energia caricata totale",
@@ -13305,7 +13305,7 @@
       "valid": "(byte(38)*16777216+byte(39)*65536+byte(40)*256+byte(41))/10<=429496729.5",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 644 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 649 risposte vere (2022-2027)"
      },
      {
       "label": "Energia erogata totale",
@@ -13315,7 +13315,7 @@
       "valid": "(byte(42)*16777216+byte(43)*65536+byte(44)*256+byte(45))/10<=429496729.5",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 644 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 649 risposte vere (2022-2027)"
      },
      {
       "label": "Salute batteria di trazione",
@@ -13325,7 +13325,7 @@
       "valid": "(byte(25)*256+byte(26))/10>0 && (byte(25)*256+byte(26))/10<=100",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 363 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 365 risposte vere (2022-2027)"
      }
     ],
     "tx": "7E4",
@@ -13406,7 +13406,7 @@
       "formula": "((byte(9))/5)*0.0689476",
       "valid": "(byte(9))/5>0 && (byte(9))/5<51 && (byte(9))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-6, 23 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 24 risposte vere (2023-2024)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -13415,7 +13415,7 @@
       "formula": "((byte(4))/5)*0.0689476",
       "valid": "(byte(4))/5>0 && (byte(4))/5<51 && (byte(4))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-6, 22 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 23 risposte vere (2023-2024)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -13424,7 +13424,7 @@
       "formula": "((byte(19))/5)*0.0689476",
       "valid": "(byte(19))/5>0 && (byte(19))/5<51 && (byte(19))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-6, 25 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 26 risposte vere (2023-2024)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -13433,7 +13433,7 @@
       "formula": "((byte(14))/5)*0.0689476",
       "valid": "(byte(14))/5>0 && (byte(14))/5<51 && (byte(14))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-IONIQ-6, 24 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 25 risposte vere (2023-2024)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -13441,7 +13441,7 @@
       "did": "C00B",
       "formula": "byte(10)-50",
       "valid": "byte(10)-50>-50 && byte(10)-50<205 && byte(10)-50>=-50 && byte(10)-50<=205",
-      "source": "OBDb Hyundai-IONIQ-6, 23 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 24 risposte vere (2023-2024)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -13449,7 +13449,7 @@
       "did": "C00B",
       "formula": "byte(5)-50",
       "valid": "byte(5)-50>-50 && byte(5)-50<205 && byte(5)-50>=-50 && byte(5)-50<=205",
-      "source": "OBDb Hyundai-IONIQ-6, 22 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 23 risposte vere (2023-2024)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -13457,7 +13457,7 @@
       "did": "C00B",
       "formula": "byte(20)-50",
       "valid": "byte(20)-50>-50 && byte(20)-50<205 && byte(20)-50>=-50 && byte(20)-50<=205",
-      "source": "OBDb Hyundai-IONIQ-6, 25 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 26 risposte vere (2023-2024)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -13465,7 +13465,7 @@
       "did": "C00B",
       "formula": "byte(15)-50",
       "valid": "byte(15)-50>-50 && byte(15)-50<205 && byte(15)-50>=-50 && byte(15)-50<=205",
-      "source": "OBDb Hyundai-IONIQ-6, 24 risposte vere (2023-2024)"
+      "source": "OBDb Hyundai-IONIQ-6, 25 risposte vere (2023-2024)"
      }
     ],
     "tx": "7A0",
@@ -13868,7 +13868,7 @@
      "formula": "(byte(34))/1.3333-48",
      "valid": "(byte(34))/1.3333-48<=143.254781",
      "decimals": 1,
-     "source": "OBDb Hyundai-Kona, 312 risposte vere (2019-2026)"
+     "source": "OBDb Hyundai-Kona, 313 risposte vere (2019-2026)"
     },
     {
      "label": "Tensione batteria 12 V",
@@ -13877,7 +13877,7 @@
      "formula": "(byte(4)*17.37)/255",
      "valid": "(byte(4)*17.37)/255>0 && (byte(4)*17.37)/255<=17.37",
      "decimals": 2,
-     "source": "OBDb Hyundai-Kona, 309 risposte vere (2019-2026)"
+     "source": "OBDb Hyundai-Kona, 310 risposte vere (2019-2026)"
     }
    ]
   },
@@ -13894,7 +13894,7 @@
       "did": "01A0",
       "formula": "byte(13)-40",
       "valid": "byte(13)-40>=-40 && byte(13)-40<=215",
-      "source": "OBDb Hyundai-Kona, 35 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Kona, 42 risposte vere (2022-2026)"
      }
     ],
     "tx": "7E1",
@@ -15279,7 +15279,7 @@
       "formula": "((byte(9))/5)*0.0689476",
       "valid": "(byte(9))/5>0 && (byte(9))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-Tucson, 42 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 41 risposte vere (2022-2026)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -15297,7 +15297,7 @@
       "formula": "((byte(19))/5)*0.0689476",
       "valid": "(byte(19))/5>0 && (byte(19))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-Tucson, 42 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 41 risposte vere (2022-2026)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -15306,7 +15306,7 @@
       "formula": "((byte(14))/5)*0.0689476",
       "valid": "(byte(14))/5>0 && (byte(14))/5<=51",
       "decimals": 2,
-      "source": "OBDb Hyundai-Tucson, 44 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 43 risposte vere (2022-2026)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -15314,7 +15314,7 @@
       "did": "C00B",
       "formula": "byte(10)-50",
       "valid": "byte(10)-50>-50 && byte(10)-50>=-50 && byte(10)-50<=205",
-      "source": "OBDb Hyundai-Tucson, 42 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 41 risposte vere (2022-2026)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -15330,7 +15330,7 @@
       "did": "C00B",
       "formula": "byte(20)-50",
       "valid": "byte(20)-50>-50 && byte(20)-50>=-50 && byte(20)-50<=205",
-      "source": "OBDb Hyundai-Tucson, 42 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 41 risposte vere (2022-2026)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -15338,7 +15338,7 @@
       "did": "C00B",
       "formula": "byte(15)-50",
       "valid": "byte(15)-50>-50 && byte(15)-50>=-50 && byte(15)-50<=205",
-      "source": "OBDb Hyundai-Tucson, 44 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 43 risposte vere (2022-2026)"
      }
     ],
     "tx": "7A0",
@@ -15432,7 +15432,7 @@
      "did": "E001",
      "formula": "byte(6)",
      "valid": "byte(6)<255 && byte(6)<=255",
-     "source": "OBDb Hyundai-Tucson, 127 risposte vere (2022-2026)"
+     "source": "OBDb Hyundai-Tucson, 136 risposte vere (2022-2026)"
     },
     {
      "label": "Filtro antiparticolato: rigenerazioni",
@@ -15482,7 +15482,7 @@
      "formula": "(byte(34)*3)/4-48",
      "valid": "(byte(34)*3)/4-48>=-48 && (byte(34)*3)/4-48<=143",
      "decimals": 1,
-     "source": "OBDb Hyundai-Tucson, 127 risposte vere (2022-2026)"
+     "source": "OBDb Hyundai-Tucson, 136 risposte vere (2022-2026)"
     },
     {
      "label": "Tensione batteria 12 V",
@@ -15491,7 +15491,7 @@
      "formula": "(byte(4)*17.37)/255",
      "valid": "(byte(4)*17.37)/255<=17.37",
      "decimals": 2,
-     "source": "OBDb Hyundai-Tucson, 127 risposte vere (2022-2026)"
+     "source": "OBDb Hyundai-Tucson, 136 risposte vere (2022-2026)"
     }
    ]
   },
@@ -15508,7 +15508,7 @@
       "did": "01A0",
       "formula": "byte(13)-40",
       "valid": "byte(13)-40>=-40 && byte(13)-40<=215",
-      "source": "OBDb Hyundai-Tucson, 69 risposte vere (2022-2026)"
+      "source": "OBDb Hyundai-Tucson, 72 risposte vere (2022-2026)"
      }
     ],
     "tx": "7E1",
@@ -18492,7 +18492,7 @@
       "formula": "(byte(15))/2",
       "valid": "(byte(15))/2<=100",
       "decimals": 1,
-      "source": "OBDb Kia-EV6, 157 risposte vere (2021-2025)"
+      "source": "OBDb Kia-EV6, 158 risposte vere (2021-2025)"
      }
     ],
     "tx": "744",
@@ -18709,7 +18709,7 @@
       "formula": "byte(31)*0.5",
       "valid": "byte(31)*0.5<=100",
       "decimals": 1,
-      "source": "OBDb Kia-EV6, 139 risposte vere (2021-2025)"
+      "source": "OBDb Kia-EV6, 138 risposte vere (2021-2025)"
      },
      {
       "label": "Energia caricata totale",
@@ -18747,7 +18747,7 @@
       "valid": "(byte(25)*256+byte(26))/10>0 && (byte(25)*256+byte(26))/10<=100",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Kia-EV6, 138 risposte vere (2021-2025)"
+      "source": "OBDb Kia-EV6, 137 risposte vere (2021-2025)"
      }
     ],
     "tx": "7E4",
@@ -18968,7 +18968,7 @@
       "formula": "(byte(4))/2",
       "valid": "(byte(4))/2<=100",
       "decimals": 1,
-      "source": "OBDb Kia-EV9, 255 risposte vere (2024-2026)"
+      "source": "OBDb Kia-EV9, 261 risposte vere (2024-2026)"
      },
      {
       "label": "Corrente batteria di trazione",
@@ -18977,7 +18977,7 @@
       "formula": "(s16(byte(10)*256+byte(11)))/10",
       "valid": "(s16(byte(10)*256+byte(11)))/10>=-3276.8 && (s16(byte(10)*256+byte(11)))/10<=3276.7",
       "decimals": 1,
-      "source": "OBDb Kia-EV9, 255 risposte vere (2024-2026)"
+      "source": "OBDb Kia-EV9, 261 risposte vere (2024-2026)"
      },
      {
       "label": "Salute batteria di trazione",
@@ -18996,7 +18996,7 @@
       "formula": "(byte(23))/50",
       "valid": "(byte(23))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Kia-EV9, 255 risposte vere (2024-2026)"
+      "source": "OBDb Kia-EV9, 261 risposte vere (2024-2026)"
      },
      {
       "label": "Tensione cella più bassa",
@@ -19005,7 +19005,7 @@
       "formula": "(byte(25))/50",
       "valid": "(byte(25))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Kia-EV9, 255 risposte vere (2024-2026)"
+      "source": "OBDb Kia-EV9, 261 risposte vere (2024-2026)"
      }
     ],
     "tx": "7E4",
@@ -22085,7 +22085,7 @@
       "did": "01A0",
       "formula": "byte(13)-40",
       "valid": "byte(13)-40>=-40 && byte(13)-40<=215",
-      "source": "OBDb Kia-Stinger, 106 risposte vere (2019-2023)"
+      "source": "OBDb Kia-Stinger, 105 risposte vere (2019-2023)"
      }
     ],
     "tx": "7E1",
@@ -22876,7 +22876,7 @@
       "did": "2A0A",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205",
-      "source": "OBDb Land-Rover-Range-Rover-Evoque, 10 risposte vere (2025-2025)"
+      "source": "OBDb Land-Rover-Range-Rover-Evoque, 2 risposte vere (2025-2025)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -22884,7 +22884,7 @@
       "did": "2A0D",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205",
-      "source": "OBDb Land-Rover-Range-Rover-Evoque, 8 risposte vere (2025-2025)"
+      "source": "OBDb Land-Rover-Range-Rover-Evoque, 2 risposte vere (2025-2025)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -22892,7 +22892,7 @@
       "did": "2A0C",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205",
-      "source": "OBDb Land-Rover-Range-Rover-Evoque, 8 risposte vere (2025-2025)"
+      "source": "OBDb Land-Rover-Range-Rover-Evoque, 2 risposte vere (2025-2025)"
      }
     ],
     "tx": "751",
@@ -23419,7 +23419,7 @@
       "formula": "byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
       "slow": true,
-      "source": "OBDb Lexus-ES, 2 risposte vere (2024-2024)"
+      "source": "OBDb Lexus-ES, 3 risposte vere (2024-2024)"
      },
      {
       "label": "Livello carburante",
@@ -23428,7 +23428,7 @@
       "formula": "(byte(0)*100)/255",
       "valid": "(byte(0)*100)/255<=100",
       "decimals": 1,
-      "source": "OBDb Lexus-ES, 9 risposte vere (2024-2024)"
+      "source": "OBDb Lexus-ES, 2 risposte vere (2024-2024)"
      },
      {
       "label": "Pressione olio motore",
@@ -23453,7 +23453,7 @@
       "did": "107B",
       "formula": "byte(24)-40",
       "valid": "byte(24)-40>=-40 && byte(24)-40<=215",
-      "source": "OBDb Lexus-ES, 20 risposte vere (2020-2024)"
+      "source": "OBDb Lexus-ES, 22 risposte vere (2020-2024)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -23462,7 +23462,7 @@
       "formula": "((byte(0)*256+byte(1))*12.207)/10000",
       "valid": "((byte(0)*256+byte(1))*12.207)/10000<=79",
       "decimals": 2,
-      "source": "OBDb Lexus-ES, 9 risposte vere (2020-2024)"
+      "source": "OBDb Lexus-ES, 12 risposte vere (2020-2024)"
      }
     ],
     "tx": "700",
@@ -23615,7 +23615,7 @@
       "formula": "(byte(1))/58-0.5",
       "valid": "(byte(1))/58-0.5>0 && (byte(1))/58-0.5<3.896 && (byte(1))/58-0.5<=3.896",
       "decimals": 2,
-      "source": "OBDb Lexus-ES-300h, 9 risposte vere (2013-2019)"
+      "source": "OBDb Lexus-ES, 10 risposte vere (2024-2024)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -23624,7 +23624,7 @@
       "formula": "(byte(0))/58-0.5",
       "valid": "(byte(0))/58-0.5>0 && (byte(0))/58-0.5<3.896 && (byte(0))/58-0.5<=3.896",
       "decimals": 2,
-      "source": "OBDb Lexus-ES-300h, 9 risposte vere (2013-2019)"
+      "source": "OBDb Lexus-ES, 10 risposte vere (2024-2024)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -23633,7 +23633,7 @@
       "formula": "(byte(3))/58-0.5",
       "valid": "(byte(3))/58-0.5>0 && (byte(3))/58-0.5<3.896 && (byte(3))/58-0.5<=3.896",
       "decimals": 2,
-      "source": "OBDb Lexus-ES-300h, 9 risposte vere (2013-2019)"
+      "source": "OBDb Lexus-ES, 10 risposte vere (2024-2024)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -23642,7 +23642,7 @@
       "formula": "(byte(2))/58-0.5",
       "valid": "(byte(2))/58-0.5>0 && (byte(2))/58-0.5<3.896 && (byte(2))/58-0.5<=3.896",
       "decimals": 2,
-      "source": "OBDb Lexus-ES-300h, 9 risposte vere (2013-2019)"
+      "source": "OBDb Lexus-ES, 10 risposte vere (2024-2024)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -25602,7 +25602,7 @@
       "formula": "byte(0)*65536+byte(1)*256+byte(2)",
       "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
       "slow": true,
-      "source": "OBDb MG-EHS, 7 risposte vere (2024-2024)"
+      "source": "OBDb MG-EHS, 6 risposte vere (2024-2024)"
      }
     ],
     "tx": "710",
@@ -27116,7 +27116,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-MX-5, 21 risposte vere (2016-2026)"
+     "source": "OBDb Mazda-MX-5, 22 risposte vere (2016-2026)"
     }
    ]
   },
@@ -28794,7 +28794,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb MINI-Cooper, 62 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 64 risposte vere (2015-2022)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -28803,7 +28803,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb MINI-Cooper, 61 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 63 risposte vere (2015-2022)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -28812,7 +28812,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb MINI-Cooper, 55 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 56 risposte vere (2015-2022)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -28821,7 +28821,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=32.76",
       "decimals": 2,
-      "source": "OBDb MINI-Cooper, 59 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 61 risposte vere (2015-2022)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -28829,7 +28829,7 @@
       "did": "DC99",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb MINI-Cooper, 62 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 64 risposte vere (2015-2022)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -28837,7 +28837,7 @@
       "did": "DC98",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb MINI-Cooper, 61 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 63 risposte vere (2015-2022)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -28845,7 +28845,7 @@
       "did": "DC9B",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb MINI-Cooper, 55 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 56 risposte vere (2015-2022)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -28853,7 +28853,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb MINI-Cooper, 59 risposte vere (2015-2022)"
+      "source": "OBDb MINI-Cooper, 61 risposte vere (2015-2022)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -29220,16 +29220,15 @@
       "formula": "(byte(0)*256+byte(1))/128",
       "valid": "(byte(0)*256+byte(1))/128<=511.99",
       "decimals": 1,
-      "source": "OBDb MINI-Countryman, 8 risposte vere (2021-2023)"
+      "source": "OBDb MINI-Countryman, 11 risposte vere (2012-2023)"
      },
      {
       "label": "Temperatura olio motore",
       "unit": "°C",
-      "did": "57C3",
-      "formula": "(byte(0)*256+byte(1))/10",
-      "valid": "(byte(0)*256+byte(1))/10<=200",
-      "decimals": 1,
-      "source": "OBDb MINI-Countryman, 11 risposte vere (2020-2023)"
+      "did": "4506",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200",
+      "source": "OBDb MINI-Countryman, 18 risposte vere (2012-2023)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -29267,7 +29266,7 @@
       "formula": "((s16(byte(0)*256+byte(1)))*12.5)/100",
       "valid": "((s16(byte(0)*256+byte(1)))*12.5)/100>=-4096 && ((s16(byte(0)*256+byte(1)))*12.5)/100<=4095.875",
       "decimals": 1,
-      "source": "OBDb MINI-Countryman, 14 risposte vere (2011-2014)"
+      "source": "OBDb MINI-Countryman, 17 risposte vere (2011-2014)"
      },
      {
       "label": "Pressione gomma ant. DX",
@@ -29497,7 +29496,7 @@
       "formula": "((s16(byte(0)*256+byte(1)))*12.5)/100",
       "valid": "((s16(byte(0)*256+byte(1)))*12.5)/100>=-4096 && ((s16(byte(0)*256+byte(1)))*12.5)/100<=4095.875",
       "decimals": 1,
-      "source": "OBDb MINI-Countryman, 14 risposte vere (2011-2014)"
+      "source": "OBDb MINI-Countryman, 17 risposte vere (2011-2014)"
      }
     ]
    }
@@ -29597,7 +29596,7 @@
       "formula": "(byte(2)*0.19285)*6.89476",
       "valid": "byte(2)*0.19285<=49.17",
       "decimals": 1,
-      "source": "OBDb Mitsubishi-Outlander-Sport, 4 risposte vere (2011-2021)"
+      "source": "OBDb Mitsubishi-Outlander-Sport, 5 risposte vere (2011-2021)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -31089,6 +31088,18 @@
   },
   {
    "brand": "Peugeot",
+   "model": "208",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb Peugeot-208: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "Peugeot",
    "model": "3008",
    "ecu": {
     "name": "Gestione motore (iniezione)",
@@ -31399,7 +31410,7 @@
       "formula": "(byte(2)*0.19285)*6.89476",
       "valid": "byte(2)*0.19285<=49.17",
       "decimals": 1,
-      "source": "OBDb Mitsubishi-Outlander-Sport, 4 risposte vere (2011-2021)"
+      "source": "OBDb Mitsubishi-Outlander-Sport, 5 risposte vere (2011-2021)"
      },
      {
       "label": "Tensione batteria 12 V",
@@ -32823,7 +32834,7 @@
       "formula": "(byte(5))/40",
       "valid": "(byte(5))/40<6.37 && (byte(5))/40<=6.375",
       "decimals": 2,
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -32832,7 +32843,7 @@
       "formula": "(byte(5))/40",
       "valid": "(byte(5))/40<6.37 && (byte(5))/40<=6.375",
       "decimals": 2,
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -32841,7 +32852,7 @@
       "formula": "(byte(5))/40",
       "valid": "(byte(5))/40<6.37 && (byte(5))/40<=6.375",
       "decimals": 2,
-      "source": "OBDb Porsche-Taycan, 7 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -32850,7 +32861,7 @@
       "formula": "(byte(5))/40",
       "valid": "(byte(5))/40<6.37 && (byte(5))/40<=6.375",
       "decimals": 2,
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -32858,7 +32869,7 @@
       "did": "18A0",
       "formula": "byte(6)-40",
       "valid": "byte(6)-40<127 && byte(6)-40>=-40 && byte(6)-40<=127",
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -32866,7 +32877,7 @@
       "did": "18A1",
       "formula": "byte(6)-40",
       "valid": "byte(6)-40<127 && byte(6)-40>=-40 && byte(6)-40<=127",
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -32874,7 +32885,7 @@
       "did": "18A3",
       "formula": "byte(6)-40",
       "valid": "byte(6)-40<127 && byte(6)-40>=-40 && byte(6)-40<=127",
-      "source": "OBDb Porsche-Taycan, 7 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -32882,7 +32893,7 @@
       "did": "18A2",
       "formula": "byte(6)-40",
       "valid": "byte(6)-40<127 && byte(6)-40>=-40 && byte(6)-40<=127",
-      "source": "OBDb Porsche-Taycan, 8 risposte vere (2022-2025)"
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2025)"
      }
     ],
     "tx": "70B",
@@ -32972,8 +32983,17 @@
    "ecu": {
     "name": "Quadro Strumenti",
     "address": "714",
-    "params": [],
-    "source": "OBDb Porsche-Taycan: risponde su auto vere",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "02BD",
+      "formula": "byte(6)*65536+byte(7)*256+byte(8)",
+      "valid": "byte(6)*65536+byte(7)*256+byte(8)<16777215 && byte(6)*65536+byte(7)*256+byte(8)<=16777215",
+      "slow": true,
+      "source": "OBDb Porsche-Taycan, 9 risposte vere (2022-2022)"
+     }
+    ],
     "tx": "714",
     "rx": "77E"
    }
@@ -34095,7 +34115,7 @@
       "formula": "(s16(byte(0)*256+byte(1)))/10",
       "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
       "decimals": 1,
-      "source": "OBDb Seat-Ibiza, 7 risposte vere (2023-2023)"
+      "source": "OBDb Seat-Ibiza, 8 risposte vere (2023-2023)"
      }
     ],
     "tx": "746",
@@ -34145,7 +34165,7 @@
      "did": "1151",
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
-     "source": "OBDb Seat-Ibiza, 6 risposte vere (2023-2023)"
+     "source": "OBDb Seat-Ibiza, 2 risposte vere (2023-2023)"
     },
     {
      "label": "Temperatura carburante",
@@ -37147,7 +37167,7 @@
       "formula": "((byte(1))/5)*0.0689476",
       "valid": "(byte(1))/5>0 && (byte(1))/5<=51",
       "decimals": 2,
-      "source": "OBDb Subaru-Crosstrek, 66 risposte vere (2013-2026)"
+      "source": "OBDb Subaru-Crosstrek, 65 risposte vere (2013-2026)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -37156,7 +37176,7 @@
       "formula": "((byte(0))/5)*0.0689476",
       "valid": "(byte(0))/5>0 && (byte(0))/5<=51",
       "decimals": 2,
-      "source": "OBDb Subaru-Crosstrek, 70 risposte vere (2013-2026)"
+      "source": "OBDb Subaru-Crosstrek, 69 risposte vere (2013-2026)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -37165,7 +37185,7 @@
       "formula": "((byte(2))/5)*0.0689476",
       "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
       "decimals": 2,
-      "source": "OBDb Subaru-Crosstrek, 69 risposte vere (2013-2026)"
+      "source": "OBDb Subaru-Crosstrek, 68 risposte vere (2013-2026)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -37174,7 +37194,7 @@
       "formula": "((byte(3))/5)*0.0689476",
       "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
       "decimals": 2,
-      "source": "OBDb Subaru-Crosstrek, 71 risposte vere (2013-2026)"
+      "source": "OBDb Subaru-Crosstrek, 70 risposte vere (2013-2026)"
      }
     ],
     "tx": "753",
@@ -37281,7 +37301,7 @@
       "formula": "byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
       "slow": true,
-      "source": "OBDb Toyota-RAV4-Hybrid, 8 risposte vere (2022-2025)"
+      "source": "OBDb Toyota-RAV4-Prime, 10 risposte vere (2021-2024)"
      },
      {
       "label": "Mancate accensioni cil. 1",
@@ -41106,7 +41126,7 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10<=25.5",
       "decimals": 2,
-      "source": "OBDb Toyota-Land-Cruiser, 6 risposte vere (2019-2022)"
+      "source": "OBDb Toyota-Land-Cruiser, 7 risposte vere (2016-2022)"
      }
     ],
     "tx": "7C0",
@@ -42121,7 +42141,7 @@
       "formula": "(byte(0))/2",
       "valid": "(byte(0))/2<=127.5",
       "decimals": 1,
-      "source": "OBDb Toyota-Prius, 29 risposte vere (2009-2009)"
+      "source": "OBDb Toyota-Prius, 30 risposte vere (2009-2009)"
      },
      {
       "label": "Corrente batteria di trazione",
@@ -42130,7 +42150,7 @@
       "formula": "(byte(1)*256+byte(2))/100-327.68",
       "valid": "(byte(1)*256+byte(2))/100-327.68>=-327.68 && (byte(1)*256+byte(2))/100-327.68<=327.67",
       "decimals": 1,
-      "source": "OBDb Toyota-Prius, 29 risposte vere (2009-2009)"
+      "source": "OBDb Toyota-Prius, 30 risposte vere (2009-2009)"
      }
     ],
     "tx": "7E3",
@@ -44449,7 +44469,7 @@
       "formula": "byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
       "slow": true,
-      "source": "OBDb Toyota-bZ4X, 33 risposte vere (2022-2024)"
+      "source": "OBDb Toyota-bZ4X, 34 risposte vere (2022-2024)"
      }
     ],
     "tx": "747",
@@ -44512,7 +44532,7 @@
       "formula": "byte(1)*65536+byte(2)*256+byte(3)",
       "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
       "slow": true,
-      "source": "OBDb Toyota-bZ4X, 26 risposte vere (2022-2024)"
+      "source": "OBDb Toyota-bZ4X, 27 risposte vere (2022-2024)"
      },
      {
       "label": "Corrente batteria di trazione",
@@ -45328,7 +45348,7 @@
       "formula": "byte(0)*65536+byte(1)*256+byte(2)",
       "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
       "slow": true,
-      "source": "OBDb Volkswagen-e-Golf, 12 risposte vere (2015-2019)"
+      "source": "OBDb Volkswagen-e-Golf, 13 risposte vere (2015-2019)"
      },
      {
       "label": "Temperatura esterna",
@@ -45735,7 +45755,7 @@
       "formula": "(byte(0)*256+byte(1))/1000+4",
       "valid": "(byte(0)*256+byte(1))/1000+4<=69",
       "decimals": 2,
-      "source": "OBDb Volkswagen-ID3, 67 risposte vere (2020-2025)"
+      "source": "OBDb Volkswagen-ID3, 68 risposte vere (2020-2025)"
      }
     ],
     "tx": "710",
@@ -45936,7 +45956,7 @@
       "formula": "(byte(0)*256+byte(1))/1000+4",
       "valid": "(byte(0)*256+byte(1))/1000+4<=69",
       "decimals": 2,
-      "source": "OBDb Volkswagen-ID7-Tourer, 14 risposte vere (2025-2025)"
+      "source": "OBDb Volkswagen-ID7-Tourer, 18 risposte vere (2024-2025)"
      }
     ],
     "tx": "710",
@@ -47393,7 +47413,7 @@
       "did": "202F",
       "formula": "byte(0)-58",
       "valid": "byte(0)-58>=-58 && byte(0)-58<=197",
-      "source": "OBDb Volkswagen-Tiguan, 13 risposte vere (2015-2025)"
+      "source": "OBDb Volkswagen-Tiguan, 18 risposte vere (2015-2025)"
      }
     ],
     "tx": "714",
@@ -47472,7 +47492,7 @@
      "did": "1152",
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
-     "source": "OBDb Volkswagen-Tiguan, 8 risposte vere (2019-2024)"
+     "source": "OBDb Volkswagen-Tiguan, 9 risposte vere (2019-2024)"
     },
     {
      "label": "Mancate accensioni cil. 3",
@@ -47480,7 +47500,7 @@
      "did": "1150",
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
-     "source": "OBDb Volkswagen-Tiguan, 9 risposte vere (2019-2024)"
+     "source": "OBDb Volkswagen-Tiguan, 10 risposte vere (2019-2024)"
     },
     {
      "label": "Mancate accensioni cil. 4",
@@ -47506,7 +47526,7 @@
      "formula": "byte(0)*0.75-48",
      "valid": "byte(0)*0.75-48>=-48 && byte(0)*0.75-48<=143.25",
      "decimals": 1,
-     "source": "OBDb Volkswagen-Tiguan, 15 risposte vere (2016-2024)"
+     "source": "OBDb Volkswagen-Tiguan, 16 risposte vere (2016-2024)"
     },
     {
      "label": "Temperatura gas di scarico",
@@ -47515,7 +47535,7 @@
      "formula": "(byte(0)*256+byte(1))/10-40",
      "valid": "(byte(0)*256+byte(1))/10-40>=-40 && (byte(0)*256+byte(1))/10-40<=6513.5",
      "decimals": 1,
-     "source": "OBDb Volkswagen-Tiguan, 20 risposte vere (2016-2024)"
+     "source": "OBDb Volkswagen-Tiguan, 17 risposte vere (2016-2024)"
     },
     {
      "label": "Temperatura olio motore",
