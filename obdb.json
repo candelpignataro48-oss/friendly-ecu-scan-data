@@ -28008,7 +28008,16 @@
    "ecu": {
     "name": "Cambio",
     "address": "7E1",
-    "params": [],
+    "params": [
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "0234",
+      "formula": "byte(3)-50",
+      "valid": "byte(3)-50>=-50 && byte(3)-50<=205",
+      "source": "OBDb Mercedes-Benz-E-Class, 2 risposte vere (2014-2014)"
+     }
+    ],
     "source": "OBDb Mercedes-Benz-E-Class: risponde su auto vere",
     "tx": "7E1",
     "rx": "7E9"
@@ -31876,6 +31885,15 @@
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255",
       "source": "OBDb Porsche-911, 5 risposte vere (2016-2025)"
+     },
+     {
+      "label": "Temperatura carburante",
+      "unit": "°C",
+      "did": "128A",
+      "formula": "byte(0)*0.75-48",
+      "valid": "byte(0)*0.75-48>=-48 && byte(0)*0.75-48<=143.25",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 2 risposte vere (2024-2024)"
      },
      {
       "label": "Temperatura esterna",
@@ -41103,6 +41121,53 @@
    "brand": "Toyota",
    "model": "Land Cruiser (J150)",
    "ecu": {
+    "name": "Motore: dati del costruttore (2)",
+    "address": "700",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "0103",
+      "formula": "byte(1)*65536+byte(2)*256+byte(3)",
+      "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
+      "slow": true,
+      "source": "OBDb Toyota-Land-Cruiser, 13 risposte vere (2022-2025)"
+     },
+     {
+      "label": "Pressione olio motore",
+      "unit": "kPa",
+      "did": "1074",
+      "formula": "((byte(0)*256+byte(1))*10)/128",
+      "valid": "((byte(0)*256+byte(1))*10)/128<=5119.92",
+      "decimals": 1,
+      "source": "OBDb Toyota-Land-Cruiser, 7 risposte vere (2022-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1F46",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Land-Cruiser, 11 risposte vere (2022-2025)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "1002",
+      "formula": "((byte(0)*256+byte(1))*12.207)/10000",
+      "valid": "((byte(0)*256+byte(1))*12.207)/10000<=79",
+      "decimals": 2,
+      "source": "OBDb Toyota-Land-Cruiser, 15 risposte vere (2022-2025)"
+     }
+    ],
+    "tx": "700",
+    "rx": "708"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Land Cruiser (J150)",
+   "ecu": {
     "name": "Motore: dati del costruttore (3)",
     "address": "701",
     "params": [
@@ -41166,6 +41231,27 @@
     ],
     "tx": "7B0",
     "rx": "7B8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Land Cruiser (J150)",
+   "ecu": {
+    "name": "Sterzo",
+    "address": "7B3",
+    "params": [
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "1004",
+      "formula": "(s16(byte(0)*256+byte(1)))*1.5",
+      "valid": "(s16(byte(0)*256+byte(1)))*1.5>=-410 && (s16(byte(0)*256+byte(1)))*1.5<=410",
+      "decimals": 1,
+      "source": "OBDb Toyota-Land-Cruiser, 14 risposte vere (2022-2025)"
+     }
+    ],
+    "tx": "7B3",
+    "rx": "7BB"
    }
   },
   {
@@ -43549,6 +43635,15 @@
     "name": "Motore: dati del costruttore (2)",
     "address": "700",
     "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "0103",
+      "formula": "byte(1)*65536+byte(2)*256+byte(3)",
+      "valid": "byte(1)*65536+byte(2)*256+byte(3)<=16777215",
+      "slow": true,
+      "source": "OBDb Toyota-Yaris, 10 risposte vere (2024-2024)"
+     },
      {
       "label": "Pressione olio motore",
       "unit": "kPa",
