@@ -2349,6 +2349,15 @@
      "source": "OBDb Audi-Q7, 10 risposte vere (2017-2019)"
     },
     {
+     "label": "Filtro antiparticolato: temperatura ingresso",
+     "unit": "°C",
+     "did": "082D",
+     "formula": "(byte(0)*256+byte(1))/10-273.1",
+     "valid": "(byte(0)*256+byte(1))/10-273.1>=-273.1 && (byte(0)*256+byte(1))/10-273.1<=6280.4",
+     "decimals": 1,
+     "source": "OBDb Audi-Q7, 4 risposte vere (2021-2021)"
+    },
+    {
      "label": "Livello carburante",
      "unit": "L",
      "did": "2206",
@@ -2581,6 +2590,15 @@
       "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4000000000",
       "slow": true,
       "source": "OBDb Audi-Q8, 10 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Filtro antiparticolato: temperatura ingresso",
+      "unit": "°C",
+      "did": "082D",
+      "formula": "(byte(0)*256+byte(1))/10-273.1",
+      "valid": "(byte(0)*256+byte(1))/10-273.1>=-273.1 && (byte(0)*256+byte(1))/10-273.1<=6280.4",
+      "decimals": 1,
+      "source": "OBDb Audi-Q8, 4 risposte vere (2025-2025)"
      },
      {
       "label": "Mancate accensioni cil. 3",
@@ -18087,6 +18105,16 @@
      "source": "OBDb Kia-Ceed, 12 risposte vere (2018-2018)"
     },
     {
+     "label": "Filtro antiparticolato: contachilometri all'ultima rigenerazione",
+     "unit": "km",
+     "did": "E009",
+     "formula": "(byte(44)*16777216+byte(43)*65536+byte(42)*256+byte(41))/1000",
+     "valid": "(byte(44)*16777216+byte(43)*65536+byte(42)*256+byte(41))/1000<=4294967",
+     "decimals": 1,
+     "slow": true,
+     "source": "OBDb Kia-Ceed, 33 risposte vere (2025-2025)"
+    },
+    {
      "label": "Filtro antiparticolato: fuliggine",
      "unit": "",
      "did": "ED1D",
@@ -18094,6 +18122,34 @@
      "valid": "((byte(5)*256+byte(4))*256)/65535<=256",
      "decimals": 1,
      "source": "OBDb Kia-Ceed, 5 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Filtro antiparticolato: km dall'ultima rigenerazione",
+     "unit": "km",
+     "did": "E009",
+     "formula": "(byte(48)*16777216+byte(47)*65536+byte(46)*256+byte(45))/1000",
+     "valid": "(byte(48)*16777216+byte(47)*65536+byte(46)*256+byte(45))/1000<=4294967",
+     "decimals": 1,
+     "slow": true,
+     "source": "OBDb Kia-Ceed, 33 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Filtro antiparticolato: temperatura ingresso (sensore 1)",
+     "unit": "°C",
+     "did": "E009",
+     "formula": "((byte(37)*256+byte(36))*12)/125",
+     "valid": "((byte(37)*256+byte(36))*12)/125<=6291",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 33 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Filtro antiparticolato: temperatura ingresso (sensore 2)",
+     "unit": "°C",
+     "did": "E009",
+     "formula": "((byte(39)*256+byte(38))*12)/125",
+     "valid": "((byte(39)*256+byte(38))*12)/125<=6291",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 33 risposte vere (2025-2025)"
     },
     {
      "label": "Salute batteria 12 V",
@@ -47477,6 +47533,16 @@
      "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
      "slow": true,
      "source": "OBDb Volkswagen-Tiguan, 26 risposte vere (2016-2023)"
+    },
+    {
+     "label": "Filtro antiparticolato: km dall'ultima rigenerazione",
+     "unit": "km",
+     "did": "208D",
+     "formula": "(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))/1000",
+     "valid": "(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))/1000<=4294967",
+     "decimals": 1,
+     "slow": true,
+     "source": "OBDb Volkswagen-Tiguan, 5 risposte vere (2020-2020)"
     },
     {
      "label": "Livello carburante",
