@@ -2,6 +2,194 @@
  "note": "Dati di sola lettura da OBDb (github.com/OBDb), licenza CC BY-SA 4.0: creato da tools/obdb_import.py. Solo segnali con risposte vere registrate su auto vere e decodificate come OBDb. Questo file resta sotto CC BY-SA 4.0 (attribuzione: OBDb contributors).",
  "license": "CC BY-SA 4.0",
  "attribution": "OBDb contributors, https://github.com/OBDb",
+ "paramSets": {
+  "vag-mqb-evo-motore-benzina": [
+   {
+    "label": "Filtro antiparticolato: stadio di carico",
+    "unit": "",
+    "did": "082B",
+    "formula": "byte(0)",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Filtro antiparticolato: temperatura ingresso",
+    "unit": "°C",
+    "did": "082D",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Coppia motore",
+    "unit": "Nm",
+    "did": "1010",
+    "formula": "(s16(byte(0)*256+byte(1)))/10",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Carico dell'alternatore",
+    "unit": "%",
+    "did": "101C",
+    "formula": "(s16(byte(0)*256+byte(1)))/100",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Contachilometri",
+    "unit": "km",
+    "did": "10E0",
+    "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Temperatura refrigerante all'uscita del radiatore",
+    "unit": "°C",
+    "did": "1135",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Consumo carburante",
+    "unit": "l/h",
+    "did": "113F",
+    "formula": "(byte(0)*256+byte(1))/100",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Livello olio motore",
+    "unit": "cm",
+    "did": "11BA",
+    "formula": "(byte(0)*256+byte(1))/2500",
+    "decimals": 2,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Pressione di sovralimentazione",
+    "unit": "kPa",
+    "did": "11F0",
+    "formula": "(byte(0)*256+byte(1))/128",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Giri dell'albero primario del cambio",
+    "unit": "giri/min",
+    "did": "11F1",
+    "formula": "(s16(byte(0)*256+byte(1)))/2",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Temperatura carburante",
+    "unit": "°C",
+    "did": "128A",
+    "formula": "byte(0)*0.75-48",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Livello carburante",
+    "unit": "l",
+    "did": "14B4",
+    "formula": "(byte(0)*256+byte(1))/100",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Pressione carburante (rail)",
+    "unit": "bar",
+    "did": "2027",
+    "formula": "(byte(0)*256+byte(1))/10",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Pressione carburante (rail) richiesta",
+    "unit": "bar",
+    "did": "293B",
+    "formula": "(byte(0)*256+byte(1))/10",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   }
+  ],
+  "vag-mqb-evo-motore-4-cilindri": [
+   {
+    "label": "Preaccensioni totali cil. 1",
+    "unit": "",
+    "did": "1715",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Preaccensioni totali cil. 2",
+    "unit": "",
+    "did": "1718",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Preaccensioni totali cil. 3",
+    "unit": "",
+    "did": "1716",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Preaccensioni totali cil. 4",
+    "unit": "",
+    "did": "1717",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Mancate accensioni cil. 1",
+    "unit": "",
+    "did": "291D",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Mancate accensioni cil. 2",
+    "unit": "",
+    "did": "2920",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Mancate accensioni cil. 3",
+    "unit": "",
+    "did": "291E",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   },
+   {
+    "label": "Mancate accensioni cil. 4",
+    "unit": "",
+    "did": "291F",
+    "formula": "byte(0)*256+byte(1)",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
+   }
+  ]
+ },
  "extras": [
   {
    "brand": "Abarth",
