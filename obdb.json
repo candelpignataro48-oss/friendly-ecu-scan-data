@@ -7303,6 +7303,18 @@
   },
   {
    "brand": "BMW",
+   "model": "X6",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb BMW-X6: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "BMW",
    "model": "Z4",
    "ecu": {
     "name": "Cambio",
@@ -9742,7 +9754,7 @@
    "brand": "Fiat",
    "model": "Fullback",
    "ecu": {
-    "name": "Centralina [6A0]",
+    "name": "Quadro Strumenti",
     "address": "6A0",
     "params": [
      {
@@ -9841,6 +9853,30 @@
     ],
     "tx": "7E1",
     "rx": "7E9"
+   }
+  },
+  {
+   "brand": "Fiat",
+   "model": "Fullback",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "688",
+    "params": [],
+    "source": "OBDb Mitsubishi-Triton: risponde su auto vere",
+    "tx": "688",
+    "rx": "511"
+   }
+  },
+  {
+   "brand": "Fiat",
+   "model": "Fullback",
+   "ecu": {
+    "name": "Trazione integrale",
+    "address": "7B6",
+    "params": [],
+    "source": "OBDb Mitsubishi-Triton: risponde su auto vere",
+    "tx": "7B6",
+    "rx": "7B7"
    }
   },
   {
@@ -13148,6 +13184,16 @@
       "source": "OBDb Honda-ZR-V, 2 risposte vere (2023-2023)"
      }
     ]
+   }
+  },
+  {
+   "brand": "Honda",
+   "model": "ZR-V",
+   "ecu": {
+    "name": "Cambio",
+    "address": "1E",
+    "params": [],
+    "source": "OBDb Honda-ZR-V: risponde su auto vere"
    }
   },
   {
@@ -18179,8 +18225,26 @@
    "ecu": {
     "name": "Climatizzatore",
     "address": "7B3",
-    "params": [],
-    "source": "OBDb Kia-Ceed: risponde su auto vere",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "did": "0100",
+      "formula": "(byte(5))/2-40",
+      "valid": "(byte(5))/2-40>=-40 && (byte(5))/2-40<=80",
+      "decimals": 1,
+      "source": "OBDb Kia-Ceed, 78 risposte vere (2018-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "0100",
+      "formula": "(byte(6))/2-40",
+      "valid": "(byte(6))/2-40>=-40 && (byte(6))/2-40<=80",
+      "decimals": 1,
+      "source": "OBDb Kia-Ceed, 78 risposte vere (2018-2025)"
+     }
+    ],
     "tx": "7B3",
     "rx": "7BB"
    }
@@ -22518,8 +22582,26 @@
    "ecu": {
     "name": "Climatizzatore",
     "address": "7B3",
-    "params": [],
-    "source": "OBDb Kia-XCeed: risponde su auto vere",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "did": "0100",
+      "formula": "(byte(5))/2-40",
+      "valid": "(byte(5))/2-40>=-40 && (byte(5))/2-40<=80",
+      "decimals": 1,
+      "source": "OBDb Kia-Ceed, 78 risposte vere (2018-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "0100",
+      "formula": "(byte(6))/2-40",
+      "valid": "(byte(6))/2-40>=-40 && (byte(6))/2-40<=80",
+      "decimals": 1,
+      "source": "OBDb Kia-Ceed, 78 risposte vere (2018-2025)"
+     }
+    ],
     "tx": "7B3",
     "rx": "7BB"
    }
@@ -29758,7 +29840,7 @@
    "brand": "Mitsubishi",
    "model": "ASX (I)",
    "ecu": {
-    "name": "Centralina [688]",
+    "name": "Climatizzatore",
     "address": "688",
     "params": [
      {
@@ -29779,7 +29861,7 @@
    "brand": "Mitsubishi",
    "model": "ASX (I)",
    "ecu": {
-    "name": "Centralina [6A0]",
+    "name": "Quadro Strumenti",
     "address": "6A0",
     "params": [
      {
@@ -29800,7 +29882,7 @@
    "brand": "Mitsubishi",
    "model": "ASX (I)",
    "ecu": {
-    "name": "Centralina [784]",
+    "name": "ABS / ESP",
     "address": "784",
     "params": [
      {
@@ -29901,7 +29983,7 @@
    "brand": "Mitsubishi",
    "model": "L200 (V)",
    "ecu": {
-    "name": "Centralina [6A0]",
+    "name": "Quadro Strumenti",
     "address": "6A0",
     "params": [
      {
@@ -29998,6 +30080,126 @@
       "source": "OBDb Mitsubishi-Triton, 13 risposte vere (2018-2018)"
      }
     ],
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "L200 (V)",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "688",
+    "params": [],
+    "source": "OBDb Mitsubishi-Triton: risponde su auto vere",
+    "tx": "688",
+    "rx": "511"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "L200 (V)",
+   "ecu": {
+    "name": "Trazione integrale",
+    "address": "7B6",
+    "params": [],
+    "source": "OBDb Mitsubishi-Triton: risponde su auto vere",
+    "tx": "7B6",
+    "rx": "7B7"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "688",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "688",
+    "rx": "511"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "6A0",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "6A0",
+    "rx": "514"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "784",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "784",
+    "rx": "785"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer Evolution X",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "688",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "688",
+    "rx": "511"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer Evolution X",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "6A0",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "6A0",
+    "rx": "514"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer Evolution X",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "784",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
+    "tx": "784",
+    "rx": "785"
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer Evolution X",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb Mitsubishi-Lancer: risponde su auto vere",
     "tx": "7E1",
     "rx": "7E9"
    }
@@ -31611,7 +31813,7 @@
    "brand": "Peugeot",
    "model": "4008",
    "ecu": {
-    "name": "Centralina [688]",
+    "name": "Climatizzatore",
     "address": "688",
     "params": [
      {
@@ -31632,7 +31834,7 @@
    "brand": "Peugeot",
    "model": "4008",
    "ecu": {
-    "name": "Centralina [6A0]",
+    "name": "Quadro Strumenti",
     "address": "6A0",
     "params": [
      {
@@ -31697,6 +31899,18 @@
     ],
     "tx": "7E1",
     "rx": "7E9"
+   }
+  },
+  {
+   "brand": "Peugeot",
+   "model": "4008",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "784",
+    "params": [],
+    "source": "OBDb Mitsubishi-Outlander-Sport: risponde su auto vere",
+    "tx": "784",
+    "rx": "785"
    }
   },
   {
@@ -31908,6 +32122,18 @@
     ],
     "tx": "7E0",
     "rx": "7E8"
+   }
+  },
+  {
+   "brand": "Porsche",
+   "model": "911 (991)",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb Porsche-911: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
    }
   },
   {
@@ -35803,37 +36029,37 @@
       "label": "Pressione gomma ant. DX",
       "unit": "bar",
       "did": "1022",
-      "formula": "((byte(2))/5)*0.0689476",
-      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Forester, 58 risposte vere (2015-2026)"
-     },
-     {
-      "label": "Pressione gomma ant. SX",
-      "unit": "bar",
-      "did": "1022",
-      "formula": "((byte(3))/5)*0.0689476",
-      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Forester, 55 risposte vere (2015-2026)"
-     },
-     {
-      "label": "Pressione gomma post. DX",
-      "unit": "bar",
-      "did": "1022",
       "formula": "((byte(1))/5)*0.0689476",
       "valid": "(byte(1))/5>0 && (byte(1))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Forester, 57 risposte vere (2015-2026)"
      },
      {
-      "label": "Pressione gomma post. SX",
+      "label": "Pressione gomma ant. SX",
       "unit": "bar",
       "did": "1022",
       "formula": "((byte(0))/5)*0.0689476",
       "valid": "(byte(0))/5>0 && (byte(0))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Forester, 56 risposte vere (2015-2026)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(2))/5)*0.0689476",
+      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Forester, 58 risposte vere (2015-2026)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(3))/5)*0.0689476",
+      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Forester, 55 risposte vere (2015-2026)"
      }
     ],
     "tx": "753",
@@ -35940,37 +36166,37 @@
       "label": "Pressione gomma ant. DX",
       "unit": "bar",
       "did": "1022",
-      "formula": "((byte(2))/5)*0.0689476",
-      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Forester, 58 risposte vere (2015-2026)"
-     },
-     {
-      "label": "Pressione gomma ant. SX",
-      "unit": "bar",
-      "did": "1022",
-      "formula": "((byte(3))/5)*0.0689476",
-      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Forester, 55 risposte vere (2015-2026)"
-     },
-     {
-      "label": "Pressione gomma post. DX",
-      "unit": "bar",
-      "did": "1022",
       "formula": "((byte(1))/5)*0.0689476",
       "valid": "(byte(1))/5>0 && (byte(1))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Forester, 57 risposte vere (2015-2026)"
      },
      {
-      "label": "Pressione gomma post. SX",
+      "label": "Pressione gomma ant. SX",
       "unit": "bar",
       "did": "1022",
       "formula": "((byte(0))/5)*0.0689476",
       "valid": "(byte(0))/5>0 && (byte(0))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Forester, 56 risposte vere (2015-2026)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(2))/5)*0.0689476",
+      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Forester, 58 risposte vere (2015-2026)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(3))/5)*0.0689476",
+      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Forester, 55 risposte vere (2015-2026)"
      }
     ],
     "tx": "753",
@@ -36335,37 +36561,37 @@
       "label": "Pressione gomma ant. DX",
       "unit": "bar",
       "did": "1022",
-      "formula": "((byte(2))/5)*0.0689476",
-      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
-     },
-     {
-      "label": "Pressione gomma ant. SX",
-      "unit": "bar",
-      "did": "1022",
-      "formula": "((byte(3))/5)*0.0689476",
-      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
-     },
-     {
-      "label": "Pressione gomma post. DX",
-      "unit": "bar",
-      "did": "1022",
       "formula": "((byte(1))/5)*0.0689476",
       "valid": "(byte(1))/5>0 && (byte(1))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Impreza, 82 risposte vere (2009-2025)"
      },
      {
-      "label": "Pressione gomma post. SX",
+      "label": "Pressione gomma ant. SX",
       "unit": "bar",
       "did": "1022",
       "formula": "((byte(0))/5)*0.0689476",
       "valid": "(byte(0))/5>0 && (byte(0))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Impreza, 80 risposte vere (2012-2025)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(2))/5)*0.0689476",
+      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(3))/5)*0.0689476",
+      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
      }
     ],
     "tx": "753",
@@ -36472,37 +36698,37 @@
       "label": "Pressione gomma ant. DX",
       "unit": "bar",
       "did": "1022",
-      "formula": "((byte(2))/5)*0.0689476",
-      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
-     },
-     {
-      "label": "Pressione gomma ant. SX",
-      "unit": "bar",
-      "did": "1022",
-      "formula": "((byte(3))/5)*0.0689476",
-      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
-      "decimals": 2,
-      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
-     },
-     {
-      "label": "Pressione gomma post. DX",
-      "unit": "bar",
-      "did": "1022",
       "formula": "((byte(1))/5)*0.0689476",
       "valid": "(byte(1))/5>0 && (byte(1))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Impreza, 82 risposte vere (2009-2025)"
      },
      {
-      "label": "Pressione gomma post. SX",
+      "label": "Pressione gomma ant. SX",
       "unit": "bar",
       "did": "1022",
       "formula": "((byte(0))/5)*0.0689476",
       "valid": "(byte(0))/5>0 && (byte(0))/5<=51",
       "decimals": 2,
       "source": "OBDb Subaru-Impreza, 80 risposte vere (2012-2025)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(2))/5)*0.0689476",
+      "valid": "(byte(2))/5>0 && (byte(2))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "1022",
+      "formula": "((byte(3))/5)*0.0689476",
+      "valid": "(byte(3))/5>0 && (byte(3))/5<=51",
+      "decimals": 2,
+      "source": "OBDb Subaru-Impreza, 81 risposte vere (2012-2025)"
      }
     ],
     "tx": "753",
@@ -41551,6 +41777,18 @@
       "source": "OBDb Toyota-Land-Cruiser, 13 risposte vere (2023-2025)"
      }
     ]
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Land Cruiser (J150)",
+   "ecu": {
+    "name": "Freno di stazionamento",
+    "address": "7D0",
+    "params": [],
+    "source": "OBDb Toyota-Land-Cruiser: risponde su auto vere",
+    "tx": "7D0",
+    "rx": "7D8"
    }
   },
   {
