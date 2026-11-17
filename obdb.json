@@ -188,6 +188,121 @@
     "decimals": 0,
     "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su un'Audi A3 (MQB-EVO) all'indirizzo 17FC0076"
    }
+  ],
+  "vag-ea288-tdi-motore": [
+   {
+    "label": "Marcia inserita",
+    "unit": "",
+    "did": "100D",
+    "formula": "s8(byte(0))",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Coppia motore",
+    "unit": "Nm",
+    "did": "1047",
+    "formula": "s16(byte(0)*256+byte(1))/10",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Carico dell'alternatore",
+    "unit": "%",
+    "did": "105C",
+    "formula": "(byte(0)*256+byte(1))/100",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Tensione batteria 12 V",
+    "unit": "V",
+    "did": "105E",
+    "formula": "(byte(0)*256+byte(1))/50",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Temperatura gas di scarico, sensore 1",
+    "unit": "°C",
+    "did": "10FB",
+    "formula": "s16(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Temperatura gas di scarico, sensore 2",
+    "unit": "°C",
+    "did": "14F7",
+    "formula": "s16(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Filtro antiparticolato: temperatura ingresso",
+    "unit": "°C",
+    "did": "11B2",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Filtro antiparticolato: temperatura uscita",
+    "unit": "°C",
+    "did": "10F9",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Filtro antiparticolato: temperatura superficie",
+    "unit": "°C",
+    "did": "1044",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Velocità ventola radiatore",
+    "unit": "%",
+    "did": "1116",
+    "formula": "s16(byte(0)*256+byte(1))/100",
+    "decimals": 0,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Consumo carburante",
+    "unit": "l/h",
+    "did": "111A",
+    "formula": "s16(byte(0)*256+byte(1))/100",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Livello olio motore (mm)",
+    "unit": "mm",
+    "did": "11BC",
+    "formula": "s16(byte(0)*256+byte(1))/250",
+    "decimals": 1,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Temperatura aria dopo intercooler",
+    "unit": "°C",
+    "did": "1628",
+    "formula": "(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   },
+   {
+    "label": "Temperatura aria all'uscita del turbo (calcolata)",
+    "unit": "°C",
+    "did": "1798",
+    "formula": "s16(byte(0)*256+byte(1))/10-273.1",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
+   }
   ]
  },
  "extras": [
@@ -266,15 +381,6 @@
    "brand": "Audi",
    "model": "A1",
    "engineParams": [
-    {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Audi-A1, 2 risposte vere (2015-2015)"
-    },
     {
      "label": "Temperatura carburante",
      "unit": "°C",
@@ -581,15 +687,6 @@
      "source": "OBDb Audi-A3, 11 risposte vere (2013-2018)"
     },
     {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Audi-A3, 4 risposte vere (2015-2015)"
-    },
-    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "162D",
@@ -838,15 +935,6 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Audi-S4, 9 risposte vere (2018-2023)"
-    },
-    {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Audi-S4, 3 risposte vere (2010-2015)"
     },
     {
      "label": "Temperatura carburante",
@@ -1201,15 +1289,6 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Audi-S5, 10 risposte vere (2017-2024)"
-     },
-     {
-      "label": "Pressione turbo",
-      "unit": "bar",
-      "did": "1057",
-      "formula": "(byte(0)*256+byte(1))/1000",
-      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-      "decimals": 2,
-      "source": "OBDb Audi-A5, 5 risposte vere (2009-2019)"
      },
      {
       "label": "Temperatura carburante",
@@ -1572,15 +1651,6 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Audi-A7, 3 risposte vere (2020-2020)"
-     },
-     {
-      "label": "Pressione turbo",
-      "unit": "bar",
-      "did": "1057",
-      "formula": "(byte(0)*256+byte(1))/1000",
-      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-      "decimals": 2,
-      "source": "OBDb Audi-A7, 14 risposte vere (2011-2014)"
      },
      {
       "label": "Temperatura carburante",
@@ -2315,15 +2385,6 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "source": "OBDb Audi-Q5, 8 risposte vere (2018-2022)"
-    },
-    {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Audi-Q5, 2 risposte vere (2015-2015)"
     },
     {
      "label": "Temperatura carburante",
@@ -3772,7 +3833,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-2-Series, 18 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 21 risposte vere (2015-2016)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -3781,7 +3842,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-2-Series, 22 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 23 risposte vere (2015-2016)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -3790,7 +3851,7 @@
       "formula": "(s16(byte(6)*256+byte(5)))/1000",
       "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-2-Series, 22 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 21 risposte vere (2015-2016)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -3806,7 +3867,7 @@
       "did": "DC98",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-2-Series, 17 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 20 risposte vere (2015-2016)"
      },
      {
       "label": "Temperatura gomma post. DX",
@@ -3814,7 +3875,7 @@
       "did": "DC9B",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-2-Series, 22 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 23 risposte vere (2015-2016)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -3822,7 +3883,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-2-Series, 21 risposte vere (2015-2016)"
+      "source": "OBDb BMW-2-Series, 20 risposte vere (2015-2016)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -4418,7 +4479,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 38 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 40 risposte vere (2020-2026)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -4427,7 +4488,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 37 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 38 risposte vere (2020-2026)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -4436,7 +4497,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 35 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 36 risposte vere (2020-2026)"
      },
      {
       "label": "Pressione gomma post. SX",
@@ -4445,7 +4506,7 @@
       "formula": "(byte(5)*256+byte(6))/1000",
       "valid": "(byte(5)*256+byte(6))/1000<6.3 && (byte(5)*256+byte(6))/1000<=6.3",
       "decimals": 2,
-      "source": "OBDb BMW-3-Series, 34 risposte vere (2020-2026)"
+      "source": "OBDb BMW-3-Series, 35 risposte vere (2020-2026)"
      },
      {
       "label": "Temperatura gomma ant. DX",
@@ -4453,7 +4514,7 @@
       "did": "DC99",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-3-Series-eDrive, 27 risposte vere (2018-2021)"
+      "source": "OBDb BMW-3-Series-eDrive, 28 risposte vere (2018-2021)"
      },
      {
       "label": "Temperatura gomma ant. SX",
@@ -4469,7 +4530,7 @@
       "did": "DC9B",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-3-Series-eDrive, 28 risposte vere (2018-2021)"
+      "source": "OBDb BMW-3-Series-eDrive, 27 risposte vere (2018-2021)"
      },
      {
       "label": "Temperatura gomma post. SX",
@@ -4477,7 +4538,7 @@
       "did": "DC9A",
       "formula": "s8(byte(7))",
       "valid": "s8(byte(7))>=-128 && s8(byte(7))<=127",
-      "source": "OBDb BMW-3-Series-eDrive, 28 risposte vere (2018-2021)"
+      "source": "OBDb BMW-3-Series-eDrive, 30 risposte vere (2018-2021)"
      },
      {
       "label": "Velocità ruota ant. DX",
@@ -11237,7 +11298,7 @@
      "formula": "byte(0)*65536+byte(1)*256+byte(2)",
      "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
      "slow": true,
-     "source": "OBDb Ford-Mondeo, 20 risposte vere (2011-2021)"
+     "source": "OBDb Ford-Mondeo, 22 risposte vere (2011-2021)"
     },
     {
      "label": "Livello carburante",
@@ -11246,7 +11307,7 @@
      "formula": "(byte(0)*100)/255",
      "valid": "(byte(0)*100)/255<=100",
      "decimals": 1,
-     "source": "OBDb Ford-Mondeo, 10 risposte vere (2011-2021)"
+     "source": "OBDb Ford-Mondeo, 11 risposte vere (2011-2021)"
     }
    ]
   },
@@ -11344,7 +11405,7 @@
      "formula": "byte(0)*65536+byte(1)*256+byte(2)",
      "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
      "slow": true,
-     "source": "OBDb Ford-Mondeo, 20 risposte vere (2011-2021)"
+     "source": "OBDb Ford-Mondeo, 22 risposte vere (2011-2021)"
     },
     {
      "label": "Km dall'ultimo cambio olio",
@@ -11353,7 +11414,7 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "source": "OBDb Ford-Mondeo, 5 risposte vere (2015-2019)"
+     "source": "OBDb Ford-Mondeo, 7 risposte vere (2015-2019)"
     },
     {
      "label": "Livello carburante",
@@ -11362,7 +11423,7 @@
      "formula": "(byte(0)*100)/255",
      "valid": "(byte(0)*100)/255<=100",
      "decimals": 1,
-     "source": "OBDb Ford-Mondeo, 10 risposte vere (2011-2021)"
+     "source": "OBDb Ford-Mondeo, 11 risposte vere (2011-2021)"
     },
     {
      "label": "Pressione olio motore",
@@ -11370,7 +11431,7 @@
      "did": "0415",
      "formula": "s16(byte(0)*256+byte(1))",
      "valid": "s16(byte(0)*256+byte(1))>=-32768 && s16(byte(0)*256+byte(1))<=32767",
-     "source": "OBDb Ford-Mondeo, 3 risposte vere (2015-2019)"
+     "source": "OBDb Ford-Mondeo, 5 risposte vere (2015-2019)"
     },
     {
      "label": "Temperatura aria dopo intercooler",
@@ -11378,7 +11439,7 @@
      "did": "051C",
      "formula": "byte(0)-40",
      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
-     "source": "OBDb Ford-Mondeo, 4 risposte vere (2015-2019)"
+     "source": "OBDb Ford-Mondeo, 9 risposte vere (2015-2019)"
     },
     {
      "label": "Temperatura olio cambio",
@@ -11395,7 +11456,7 @@
      "did": "03F3",
      "formula": "byte(0)-40",
      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
-     "source": "OBDb Ford-Mondeo, 4 risposte vere (2015-2019)"
+     "source": "OBDb Ford-Mondeo, 11 risposte vere (2015-2019)"
     },
     {
      "label": "Vita olio residua",
@@ -11404,7 +11465,7 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=100",
      "slow": true,
-     "source": "OBDb Ford-Mondeo, 18 risposte vere (2015-2019)"
+     "source": "OBDb Ford-Mondeo, 19 risposte vere (2015-2019)"
     }
    ]
   },
@@ -12698,7 +12759,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 114 risposte vere (2016-2026)"
      }
     ]
    }
@@ -12773,7 +12834,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 114 risposte vere (2016-2026)"
      }
     ]
    }
@@ -12864,7 +12925,7 @@
       "did": "2301",
       "formula": "byte(26)-40",
       "valid": "byte(26)-40>=-40 && byte(26)-40<=215",
-      "source": "OBDb Honda-Civic, 112 risposte vere (2016-2026)"
+      "source": "OBDb Honda-Civic, 114 risposte vere (2016-2026)"
      }
     ]
    }
@@ -13553,7 +13614,7 @@
       "formula": "(byte(31))/2",
       "valid": "(byte(31))/2<=100",
       "decimals": 1,
-      "source": "OBDb Hyundai-IONIQ-5, 367 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 365 risposte vere (2022-2027)"
      },
      {
       "label": "Energia caricata totale",
@@ -13563,7 +13624,7 @@
       "valid": "(byte(38)*16777216+byte(39)*65536+byte(40)*256+byte(41))/10<=429496729.5",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 649 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 655 risposte vere (2022-2027)"
      },
      {
       "label": "Energia erogata totale",
@@ -13573,7 +13634,7 @@
       "valid": "(byte(42)*16777216+byte(43)*65536+byte(44)*256+byte(45))/10<=429496729.5",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 649 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 655 risposte vere (2022-2027)"
      },
      {
       "label": "Salute batteria di trazione",
@@ -13583,7 +13644,7 @@
       "valid": "(byte(25)*256+byte(26))/10>0 && (byte(25)*256+byte(26))/10<=100",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-IONIQ-5, 365 risposte vere (2022-2027)"
+      "source": "OBDb Hyundai-IONIQ-5, 363 risposte vere (2022-2027)"
      }
     ],
     "tx": "7E4",
@@ -14185,7 +14246,7 @@
       "formula": "(byte(4))/2",
       "valid": "(byte(4))/2<=100",
       "decimals": 1,
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Corrente batteria di trazione",
@@ -14194,7 +14255,7 @@
       "formula": "(s16(byte(10)*256+byte(11)))/10",
       "valid": "(s16(byte(10)*256+byte(11)))/10>=-3276.8 && (s16(byte(10)*256+byte(11)))/10<=3276.7",
       "decimals": 1,
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Resistenza di isolamento",
@@ -14202,7 +14263,7 @@
       "did": "0101",
       "formula": "byte(57)*256+byte(58)",
       "valid": "byte(57)*256+byte(58)<=65535",
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Salute batteria di trazione",
@@ -14212,7 +14273,7 @@
       "valid": "(byte(25)*256+byte(26))/10<=100",
       "decimals": 1,
       "slow": true,
-      "source": "OBDb Hyundai-Kona-Electric, 109 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 110 risposte vere (2020-2024)"
      },
      {
       "label": "Temperatura batteria (max)",
@@ -14220,7 +14281,7 @@
       "did": "0101",
       "formula": "s8(byte(14))",
       "valid": "s8(byte(14))>=-127 && s8(byte(14))<=127",
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Temperatura batteria (min)",
@@ -14228,7 +14289,7 @@
       "did": "0101",
       "formula": "s8(byte(15))",
       "valid": "s8(byte(15))>=-127 && s8(byte(15))<=127",
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Tensione cella più alta",
@@ -14237,7 +14298,7 @@
       "formula": "(byte(23))/50",
       "valid": "(byte(23))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      },
      {
       "label": "Tensione cella più bassa",
@@ -14246,7 +14307,7 @@
       "formula": "(byte(25))/50",
       "valid": "(byte(25))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Hyundai-Kona-Electric, 200 risposte vere (2020-2024)"
+      "source": "OBDb Hyundai-Kona-Electric, 202 risposte vere (2020-2024)"
      }
     ],
     "tx": "7E4",
@@ -19654,7 +19715,7 @@
       "formula": "(byte(4))/2",
       "valid": "(byte(4))/2<=100",
       "decimals": 1,
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Corrente batteria di trazione",
@@ -19663,7 +19724,7 @@
       "formula": "(s16(byte(10)*256+byte(11)))/10",
       "valid": "(s16(byte(10)*256+byte(11)))/10>=-3276.8 && (s16(byte(10)*256+byte(11)))/10<=3276.7",
       "decimals": 1,
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Resistenza di isolamento",
@@ -19671,7 +19732,7 @@
       "did": "0101",
       "formula": "byte(57)*256+byte(58)",
       "valid": "byte(57)*256+byte(58)<=65535",
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Salute batteria di trazione",
@@ -19689,7 +19750,7 @@
       "did": "0101",
       "formula": "s8(byte(14))",
       "valid": "s8(byte(14))>=-127 && s8(byte(14))<=127",
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Temperatura batteria (min)",
@@ -19697,7 +19758,7 @@
       "did": "0101",
       "formula": "s8(byte(15))",
       "valid": "s8(byte(15))>=-127 && s8(byte(15))<=127",
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Tensione cella più alta",
@@ -19706,7 +19767,7 @@
       "formula": "(byte(23))/50",
       "valid": "(byte(23))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      },
      {
       "label": "Tensione cella più bassa",
@@ -19715,7 +19776,7 @@
       "formula": "(byte(25))/50",
       "valid": "(byte(25))/50<=5.1",
       "decimals": 2,
-      "source": "OBDb Kia-Niro-EV, 245 risposte vere (2019-2026)"
+      "source": "OBDb Kia-Niro-EV, 247 risposte vere (2019-2026)"
      }
     ],
     "tx": "7E4",
@@ -27883,7 +27944,7 @@
      "formula": "(byte(0)*100)/255",
      "valid": "(byte(0)*100)/255<=100",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 20 risposte vere (2011-2025)"
+     "source": "OBDb Mazda-3, 22 risposte vere (2011-2025)"
     },
     {
      "label": "Temperatura olio motore",
@@ -27892,7 +27953,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 35 risposte vere (2012-2026)"
+     "source": "OBDb Mazda-3, 36 risposte vere (2012-2026)"
     }
    ]
   },
@@ -27952,7 +28013,7 @@
      "formula": "(byte(0)*100)/255",
      "valid": "(byte(0)*100)/255<=100",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 20 risposte vere (2011-2025)"
+     "source": "OBDb Mazda-3, 22 risposte vere (2011-2025)"
     },
     {
      "label": "Pressione olio motore",
@@ -27969,7 +28030,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 35 risposte vere (2012-2026)"
+     "source": "OBDb Mazda-3, 36 risposte vere (2012-2026)"
     }
    ]
   },
@@ -28038,7 +28099,7 @@
      "formula": "(byte(0)*100)/255",
      "valid": "(byte(0)*100)/255<=100",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 20 risposte vere (2011-2025)"
+     "source": "OBDb Mazda-3, 22 risposte vere (2011-2025)"
     },
     {
      "label": "Pressione olio motore",
@@ -28055,7 +28116,7 @@
      "formula": "(byte(0)*256+byte(1))/100-40",
      "valid": "(byte(0)*256+byte(1))/100-40>=-40 && (byte(0)*256+byte(1))/100-40<=615.35",
      "decimals": 1,
-     "source": "OBDb Mazda-3, 35 risposte vere (2012-2026)"
+     "source": "OBDb Mazda-3, 36 risposte vere (2012-2026)"
     }
    ]
   },
@@ -30705,7 +30766,7 @@
       "formula": "(byte(0)*1.7236894)*0.01",
       "valid": "byte(0)*1.7236894<=439.5",
       "decimals": 2,
-      "source": "OBDb Nissan-Leaf, 3 risposte vere (2018-2024)"
+      "source": "OBDb Nissan-Leaf, 4 risposte vere (2018-2024)"
      },
      {
       "label": "Pressione gomma ant. SX",
@@ -30714,7 +30775,7 @@
       "formula": "(byte(0)*1.7236894)*0.01",
       "valid": "byte(0)*1.7236894<=439.5",
       "decimals": 2,
-      "source": "OBDb Nissan-Leaf, 7 risposte vere (2018-2024)"
+      "source": "OBDb Nissan-Leaf, 8 risposte vere (2018-2024)"
      },
      {
       "label": "Pressione gomma post. DX",
@@ -30732,7 +30793,7 @@
       "formula": "(byte(0)*1.7236894)*0.01",
       "valid": "byte(0)*1.7236894<=439.5",
       "decimals": 2,
-      "source": "OBDb Nissan-Leaf, 5 risposte vere (2018-2024)"
+      "source": "OBDb Nissan-Leaf, 6 risposte vere (2018-2024)"
      }
     ],
     "tx": "743",
@@ -34537,15 +34598,6 @@
      "source": "OBDb Seat-Ateca, 4 risposte vere (2018-2018)"
     },
     {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Seat-Ateca, 3 risposte vere (2017-2017)"
-    },
-    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "162D",
@@ -35096,15 +35148,6 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Seat-Leon, 3 risposte vere (2018-2019)"
-    },
-    {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Seat-Leon, 4 risposte vere (2012-2012)"
     },
     {
      "label": "Temperatura carburante",
@@ -47177,15 +47220,6 @@
       "source": "OBDb Volkswagen-Passat, 6 risposte vere (2011-2018)"
      },
      {
-      "label": "Pressione turbo",
-      "unit": "bar",
-      "did": "1057",
-      "formula": "(byte(0)*256+byte(1))/1000",
-      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-      "decimals": 2,
-      "source": "OBDb Volkswagen-Passat, 9 risposte vere (2012-2019)"
-     },
-     {
       "label": "Temperatura carburante",
       "unit": "°C",
       "did": "162D",
@@ -47940,15 +47974,6 @@
      "source": "OBDb Volkswagen-T-Roc, 2 risposte vere (2022-2022)"
     },
     {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Volkswagen-T-Roc, 2 risposte vere (2021-2021)"
-    },
-    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "128A",
@@ -48294,15 +48319,6 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Volkswagen-Tiguan, 7 risposte vere (2016-2024)"
-    },
-    {
-     "label": "Pressione turbo",
-     "unit": "bar",
-     "did": "1057",
-     "formula": "(byte(0)*256+byte(1))/1000",
-     "valid": "(byte(0)*256+byte(1))/1000<=65.535",
-     "decimals": 2,
-     "source": "OBDb Volkswagen-Tiguan, 4 risposte vere (2018-2018)"
     },
     {
      "label": "Temperatura carburante",
