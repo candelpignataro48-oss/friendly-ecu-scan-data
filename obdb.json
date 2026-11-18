@@ -303,6 +303,48 @@
     "decimals": 1,
     "source": "OBDb (CC BY-SA 4.0), formule dei motori Volkswagen; risposte confermate su una VW Tiguan 2.0 TDI (EA288) del 2018"
    }
+  ],
+  "fca-gpec4-gse-motore": [
+   {
+    "label": "Pressione olio motore",
+    "unit": "bar",
+    "did": "022A",
+    "formula": "A*0.04",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+   },
+   {
+    "label": "Pressione del climatizzatore",
+    "unit": "bar",
+    "did": "0329",
+    "formula": "A*0.14",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+   },
+   {
+    "label": "Tempo di iniezione cilindro 1",
+    "unit": "ms",
+    "did": "0234",
+    "formula": "(A*16777216+B*65536+C*256+D)/1000",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+   },
+   {
+    "label": "Tempo di iniezione cilindro 2",
+    "unit": "ms",
+    "did": "0235",
+    "formula": "(A*16777216+B*65536+C*256+D)/1000",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+   },
+   {
+    "label": "Tempo di iniezione cilindro 3",
+    "unit": "ms",
+    "did": "0236",
+    "formula": "(A*16777216+B*65536+C*256+D)/1000",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+   }
   ]
  },
  "extras": [
@@ -17305,6 +17347,22 @@
       "formula": "byte(0)-40",
       "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
       "source": "OBDb Jeep-Compass, 9 risposte vere (2018-2026)"
+     },
+     {
+      "label": "Coppia motore (dal cambio)",
+      "unit": "Nm",
+      "did": "1018",
+      "formula": "(byte(0)*256+byte(1))-500",
+      "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
+      "source": "OBDb Jeep-Compass, 11 risposte vere (2018-2020)"
+     },
+     {
+      "label": "Giri in uscita dal cambio",
+      "unit": "giri/min",
+      "did": "2102",
+      "formula": "(byte(0)*256+byte(1))/4",
+      "valid": "(byte(0)*256+byte(1))/4<=16383",
+      "source": "OBDb Jeep-Compass, 10 risposte vere (2018-2020)"
      }
     ]
    }
@@ -17991,6 +18049,22 @@
       "formula": "byte(0)-40",
       "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
       "source": "OBDb Jeep-Renegade, 9 risposte vere (2015-2021)"
+     },
+     {
+      "label": "Coppia motore (dal cambio)",
+      "unit": "Nm",
+      "did": "1018",
+      "formula": "(byte(0)*256+byte(1))-500",
+      "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
+      "source": "OBDb Jeep-Renegade, 18 risposte vere (2015-2021)"
+     },
+     {
+      "label": "Giri in uscita dal cambio",
+      "unit": "giri/min",
+      "did": "2102",
+      "formula": "(byte(0)*256+byte(1))/4",
+      "valid": "(byte(0)*256+byte(1))/4<=16383",
+      "source": "OBDb Jeep-Renegade, 13 risposte vere (2015-2021)"
      }
     ]
    }
