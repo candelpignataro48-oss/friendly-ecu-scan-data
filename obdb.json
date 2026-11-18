@@ -311,7 +311,8 @@
     "did": "022A",
     "formula": "A*0.04",
     "decimals": 2,
-    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "A*0.04<=10"
    },
    {
     "label": "Pressione del climatizzatore",
@@ -319,7 +320,9 @@
     "did": "0329",
     "formula": "A*0.14",
     "decimals": 1,
-    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "A*0.14<=35",
+    "extra": true
    },
    {
     "label": "Tempo di iniezione cilindro 1",
@@ -327,7 +330,8 @@
     "did": "0234",
     "formula": "(A*16777216+B*65536+C*256+D)/1000",
     "decimals": 2,
-    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*16777216+B*65536+C*256+D)/1000<=50"
    },
    {
     "label": "Tempo di iniezione cilindro 2",
@@ -335,7 +339,8 @@
     "did": "0235",
     "formula": "(A*16777216+B*65536+C*256+D)/1000",
     "decimals": 2,
-    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*16777216+B*65536+C*256+D)/1000<=50"
    },
    {
     "label": "Tempo di iniezione cilindro 3",
@@ -343,7 +348,97 @@
     "did": "0236",
     "formula": "(A*16777216+B*65536+C*256+D)/1000",
     "decimals": 2,
-    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*16777216+B*65536+C*256+D)/1000<=50"
+   },
+   {
+    "label": "Pressione rail misurata",
+    "unit": "bar",
+    "did": "06F3",
+    "formula": "(A*256+B)/100",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021 (rail a 201 bar con richiesta a 194,6 bar)",
+    "valid": "(A*256+B)/100<=350"
+   },
+   {
+    "label": "Pressione rail richiesta",
+    "unit": "bar",
+    "did": "1D89",
+    "formula": "(A*256+B)/100",
+    "decimals": 1,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021 (rail a 201 bar con richiesta a 194,6 bar)",
+    "valid": "(A*256+B)/100<=350",
+    "extra": true
+   },
+   {
+    "label": "Pressione prima della farfalla",
+    "unit": "bar",
+    "did": "1247",
+    "formula": "(A*256+B)/16000",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*256+B)/16000<=4"
+   },
+   {
+    "label": "Sensore battito in testa",
+    "unit": "V",
+    "did": "01A9",
+    "formula": "(A*256+B)/13107",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*256+B)/13107<=5",
+    "extra": true
+   },
+   {
+    "label": "Sensore valvola del turbo (wastegate)",
+    "unit": "V",
+    "did": "1F59",
+    "formula": "(A*256+B)*61/12500",
+    "decimals": 2,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "(A*256+B)*61/12500<=5",
+    "extra": true
+   },
+   {
+    "label": "Km in centralina motore",
+    "unit": "km",
+    "did": "043B",
+    "formula": "(A*256+B)*13.184",
+    "decimals": 0,
+    "slow": true,
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "note": "La centralina motore salva i km a scatti di circa 13 km e li aggiorna meno spesso del quadro: qualche centinaio di km in meno del contachilometri è normale (sulla Tipo del proprietario 79.775 contro 80.275). Una differenza di migliaia di km può far pensare a un contachilometri modificato.",
+    "valid": "(A*256+B)*13.184<=2000000",
+    "extra": true
+   },
+   {
+    "label": "Temperatura aria dopo l'intercooler",
+    "unit": "°C",
+    "did": "1250",
+    "formula": "A-64",
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "valid": "A-64<=150",
+    "extra": true
+   },
+   {
+    "label": "Temperatura catalizzatore (calcolata)",
+    "unit": "°C",
+    "did": "012B",
+    "formula": "A*256+B",
+    "valid": "A*256+B<=1100",
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA; risposte confermate su una Fiat Tipo Cross 1.0 T3 FireFly del 2021",
+    "extra": true
+   }
+  ],
+  "fca-gpec4-gse-cil4": [
+   {
+    "label": "Tempo di iniezione cilindro 4",
+    "unit": "ms",
+    "did": "0237",
+    "formula": "(A*16777216+B*65536+C*256+D)/1000",
+    "decimals": 2,
+    "valid": "(A*16777216+B*65536+C*256+D)/1000<=50",
+    "source": "OBDb (CC BY-SA 4.0), formule delle centraline motore Continental GPEC del gruppo FCA (0234-0239 = cilindri 1-6); cilindri 1-3 confermati su una Fiat Tipo Cross 1.0 T3 FireFly del 2021"
    }
   ]
  },
@@ -423,6 +518,22 @@
    "brand": "Audi",
    "model": "A1",
    "engineParams": [
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "1148",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-A1, 2 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 4",
+     "unit": "",
+     "did": "1149",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-A1, 2 risposte vere (2015-2015)"
+    },
     {
      "label": "Temperatura carburante",
      "unit": "°C",
@@ -729,6 +840,54 @@
      "source": "OBDb Audi-A3, 11 risposte vere (2013-2018)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-A3-e-tron, 5 risposte vere (2017-2017)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "200A",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-S3, 2 risposte vere (2016-2016)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "200B",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-S3, 2 risposte vere (2016-2016)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "200C",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-A3, 3 risposte vere (2017-2017)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "200D",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-A3, 2 risposte vere (2017-2017)",
+     "extra": true
+    },
+    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "162D",
@@ -977,6 +1136,39 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Audi-S4, 9 risposte vere (2018-2023)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 1",
+     "unit": "",
+     "did": "1147",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-S4, 2 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-S4, 4 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "10F4",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-S4, 4 risposte vere (2020-2020)"
+    },
+    {
+     "label": "Mancate accensioni totali",
+     "unit": "",
+     "did": "1146",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-S4, 2 risposte vere (2021-2021)",
+     "extra": true
     },
     {
      "label": "Temperatura carburante",
@@ -1333,6 +1525,79 @@
       "source": "OBDb Audi-S5, 10 risposte vere (2017-2024)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 1",
+      "unit": "",
+      "did": "1147",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A5, 2 risposte vere (2010-2012)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-S5, 6 risposte vere (2017-2024)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 3",
+      "unit": "",
+      "did": "10F4",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A5, 7 risposte vere (2017-2023)"
+     },
+     {
+      "label": "Mancate accensioni totali",
+      "unit": "",
+      "did": "1146",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A5, 5 risposte vere (2009-2010)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 1",
+      "unit": "°",
+      "did": "200A",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Audi-A5, 4 risposte vere (2017-2020)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Audi-A5, 5 risposte vere (2017-2020)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 3",
+      "unit": "°",
+      "did": "200C",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Audi-A5, 3 risposte vere (2017-2020)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 4",
+      "unit": "°",
+      "did": "200D",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Audi-A5, 5 risposte vere (2017-2020)",
+      "extra": true
+     },
+     {
       "label": "Temperatura carburante",
       "unit": "°C",
       "did": "128A",
@@ -1540,6 +1805,14 @@
       "source": "OBDb Audi-S6, 2 risposte vere (2022-2022)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-S6, 6 risposte vere (2022-2022)"
+     },
+     {
       "label": "Temperatura esterna",
       "unit": "°C",
       "did": "1004",
@@ -1693,6 +1966,31 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Audi-A7, 3 risposte vere (2020-2020)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 1",
+      "unit": "",
+      "did": "1147",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A7, 3 risposte vere (2011-2012)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A7, 3 risposte vere (2020-2020)"
+     },
+     {
+      "label": "Mancate accensioni totali",
+      "unit": "",
+      "did": "1146",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-A7, 6 risposte vere (2011-2012)",
+      "extra": true
      },
      {
       "label": "Temperatura carburante",
@@ -1933,6 +2231,14 @@
      "source": "OBDb Audi-Q2, 6 risposte vere (2017-2018)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-Q2, 3 risposte vere (2017-2017)"
+    },
+    {
      "label": "Temperatura esterna",
      "unit": "°C",
      "did": "1004",
@@ -2169,6 +2475,46 @@
      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
      "decimals": 2,
      "source": "OBDb Audi-Q3, 4 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "200A",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q3, 4 risposte vere (2020-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "200B",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q3, 4 risposte vere (2020-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "200C",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q3, 5 risposte vere (2020-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "200D",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q3, 5 risposte vere (2020-2025)",
+     "extra": true
     },
     {
      "label": "Temperatura carburante",
@@ -2429,6 +2775,54 @@
      "source": "OBDb Audi-Q5, 8 risposte vere (2018-2022)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "10F4",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-Q5, 3 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "200A",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q5, 3 risposte vere (2018-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "200B",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q5, 3 risposte vere (2018-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "200C",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q5, 3 risposte vere (2018-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "200D",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q5, 3 risposte vere (2018-2022)",
+     "extra": true
+    },
+    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "203E",
@@ -2674,6 +3068,31 @@
      "source": "OBDb Audi-Q7, 3 risposte vere (2021-2021)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "10F6",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-Q7, 4 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "10F4",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-Q7, 4 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni totali",
+     "unit": "",
+     "did": "1146",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Audi-Q7, 5 risposte vere (2015-2021)",
+     "extra": true
+    },
+    {
      "label": "Pressione turbo",
      "unit": "bar",
      "did": "1057",
@@ -2681,6 +3100,46 @@
      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
      "decimals": 2,
      "source": "OBDb Audi-Q7, 3 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "200A",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q7, 6 risposte vere (2017-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "200B",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q7, 12 risposte vere (2017-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "200C",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q7, 4 risposte vere (2017-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "200D",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Audi-Q7, 6 risposte vere (2017-2019)",
+     "extra": true
     },
     {
      "label": "Temperatura carburante",
@@ -2900,6 +3359,14 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Audi-Q8, 5 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Audi-Q8, 7 risposte vere (2019-2026)"
      },
      {
       "label": "Temperatura carburante",
@@ -7420,6 +7887,120 @@
   },
   {
    "brand": "BMW",
+   "model": "X7 (G07)",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb BMW-X7: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "X7 (G07)",
+   "ecu": {
+    "name": "Cambio automatico (EGS)",
+    "address": "X18",
+    "params": [
+     {
+      "label": "Temperatura olio motore",
+      "unit": "°C",
+      "did": "DA25",
+      "formula": "s16(byte(0)*256+byte(1))-48",
+      "valid": "s16(byte(0)*256+byte(1))-48>=-500 && s16(byte(0)*256+byte(1))-48<=500",
+      "source": "OBDb BMW-X7, 25 risposte vere (2019-2026)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "X7 (G07)",
+   "ecu": {
+    "name": "Ripartitore di coppia",
+    "address": "X19",
+    "params": [],
+    "source": "OBDb BMW-X7: risponde su auto vere"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "X7 (G07)",
+   "ecu": {
+    "name": "Freni (DSC)",
+    "address": "X29",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(2)*256+byte(3)))/100",
+      "valid": "(s16(byte(2)*256+byte(3)))/100>=-327.68 && (s16(byte(2)*256+byte(3)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-X7, 34 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(0)*256+byte(1)))/100",
+      "valid": "(s16(byte(0)*256+byte(1)))/100>=-327.68 && (s16(byte(0)*256+byte(1)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-X7, 34 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(6)*256+byte(7)))/100",
+      "valid": "(s16(byte(6)*256+byte(7)))/100>=-327.68 && (s16(byte(6)*256+byte(7)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-X7, 34 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(4)*256+byte(5)))/100",
+      "valid": "(s16(byte(4)*256+byte(5)))/100>=-327.68 && (s16(byte(4)*256+byte(5)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-X7, 34 risposte vere (2019-2026)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "X7 (G07)",
+   "ecu": {
+    "name": "Quadro Strumenti (KOMBI)",
+    "address": "X60",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "D10D",
+      "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
+      "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
+      "slow": true,
+      "source": "OBDb BMW-X7, 19 risposte vere (2019-2026)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "D112",
+      "formula": "(byte(0))/2-40",
+      "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
+      "decimals": 1,
+      "source": "OBDb BMW-X7, 29 risposte vere (2019-2026)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
    "model": "Z4",
    "ecu": {
     "name": "Cambio",
@@ -7849,6 +8430,298 @@
       "formula": "s8(byte(0))",
       "valid": "s8(byte(0))>=-128 && s8(byte(0))<=127",
       "source": "OBDb BMW-i3, 13 risposte vere (2016-2021)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb BMW-i8: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Batteria di trazione (SME)",
+    "address": "X07",
+    "params": [
+     {
+      "label": "Corrente batteria di trazione",
+      "unit": "A",
+      "did": "DD69",
+      "formula": "(s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100",
+      "valid": "(s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100>=-10000 && (s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100<=10000",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 12 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "DD68",
+      "formula": "(byte(0)*256+byte(1))/100",
+      "valid": "(byte(0)*256+byte(1))/100<=655.35",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 10 risposte vere (2015-2018)"
+     }
+    ],
+    "fuels": [
+     "diesel mild hybrid",
+     "elettrica",
+     "ibrida",
+     "mild hybrid",
+     "plug-in hybrid"
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Motore (DME/DDE)",
+    "address": "X12",
+    "params": [
+     {
+      "label": "Pressione olio motore",
+      "unit": "bar",
+      "did": "586F",
+      "formula": "(byte(0)*256+byte(1))/1000",
+      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 10 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Pressione turbo",
+      "unit": "kPa",
+      "did": "4205",
+      "formula": "(byte(0)*256+byte(1))/128",
+      "valid": "(byte(0)*256+byte(1))/128<=511.99",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 3 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Temperatura olio motore",
+      "unit": "°C",
+      "did": "4506",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200",
+      "source": "OBDb BMW-i8, 3 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "402B",
+      "formula": "(byte(2)*256+byte(3))/4000+6",
+      "valid": "(byte(2)*256+byte(3))/4000+6<22.3837 && (byte(2)*256+byte(3))/4000+6>=6 && (byte(2)*256+byte(3))/4000+6<=22.3837",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 8 risposte vere (2018-2018)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Cambio automatico (EGS)",
+    "address": "X18",
+    "params": [],
+    "source": "OBDb BMW-i8: risponde su auto vere"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Freni (DSC)",
+    "address": "X29",
+    "params": [
+     {
+      "label": "Pressione gomma ant. DX",
+      "unit": "bar",
+      "did": "DC99",
+      "formula": "(s16(byte(6)*256+byte(5)))/1000",
+      "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 11 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Pressione gomma ant. SX",
+      "unit": "bar",
+      "did": "DC98",
+      "formula": "(s16(byte(6)*256+byte(5)))/1000",
+      "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 10 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "DC9B",
+      "formula": "(s16(byte(6)*256+byte(5)))/1000",
+      "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 9 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "DC9A",
+      "formula": "(s16(byte(6)*256+byte(5)))/1000",
+      "valid": "(s16(byte(6)*256+byte(5)))/1000<6.3 && (s16(byte(6)*256+byte(5)))/1000>=-32.76 && (s16(byte(6)*256+byte(5)))/1000<=6.3",
+      "decimals": 2,
+      "source": "OBDb BMW-i8, 10 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Temperatura gomma ant. DX",
+      "unit": "°C",
+      "did": "DC99",
+      "formula": "s8(byte(7))",
+      "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
+      "source": "OBDb BMW-i8, 11 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Temperatura gomma ant. SX",
+      "unit": "°C",
+      "did": "DC98",
+      "formula": "s8(byte(7))",
+      "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
+      "source": "OBDb BMW-i8, 10 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Temperatura gomma post. DX",
+      "unit": "°C",
+      "did": "DC9B",
+      "formula": "s8(byte(7))",
+      "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
+      "source": "OBDb BMW-i8, 9 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Temperatura gomma post. SX",
+      "unit": "°C",
+      "did": "DC9A",
+      "formula": "s8(byte(7))",
+      "valid": "s8(byte(7))<127 && s8(byte(7))>=-128 && s8(byte(7))<=127",
+      "source": "OBDb BMW-i8, 10 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(2)*256+byte(3)))/100",
+      "valid": "(s16(byte(2)*256+byte(3)))/100>=-327.68 && (s16(byte(2)*256+byte(3)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 28 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(0)*256+byte(1)))/100",
+      "valid": "(s16(byte(0)*256+byte(1)))/100>=-327.68 && (s16(byte(0)*256+byte(1)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 28 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(6)*256+byte(7)))/100",
+      "valid": "(s16(byte(6)*256+byte(7)))/100>=-327.68 && (s16(byte(6)*256+byte(7)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 28 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "did": "DBE4",
+      "formula": "(s16(byte(4)*256+byte(5)))/100",
+      "valid": "(s16(byte(4)*256+byte(5)))/100>=-327.68 && (s16(byte(4)*256+byte(5)))/100<=327.67",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 28 risposte vere (2015-2018)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Servosterzo (EPS)",
+    "address": "X30",
+    "params": [],
+    "source": "OBDb BMW-i8: risponde su auto vere"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Accesso e avviamento (CAS/BDC)",
+    "address": "X40",
+    "params": [],
+    "source": "OBDb BMW-i8: risponde su auto vere"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Quadro Strumenti (KOMBI)",
+    "address": "X60",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "D10D",
+      "formula": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)",
+      "valid": "byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)<=4294967295",
+      "slow": true,
+      "source": "OBDb BMW-i8, 18 risposte vere (2015-2018)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "D112",
+      "formula": "(byte(0))/2-40",
+      "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
+      "decimals": 1,
+      "source": "OBDb BMW-i8, 23 risposte vere (2015-2018)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Unità multimediale",
+    "address": "X63",
+    "params": [],
+    "source": "OBDb BMW-i8: risponde su auto vere"
+   }
+  },
+  {
+   "brand": "BMW",
+   "model": "i8",
+   "ecu": {
+    "name": "Climatizzatore (IHKA)",
+    "address": "X78",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "did": "D85C",
+      "formula": "s8(byte(0))",
+      "valid": "s8(byte(0))>=-128 && s8(byte(0))<=127",
+      "source": "OBDb BMW-i8, 3 risposte vere (2018-2018)"
      }
     ]
    }
@@ -8495,6 +9368,22 @@
     "address": "7E0",
     "params": [
      {
+      "label": "Mancate accensioni cil. 5",
+      "unit": "",
+      "did": "11EA",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Sonic, 3 risposte vere (2013-2016)"
+     },
+     {
+      "label": "Mancate accensioni cil. 6",
+      "unit": "",
+      "did": "11EB",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Sonic, 3 risposte vere (2013-2016)"
+     },
+     {
       "label": "Pressione olio motore",
       "unit": "kPa",
       "did": "2345",
@@ -8590,6 +9479,74 @@
     "name": "Motore: dati del costruttore",
     "address": "7E0",
     "params": [
+     {
+      "label": "Mancate accensioni cil. 5",
+      "unit": "",
+      "did": "11EA",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Camaro, 20 risposte vere (2013-2022)"
+     },
+     {
+      "label": "Mancate accensioni cil. 6",
+      "unit": "",
+      "did": "11EB",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Camaro, 9 risposte vere (2013-2022)"
+     },
+     {
+      "label": "Mancate accensioni cil. 7",
+      "unit": "",
+      "did": "11EC",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Camaro, 9 risposte vere (2013-2019)"
+     },
+     {
+      "label": "Mancate accensioni cil. 8",
+      "unit": "",
+      "did": "11ED",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Chevrolet-Camaro, 6 risposte vere (2013-2019)"
+     },
+     {
+      "label": "Mancate accensioni storiche cil. 5",
+      "unit": "",
+      "did": "11F8",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Chevrolet-Camaro, 7 risposte vere (2013-2019)",
+      "extra": true
+     },
+     {
+      "label": "Mancate accensioni storiche cil. 6",
+      "unit": "",
+      "did": "11F9",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Chevrolet-Camaro, 7 risposte vere (2013-2019)",
+      "extra": true
+     },
+     {
+      "label": "Mancate accensioni storiche cil. 7",
+      "unit": "",
+      "did": "11FA",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Chevrolet-Camaro, 11 risposte vere (2013-2019)",
+      "extra": true
+     },
+     {
+      "label": "Mancate accensioni storiche cil. 8",
+      "unit": "",
+      "did": "11FB",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Chevrolet-Camaro, 6 risposte vere (2013-2019)",
+      "extra": true
+     },
      {
       "label": "Temperatura olio cambio",
       "unit": "°C",
@@ -10447,6 +11404,142 @@
     "tx": "7E1",
     "rx": "7E9"
    }
+  },
+  {
+   "brand": "Ford",
+   "model": "Explorer (VI)",
+   "ecu": {
+    "name": "Body Computer",
+    "address": "726",
+    "params": [
+     {
+      "label": "Pressione gomma ant. DX",
+      "unit": "bar",
+      "did": "2814",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<=3276",
+      "decimals": 2,
+      "source": "OBDb Ford-Explorer, 30 risposte vere (2011-2026)"
+     },
+     {
+      "label": "Pressione gomma ant. SX",
+      "unit": "bar",
+      "did": "2813",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<=3276",
+      "decimals": 2,
+      "source": "OBDb Ford-Explorer, 40 risposte vere (2011-2026)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "2815",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<=255",
+      "decimals": 2,
+      "source": "OBDb Ford-Explorer, 32 risposte vere (2011-2026)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "2816",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<=255",
+      "decimals": 2,
+      "source": "OBDb Ford-Explorer, 33 risposte vere (2011-2026)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "402A",
+      "formula": "(byte(0))/20+6",
+      "valid": "(byte(0))/20+6<=18.75",
+      "decimals": 2,
+      "source": "OBDb Ford-Explorer, 37 risposte vere (2011-2026)"
+     }
+    ],
+    "tx": "726",
+    "rx": "72E"
+   }
+  },
+  {
+   "brand": "Ford",
+   "model": "Explorer (VI)",
+   "ecu": {
+    "name": "SYNC / Infotainment",
+    "address": "7D0",
+    "params": [],
+    "source": "OBDb Ford-Explorer: risponde su auto vere",
+    "tx": "7D0",
+    "rx": "7D8"
+   }
+  },
+  {
+   "brand": "Ford",
+   "model": "Explorer (VI)",
+   "engineParams": [
+    {
+     "label": "Contachilometri",
+     "unit": "km",
+     "did": "DD01",
+     "formula": "byte(0)*65536+byte(1)*256+byte(2)",
+     "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
+     "slow": true,
+     "source": "OBDb Ford-Explorer, 56 risposte vere (2011-2026)"
+    },
+    {
+     "label": "Livello carburante",
+     "unit": "%",
+     "did": "F42F",
+     "formula": "(byte(0)*100)/255",
+     "valid": "(byte(0)*100)/255<=255",
+     "decimals": 1,
+     "source": "OBDb Ford-Explorer, 39 risposte vere (2011-2026)"
+    },
+    {
+     "label": "Pressione olio motore",
+     "unit": "kPa",
+     "did": "0415",
+     "formula": "s16(byte(0)*256+byte(1))",
+     "valid": "s16(byte(0)*256+byte(1))>=-32768 && s16(byte(0)*256+byte(1))<=32767",
+     "source": "OBDb Ford-Explorer, 7 risposte vere (2020-2026)"
+    },
+    {
+     "label": "Temperatura aria dopo intercooler",
+     "unit": "°C",
+     "did": "0461",
+     "formula": "(s16(byte(0)*256+byte(1)))/64-40",
+     "valid": "(s16(byte(0)*256+byte(1)))/64-40>=-40 && (s16(byte(0)*256+byte(1)))/64-40<=189",
+     "decimals": 1,
+     "source": "OBDb Ford-Explorer, 9 risposte vere (2014-2025)"
+    },
+    {
+     "label": "Temperatura esterna",
+     "unit": "°C",
+     "did": "F446",
+     "formula": "byte(0)-40",
+     "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+     "source": "OBDb Ford-Explorer, 29 risposte vere (2011-2026)"
+    },
+    {
+     "label": "Temperatura olio cambio",
+     "unit": "°C",
+     "did": "1E1C",
+     "formula": "(s16(byte(0)*256+byte(1)))/16",
+     "valid": "(s16(byte(0)*256+byte(1)))/16>=-500 && (s16(byte(0)*256+byte(1)))/16<=500",
+     "decimals": 1,
+     "source": "OBDb Ford-Explorer, 63 risposte vere (2011-2026)"
+    },
+    {
+     "label": "Vita olio residua",
+     "unit": "%",
+     "did": "054B",
+     "formula": "byte(0)",
+     "valid": "byte(0)<=100",
+     "slow": true,
+     "source": "OBDb Ford-Explorer, 10 risposte vere (2014-2026)"
+    }
+   ]
   },
   {
    "brand": "Ford",
@@ -13414,6 +14507,46 @@
      "source": "OBDb Hyundai-IONIQ-Electric, 46 risposte vere (2017-2018)"
     },
     {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-IONIQ-Electric, 17 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-IONIQ-Electric, 17 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-IONIQ-Electric, 17 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-IONIQ-Electric, 17 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
      "label": "Temperatura olio motore",
      "unit": "°C",
      "did": "E001",
@@ -14223,6 +15356,38 @@
      "source": "OBDb Hyundai-Kona, 31 risposte vere (2022-2026)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Kona, 31 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Kona, 31 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Kona, 31 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Kona, 31 risposte vere (2022-2026)"
+    },
+    {
      "label": "Temperatura olio motore",
      "unit": "°C",
      "did": "E001",
@@ -14363,6 +15528,156 @@
    "brand": "Hyundai",
    "model": "Santa Fe (II)",
    "engineParams": [
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(67)",
+     "valid": "byte(67)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(68)",
+     "valid": "byte(68)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(69)",
+     "valid": "byte(69)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(70)",
+     "valid": "byte(70)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(71)",
+     "valid": "byte(71)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(72)",
+     "valid": "byte(72)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -14595,6 +15910,156 @@
      "decimals": 1,
      "slow": true,
      "source": "OBDb Hyundai-Santa-Fe, 41 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(67)",
+     "valid": "byte(67)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(68)",
+     "valid": "byte(68)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(69)",
+     "valid": "byte(69)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(70)",
+     "valid": "byte(70)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(71)",
+     "valid": "byte(71)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(72)",
+     "valid": "byte(72)<=255",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 8 risposte vere (2011-2013)"
     },
     {
      "label": "Temperatura gas di scarico",
@@ -14868,6 +16333,42 @@
      "source": "OBDb Hyundai-Santa-Fe, 28 risposte vere (2019-2026)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe-Hybrid, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe-Hybrid, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe-Hybrid, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe-Hybrid, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
      "label": "Mancate accensioni cil. 1",
      "unit": "",
      "did": "E01D",
@@ -14900,6 +16401,38 @@
      "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
      "label": "Pressione turbo",
      "unit": "kPa",
      "did": "E021",
@@ -14907,6 +16440,46 @@
      "valid": "(byte(7)*256+byte(8))*0.008291<=543",
      "decimals": 1,
      "source": "OBDb Hyundai-Santa-Fe, 98 risposte vere (2018-2026)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -15216,6 +16789,38 @@
      "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Santa-Fe, 48 risposte vere (2019-2026)"
+    },
+    {
      "label": "Pressione turbo",
      "unit": "kPa",
      "did": "E021",
@@ -15223,6 +16828,46 @@
      "valid": "(byte(7)*256+byte(8))*0.008291<=543",
      "decimals": 1,
      "source": "OBDb Hyundai-Santa-Fe, 98 risposte vere (2018-2026)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Santa-Fe, 96 risposte vere (2018-2026)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -15583,6 +17228,148 @@
      "source": "OBDb Hyundai-Tucson, 17 risposte vere (2018-2018)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Hyundai-Tucson, 11 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(20))/1.3333333333",
+     "valid": "(byte(20))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 12 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(21))/1.3333333333",
+     "valid": "(byte(21))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 12 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(22))/1.3333333333",
+     "valid": "(byte(22))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 12 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(23))/1.3333333333",
+     "valid": "(byte(23))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 12 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
      "label": "Temperatura gas di scarico",
      "unit": "°C",
      "lid": "03",
@@ -15805,6 +17592,42 @@
      "source": "OBDb Hyundai-Tucson, 22 risposte vere (2022-2026)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Tucson, 2 risposte vere (2023-2023)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Tucson, 2 risposte vere (2023-2023)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Tucson, 2 risposte vere (2023-2023)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Hyundai-Tucson, 2 risposte vere (2023-2023)",
+     "extra": true
+    },
+    {
      "label": "Mancate accensioni cil. 1",
      "unit": "",
      "did": "E01D",
@@ -15835,6 +17658,68 @@
      "formula": "byte(11)*256+byte(10)",
      "valid": "byte(11)*256+byte(10)<=65535",
      "source": "OBDb Hyundai-Tucson, 39 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Hyundai-Tucson, 39 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-Tucson, 39 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-Tucson, 39 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-Tucson, 39 risposte vere (2022-2026)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 40 risposte vere (2022-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 40 risposte vere (2022-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 40 risposte vere (2022-2026)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -16118,6 +18003,46 @@
      "source": "OBDb Hyundai-i10, 12 risposte vere (2024-2024)"
     },
     {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i10, 17 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i10, 17 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i10, 17 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i10, 17 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
      "label": "Temperatura gas di scarico",
      "unit": "°C",
      "lid": "03",
@@ -16312,6 +18237,146 @@
    "model": "i20 (III)",
    "engineParams": [
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(13)*256+byte(12)",
+     "valid": "byte(13)*256+byte(12)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(45)*256+byte(44)",
+     "valid": "byte(45)*256+byte(44)<=65535",
+     "source": "OBDb Hyundai-i20, 9 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i20, 23 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i20, 23 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i20, 23 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i20, 23 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
      "label": "Temperatura olio motore",
      "unit": "°C",
      "did": "E001",
@@ -16487,6 +18552,46 @@
      "formula": "byte(11)*256+byte(10)",
      "valid": "byte(11)*256+byte(10)<=65535",
      "source": "OBDb Hyundai-i30, 9 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 5 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 5 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 5 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 5 risposte vere (2015-2015)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -16697,6 +18802,46 @@
      "valid": "(byte(7)*256+byte(8))*0.008291<=543",
      "decimals": 1,
      "source": "OBDb Hyundai-i30, 134 risposte vere (2019-2023)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 71 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 56 risposte vere (2019-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 71 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Hyundai-i30, 71 risposte vere (2019-2023)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -16931,6 +19076,46 @@
      "formula": "byte(11)*256+byte(10)",
      "valid": "byte(11)*256+byte(10)<=65535",
      "source": "OBDb Hyundai-Tucson, 10 risposte vere (2014-2014)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 10 risposte vere (2014-2014)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 10 risposte vere (2014-2014)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 10 risposte vere (2014-2014)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Hyundai-Tucson, 10 risposte vere (2014-2014)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -17354,7 +19539,9 @@
       "did": "1018",
       "formula": "(byte(0)*256+byte(1))-500",
       "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
-      "source": "OBDb Jeep-Compass, 11 risposte vere (2018-2020)"
+      "source": "OBDb Jeep-Compass, 11 risposte vere (2018-2020)",
+      "extra": true,
+      "manuale": true
      },
      {
       "label": "Giri in uscita dal cambio",
@@ -17362,7 +19549,9 @@
       "did": "2102",
       "formula": "(byte(0)*256+byte(1))/4",
       "valid": "(byte(0)*256+byte(1))/4<=16383",
-      "source": "OBDb Jeep-Compass, 10 risposte vere (2018-2020)"
+      "source": "OBDb Jeep-Compass, 10 risposte vere (2018-2020)",
+      "extra": true,
+      "manuale": true
      }
     ]
    }
@@ -18056,7 +20245,9 @@
       "did": "1018",
       "formula": "(byte(0)*256+byte(1))-500",
       "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
-      "source": "OBDb Jeep-Renegade, 18 risposte vere (2015-2021)"
+      "source": "OBDb Jeep-Renegade, 18 risposte vere (2015-2021)",
+      "extra": true,
+      "manuale": true
      },
      {
       "label": "Giri in uscita dal cambio",
@@ -18064,7 +20255,9 @@
       "did": "2102",
       "formula": "(byte(0)*256+byte(1))/4",
       "valid": "(byte(0)*256+byte(1))/4<=16383",
-      "source": "OBDb Jeep-Renegade, 13 risposte vere (2015-2021)"
+      "source": "OBDb Jeep-Renegade, 13 risposte vere (2015-2021)",
+      "extra": true,
+      "manuale": true
      }
     ]
    }
@@ -18567,6 +20760,46 @@
      "valid": "((byte(39)*256+byte(38))*12)/125<=6291",
      "decimals": 1,
      "source": "OBDb Kia-Ceed, 33 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 71 risposte vere (2017-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 71 risposte vere (2017-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 71 risposte vere (2017-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Ceed, 71 risposte vere (2017-2025)",
+     "extra": true
     },
     {
      "label": "Salute batteria 12 V",
@@ -19723,6 +21956,38 @@
      "source": "OBDb Kia-Niro, 40 risposte vere (2018-2024)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Niro, 40 risposte vere (2018-2024)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Niro, 40 risposte vere (2018-2024)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Niro, 40 risposte vere (2018-2024)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Niro, 40 risposte vere (2018-2024)"
+    },
+    {
      "label": "Pressione turbo",
      "unit": "kPa",
      "did": "E021",
@@ -19730,6 +21995,46 @@
      "valid": "(byte(7)*256+byte(8))*0.008291<=543",
      "decimals": 1,
      "source": "OBDb Kia-Niro, 29 risposte vere (2018-2025)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Niro, 66 risposte vere (2018-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Niro, 66 risposte vere (2018-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Niro, 66 risposte vere (2018-2025)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Niro, 66 risposte vere (2018-2025)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -20085,6 +22390,42 @@
    "model": "Optima",
    "engineParams": [
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(5)*256+byte(4)",
+     "valid": "byte(5)*256+byte(4)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
      "label": "Mancate accensioni cil. 1",
      "unit": "",
      "lid": "1D",
@@ -20117,6 +22458,38 @@
      "source": "OBDb Kia-Optima, 26 risposte vere (2013-2013)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Optima, 56 risposte vere (2018-2020)"
+    },
+    {
      "label": "Pressione turbo",
      "unit": "kPa",
      "did": "E021",
@@ -20124,6 +22497,46 @@
      "valid": "(byte(9)*256+byte(8))/831.55690902-12>=-10 && (byte(9)*256+byte(8))/831.55690902-12<=66.81",
      "decimals": 1,
      "source": "OBDb Kia-Optima, 49 risposte vere (2018-2020)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Optima, 93 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Optima, 93 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Optima, 93 risposte vere (2018-2020)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Optima, 93 risposte vere (2018-2020)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -20184,6 +22597,46 @@
    "brand": "Kia",
    "model": "Picanto (II)",
    "engineParams": [
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 10 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 10 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 10 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 10 risposte vere (2013-2013)",
+     "extra": true
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -20320,6 +22773,46 @@
    "brand": "Kia",
    "model": "Picanto (III)",
    "engineParams": [
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 9 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 9 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 9 risposte vere (2024-2024)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Picanto, 9 risposte vere (2024-2024)",
+     "extra": true
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -20625,6 +23118,114 @@
      "source": "OBDb Kia-Rio, 37 risposte vere (2021-2022)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Kia-Rio, 10 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Rio, 53 risposte vere (2019-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Rio, 53 risposte vere (2019-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Rio, 53 risposte vere (2019-2022)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Rio, 53 risposte vere (2019-2022)",
+     "extra": true
+    },
+    {
      "label": "Temperatura gas di scarico",
      "unit": "°C",
      "lid": "03",
@@ -20823,6 +23424,60 @@
      "source": "OBDb Kia-Sorento, 116 risposte vere (2011-2017)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
      "label": "Mancate accensioni cil. 1",
      "unit": "",
      "lid": "1D",
@@ -20853,6 +23508,110 @@
      "formula": "byte(11)*256+byte(10)",
      "valid": "byte(11)*256+byte(10)<=65535",
      "source": "OBDb Kia-Sorento, 49 risposte vere (2013-2014)"
+    },
+    {
+     "label": "Mancate accensioni cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(71)",
+     "valid": "byte(71)<=255",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(72)",
+     "valid": "byte(72)<=255",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 5",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 6",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Kia-Sorento, 9 risposte vere (2013-2013)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 49 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 49 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 49 risposte vere (2013-2013)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "19",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 49 risposte vere (2013-2013)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -21103,6 +23862,46 @@
      "source": "OBDb Kia-Sorento, 181 risposte vere (2016-2026)"
     },
     {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
      "label": "Temperatura olio motore",
      "unit": "°C",
      "did": "E001",
@@ -21307,6 +24106,42 @@
      "source": "OBDb Kia-Sorento, 27 risposte vere (2024-2026)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Sorento, 2 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Sorento, 2 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Sorento, 2 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Kia-Sorento, 2 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
      "label": "Mancate accensioni cil. 1",
      "unit": "",
      "did": "E01D",
@@ -21339,6 +24174,38 @@
      "source": "OBDb Kia-Sorento, 65 risposte vere (2024-2026)"
     },
     {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Sorento, 65 risposte vere (2024-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Sorento, 65 risposte vere (2024-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Sorento, 65 risposte vere (2024-2026)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Sorento, 65 risposte vere (2024-2026)"
+    },
+    {
      "label": "Pressione turbo",
      "unit": "kPa",
      "did": "E021",
@@ -21346,6 +24213,46 @@
      "valid": "(byte(7)*256+byte(8))*0.008291<=543",
      "decimals": 1,
      "source": "OBDb Kia-Sorento, 181 risposte vere (2016-2026)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Sorento, 101 risposte vere (2016-2026)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -21765,6 +24672,120 @@
   },
   {
    "brand": "Kia",
+   "model": "Soul",
+   "engineParams": [
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(17)*256+byte(16)",
+     "valid": "byte(17)*256+byte(16)<=65535",
+     "source": "OBDb Kia-Soul, 14 risposte vere (2010-2015)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(19)*256+byte(18)",
+     "valid": "byte(19)*256+byte(18)<=65535",
+     "source": "OBDb Kia-Soul, 14 risposte vere (2010-2015)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Soul, 14 risposte vere (2010-2015)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Soul, 14 risposte vere (2010-2015)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(33)*256+byte(32)",
+     "valid": "byte(33)*256+byte(32)<=65535",
+     "source": "OBDb Kia-Soul, 8 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(35)*256+byte(34)",
+     "valid": "byte(35)*256+byte(34)<=65535",
+     "source": "OBDb Kia-Soul, 8 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(37)*256+byte(36)",
+     "valid": "byte(37)*256+byte(36)<=65535",
+     "source": "OBDb Kia-Soul, 8 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "lid": "08",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Kia-Soul, 8 risposte vere (2015-2015)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(20))/1.3333333333",
+     "valid": "(byte(20))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Kia-Soul, 12 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(21))/1.3333333333",
+     "valid": "(byte(21))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Kia-Soul, 12 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(22))/1.3333333333",
+     "valid": "(byte(22))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Kia-Soul, 12 risposte vere (2015-2015)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "lid": "0A",
+     "formula": "(byte(23))/1.3333333333",
+     "valid": "(byte(23))/1.3333333333<=191.25",
+     "decimals": 1,
+     "source": "OBDb Kia-Soul, 12 risposte vere (2015-2015)",
+     "extra": true
+    }
+   ]
+  },
+  {
+   "brand": "Kia",
    "model": "Sportage (III)",
    "ecu": {
     "name": "Quadro Strumenti",
@@ -21998,6 +25019,46 @@
    "brand": "Kia",
    "model": "Sportage (IV)",
    "engineParams": [
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25.6 && (s8(byte(12)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25.6 && (s8(byte(13)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25.6 && (s8(byte(14)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25.6 && (s8(byte(15)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -22240,6 +25301,146 @@
      "valid": "byte(54)*256+byte(55)<=65535",
      "slow": true,
      "source": "OBDb Kia-Sportage, 14 risposte vere (2022-2025)"
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(5)*256+byte(4)",
+     "valid": "byte(5)*256+byte(4)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-Sportage, 2 risposte vere (2022-2023)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-Sportage, 2 risposte vere (2022-2023)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-Sportage, 2 risposte vere (2022-2023)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(13)*256+byte(12)",
+     "valid": "byte(13)*256+byte(12)<=65535",
+     "source": "OBDb Kia-Sportage, 2 risposte vere (2022-2023)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Sportage, 21 risposte vere (2025-2025)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25.6 && (s8(byte(12)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25.6 && (s8(byte(13)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25.6 && (s8(byte(14)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25.6 && (s8(byte(15)))/5<=25.4",
+     "decimals": 1,
+     "source": "OBDb Kia-Sportage, 126 risposte vere (2019-2026)",
+     "extra": true
     },
     {
      "label": "Temperatura olio motore",
@@ -22527,6 +25728,114 @@
      "source": "OBDb Kia-Stinger, 238 risposte vere (2018-2023)"
     },
     {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(5)*256+byte(4)",
+     "valid": "byte(5)*256+byte(4)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(21)*256+byte(20)",
+     "valid": "byte(21)*256+byte(20)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E01D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Stinger, 46 risposte vere (2020-2021)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(21)*0.75-191.25",
+     "valid": "byte(21)*0.75-191.25>=-191.25 && byte(21)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Stinger, 132 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(22)*0.75-191.25",
+     "valid": "byte(22)*0.75-191.25>=-191.25 && byte(22)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Stinger, 132 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(23)*0.75-191.25",
+     "valid": "byte(23)*0.75-191.25>=-191.25 && byte(23)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Stinger, 132 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E019",
+     "formula": "byte(24)*0.75-191.25",
+     "valid": "byte(24)*0.75-191.25>=-191.25 && byte(24)*0.75-191.25<=0",
+     "decimals": 1,
+     "source": "OBDb Kia-Stinger, 132 risposte vere (2019-2023)",
+     "extra": true
+    },
+    {
      "label": "Temperatura olio motore",
      "unit": "°C",
      "did": "ED02",
@@ -22670,6 +25979,146 @@
    "brand": "Kia",
    "model": "Stonic",
    "engineParams": [
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(13)*256+byte(12)",
+     "valid": "byte(13)*256+byte(12)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(45)*256+byte(44)",
+     "valid": "byte(45)*256+byte(44)<=65535",
+     "source": "OBDb Kia-Stonic, 3 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Stonic, 22 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Stonic, 22 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Stonic, 22 risposte vere (2017-2018)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-Stonic, 22 risposte vere (2017-2018)",
+     "extra": true
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -22861,6 +26310,146 @@
    "brand": "Kia",
    "model": "XCeed",
    "engineParams": [
+    {
+     "label": "Mancate accensioni (emissioni) cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(23)*256+byte(22)",
+     "valid": "byte(23)*256+byte(22)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(25)*256+byte(24)",
+     "valid": "byte(25)*256+byte(24)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(27)*256+byte(26)",
+     "valid": "byte(27)*256+byte(26)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni (emissioni) cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(29)*256+byte(28)",
+     "valid": "byte(29)*256+byte(28)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Mancate accensioni cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(7)*256+byte(6)",
+     "valid": "byte(7)*256+byte(6)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(9)*256+byte(8)",
+     "valid": "byte(9)*256+byte(8)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(11)*256+byte(10)",
+     "valid": "byte(11)*256+byte(10)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(13)*256+byte(12)",
+     "valid": "byte(13)*256+byte(12)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 1",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(39)*256+byte(38)",
+     "valid": "byte(39)*256+byte(38)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 2",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(41)*256+byte(40)",
+     "valid": "byte(41)*256+byte(40)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 3",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(43)*256+byte(42)",
+     "valid": "byte(43)*256+byte(42)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Mancate accensioni dannose per il catalizzatore cil. 4",
+     "unit": "",
+     "did": "E00D",
+     "formula": "byte(45)*256+byte(44)",
+     "valid": "byte(45)*256+byte(44)<=65535",
+     "source": "OBDb Kia-XCeed, 2 risposte vere (2019-2019)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 1",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(12)))/5",
+     "valid": "(s8(byte(12)))/5>=-25 && (s8(byte(12)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-XCeed, 16 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 2",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(13)))/5",
+     "valid": "(s8(byte(13)))/5>=-25 && (s8(byte(13)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-XCeed, 16 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 3",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(14)))/5",
+     "valid": "(s8(byte(14)))/5>=-25 && (s8(byte(14)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-XCeed, 16 risposte vere (2019-2019)",
+     "extra": true
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "E00A",
+     "formula": "(s8(byte(15)))/5",
+     "valid": "(s8(byte(15)))/5>=-25 && (s8(byte(15)))/5<=25",
+     "decimals": 1,
+     "source": "OBDb Kia-XCeed, 16 risposte vere (2019-2019)",
+     "extra": true
+    },
     {
      "label": "Temperatura olio motore",
      "unit": "°C",
@@ -32315,6 +35904,16 @@
       "source": "OBDb Porsche-718, 4 risposte vere (2017-2017)"
      },
      {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-718, 2 risposte vere (2017-2017)",
+      "extra": true
+     },
+     {
       "label": "Temperatura esterna",
       "unit": "°C",
       "did": "1004",
@@ -32412,6 +36011,14 @@
       "source": "OBDb Porsche-911, 5 risposte vere (2016-2025)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-911, 2 risposte vere (2018-2022)"
+     },
+     {
       "label": "Pressione olio motore",
       "unit": "kPa",
       "did": "1503",
@@ -32419,6 +36026,46 @@
       "valid": "(byte(0)*256+byte(1))/416<=157",
       "decimals": 1,
       "source": "OBDb Porsche-911, 2 risposte vere (2017-2017)"
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 1",
+      "unit": "°",
+      "did": "200A",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 7 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 14 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 3",
+      "unit": "°",
+      "did": "200C",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 10 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 4",
+      "unit": "°",
+      "did": "200D",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 9 risposte vere (2016-2025)",
+      "extra": true
      },
      {
       "label": "Temperatura esterna",
@@ -32617,6 +36264,63 @@
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255",
       "source": "OBDb Porsche-911, 5 risposte vere (2016-2025)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-911, 2 risposte vere (2018-2022)"
+     },
+     {
+      "label": "Mancate accensioni totali",
+      "unit": "",
+      "did": "1146",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-911, 9 risposte vere (2022-2022)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 1",
+      "unit": "°",
+      "did": "200A",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 7 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 14 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 3",
+      "unit": "°",
+      "did": "200C",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 10 risposte vere (2016-2025)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 4",
+      "unit": "°",
+      "did": "200D",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Porsche-911, 9 risposte vere (2016-2025)",
+      "extra": true
      },
      {
       "label": "Temperatura carburante",
@@ -32969,6 +36673,30 @@
       "source": "OBDb Porsche-Macan, 2 risposte vere (2023-2025)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "10F6",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Macan, 6 risposte vere (2018-2025)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 3",
+      "unit": "",
+      "did": "10F4",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Macan, 16 risposte vere (2018-2025)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 5",
+      "unit": "",
+      "did": "114C",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Macan, 2 risposte vere (2024-2024)"
+     },
+     {
       "label": "Temperatura carburante",
       "unit": "°C",
       "did": "203E",
@@ -33314,6 +37042,22 @@
       "source": "OBDb Porsche-Panamera, 7 risposte vere (2017-2026)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Panamera, 6 risposte vere (2017-2026)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 5",
+      "unit": "",
+      "did": "114C",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Panamera, 3 risposte vere (2017-2017)"
+     },
+     {
       "label": "Temperatura carburante",
       "unit": "°C",
       "did": "128A",
@@ -33572,6 +37316,14 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Porsche-Panamera, 7 risposte vere (2017-2026)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Porsche-Panamera, 6 risposte vere (2017-2026)"
      },
      {
       "label": "Temperatura esterna",
@@ -34672,6 +38424,22 @@
      "source": "OBDb Seat-Ateca, 4 risposte vere (2018-2018)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Seat-Ateca, 4 risposte vere (2018-2018)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "10F4",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Seat-Ateca, 2 risposte vere (2021-2021)"
+    },
+    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "162D",
@@ -35222,6 +38990,24 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Seat-Leon, 3 risposte vere (2018-2019)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Seat-Leon, 3 risposte vere (2018-2019)"
+    },
+    {
+     "label": "Ritardo anticipo per battito cil. 4",
+     "unit": "°",
+     "did": "200D",
+     "formula": "byte(0)*0.375-48",
+     "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+     "decimals": 1,
+     "source": "OBDb Seat-Leon, 2 risposte vere (2017-2017)",
+     "extra": true
     },
     {
      "label": "Temperatura carburante",
@@ -41507,6 +45293,431 @@
   },
   {
    "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Motore: dati del costruttore (2)",
+    "address": "700",
+    "params": [
+     {
+      "label": "Livello carburante",
+      "unit": "%",
+      "did": "1F2F",
+      "formula": "(byte(0)*100)/255",
+      "valid": "(byte(0)*100)/255<=100",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 14 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Mancate accensioni cil. 1",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Toyota-Corolla-Cross, 17 risposte vere (2021-2026)"
+     },
+     {
+      "label": "Mancate accensioni cil. 2",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(1)",
+      "valid": "byte(1)<=255",
+      "source": "OBDb Toyota-Corolla-Cross, 17 risposte vere (2021-2026)"
+     },
+     {
+      "label": "Mancate accensioni cil. 3",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(2)",
+      "valid": "byte(2)<=255",
+      "source": "OBDb Toyota-Corolla-Cross, 17 risposte vere (2021-2026)"
+     },
+     {
+      "label": "Mancate accensioni cil. 4",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(3)",
+      "valid": "byte(3)<=255",
+      "source": "OBDb Toyota-Corolla-Cross, 17 risposte vere (2021-2026)"
+     },
+     {
+      "label": "Pressione olio motore",
+      "unit": "kPa",
+      "did": "1074",
+      "formula": "((byte(0)*256+byte(1))*10)/128",
+      "valid": "((byte(0)*256+byte(1))*10)/128<=5119.92",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 9 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1F46",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Corolla-Cross, 19 risposte vere (2021-2026)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "1002",
+      "formula": "((byte(0)*256+byte(1))*12.207)/10000",
+      "valid": "((byte(0)*256+byte(1))*12.207)/10000<=79",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2021-2026)"
+     }
+    ],
+    "tx": "700",
+    "rx": "708"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Batteria ibrida",
+    "address": "747",
+    "params": [],
+    "source": "OBDb Toyota-Corolla-Cross: risponde su auto vere",
+    "tx": "747",
+    "rx": "74F"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "ABS / VSC",
+    "address": "7B0",
+    "params": [
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "lid": "47",
+      "formula": "(byte(3)*256+byte(4))/10-3276.8",
+      "valid": "(byte(3)*256+byte(4))/10-3276.8>=-3276 && (byte(3)*256+byte(4))/10-3276.8<=3276",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 33 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "lid": "03",
+      "formula": "(byte(0)*256)/200",
+      "valid": "(byte(0)*256)/200<=326.4",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 6 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "lid": "03",
+      "formula": "(byte(1)*256)/200",
+      "valid": "(byte(1)*256)/200<=326.4",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 6 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "lid": "03",
+      "formula": "(byte(2)*256)/200",
+      "valid": "(byte(2)*256)/200<=326.4",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 6 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "lid": "03",
+      "formula": "(byte(3)*256)/200",
+      "valid": "(byte(3)*256)/200<=326.4",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 6 risposte vere (2021-2025)"
+     }
+    ],
+    "tx": "7B0",
+    "rx": "7B8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Sterzo",
+    "address": "7B3",
+    "params": [],
+    "source": "OBDb Toyota-Corolla-Cross: risponde su auto vere",
+    "tx": "7B3",
+    "rx": "7BB"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "7C0",
+    "params": [
+     {
+      "label": "Livello carburante",
+      "unit": "L",
+      "did": "1022",
+      "formula": "(byte(0)*256+byte(1))/100",
+      "valid": "(byte(0)*256+byte(1))/100<655.35 && (byte(0)*256+byte(1))/100<=655.35",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 25 risposte vere (2021-2026)"
+     }
+    ],
+    "tx": "7C0",
+    "rx": "7C8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "7C4",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "lid": "21",
+      "formula": "(byte(0)*63.75)/255-6.5",
+      "valid": "(byte(0)*63.75)/255-6.5>=-6.5 && (byte(0)*63.75)/255-6.5<=57.25",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 4 risposte vere (2021-2023)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "lid": "22",
+      "formula": "(byte(0)*89.25)/255-23.3",
+      "valid": "(byte(0)*89.25)/255-23.3>=-23.3 && (byte(0)*89.25)/255-23.3<=65.95",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 4 risposte vere (2021-2023)"
+     }
+    ],
+    "tx": "7C4",
+    "rx": "7CC"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Freno di stazionamento",
+    "address": "7D0",
+    "params": [],
+    "source": "OBDb Toyota-Corolla-Cross: risponde su auto vere",
+    "tx": "7D0",
+    "rx": "7D8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Sistema Ibrido",
+    "address": "7D2",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "1F5B",
+      "formula": "(byte(0)*100)/255",
+      "valid": "(byte(0)*100)/255<=100",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 567 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Corrente batteria di trazione",
+      "unit": "A",
+      "did": "1F9A",
+      "formula": "(s16(byte(4)*256+byte(5)))/10",
+      "valid": "(s16(byte(4)*256+byte(5)))/10>=-3276.8 && (s16(byte(4)*256+byte(5)))/10<=3276.7",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1F46",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>-40 && byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Corolla-Cross, 8 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "1040",
+      "formula": "byte(2)-40",
+      "valid": "byte(2)-40>=-40 && byte(2)-40<=215",
+      "source": "OBDb Toyota-Corolla-Cross, 8 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "15EE",
+      "formula": "byte(0)*0.31448+0.0125",
+      "valid": "byte(0)*0.31448+0.0125<=80.2",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 7 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1F9A",
+      "formula": "((byte(2)*256+byte(3))*156.25)/10000",
+      "valid": "((byte(2)*256+byte(3))*156.25)/10000<=1023",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(0)*256+byte(1))/100-327.68",
+      "valid": "(byte(0)*256+byte(1))/100-327.68>=-327.68 && (byte(0)*256+byte(1))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(2)*256+byte(3))/100-327.68",
+      "valid": "(byte(2)*256+byte(3))/100-327.68>=-327.68 && (byte(2)*256+byte(3))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(4)*256+byte(5))/100-327.68",
+      "valid": "(byte(4)*256+byte(5))/100-327.68>=-327.68 && (byte(4)*256+byte(5))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(6)*256+byte(7))/100-327.68",
+      "valid": "(byte(6)*256+byte(7))/100-327.68>=-327.68 && (byte(6)*256+byte(7))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Corolla-Cross, 16 risposte vere (2023-2025)"
+     }
+    ],
+    "tx": "7D2",
+    "rx": "7DA"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Sistema Ibrido",
+    "address": "7E2",
+    "params": [],
+    "source": "OBDb Toyota-Corolla-Cross: risponde su auto vere",
+    "tx": "7E2",
+    "rx": "7EA"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Batteria ibrida",
+    "address": "7E3",
+    "params": [],
+    "source": "OBDb Toyota-Corolla-Cross: risponde su auto vere",
+    "tx": "7E3",
+    "rx": "7EB"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Corolla Cross",
+   "ecu": {
+    "name": "Pressione pneumatici (TPMS)",
+    "address": "Y2A",
+    "params": [
+     {
+      "label": "Pressione gomma ant. DX",
+      "unit": "bar",
+      "did": "1005",
+      "formula": "((byte(1))/4.125-5.6969697)*0.0689476",
+      "valid": "(byte(1))/4.125-5.6969697>0 && (byte(1))/4.125-5.6969697<56.1212 && (byte(1))/4.125-5.6969697<=56.1212",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 19 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Pressione gomma ant. SX",
+      "unit": "bar",
+      "did": "1005",
+      "formula": "((byte(5))/4.125-5.6969697)*0.0689476",
+      "valid": "(byte(5))/4.125-5.6969697>0 && (byte(5))/4.125-5.6969697<56.1212 && (byte(5))/4.125-5.6969697<=56.1212",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 22 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "1005",
+      "formula": "((byte(3))/4.125-5.6969697)*0.0689476",
+      "valid": "(byte(3))/4.125-5.6969697>0 && (byte(3))/4.125-5.6969697<56.1212 && (byte(3))/4.125-5.6969697<=56.1212",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 23 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "1005",
+      "formula": "((byte(7))/4.125-5.6969697)*0.0689476",
+      "valid": "(byte(7))/4.125-5.6969697>0 && (byte(7))/4.125-5.6969697<56.1212 && (byte(7))/4.125-5.6969697<=56.1212",
+      "decimals": 2,
+      "source": "OBDb Toyota-Corolla-Cross, 24 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Temperatura gomma ant. DX",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>-30 && byte(0)-40>=-30 && byte(0)-40<=100",
+      "source": "OBDb Toyota-Corolla-Cross, 24 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Temperatura gomma ant. SX",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "byte(2)-40",
+      "valid": "byte(2)-40>-30 && byte(2)-40>=-30 && byte(2)-40<=100",
+      "source": "OBDb Toyota-Corolla-Cross, 27 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Temperatura gomma post. DX",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "byte(1)-40",
+      "valid": "byte(1)-40>-30 && byte(1)-40>=-30 && byte(1)-40<=100",
+      "source": "OBDb Toyota-Corolla-Cross, 25 risposte vere (2022-2026)"
+     },
+     {
+      "label": "Temperatura gomma post. SX",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "byte(3)-40",
+      "valid": "byte(3)-40>-30 && byte(3)-40>=-30 && byte(3)-40<=100",
+      "source": "OBDb Toyota-Corolla-Cross, 30 risposte vere (2022-2026)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Toyota",
    "model": "GT86",
    "ecu": {
     "name": "ABS / VDC",
@@ -44255,6 +48466,383 @@
   },
   {
    "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Motore: dati del costruttore (2)",
+    "address": "700",
+    "params": [
+     {
+      "label": "Livello carburante",
+      "unit": "%",
+      "did": "1F2F",
+      "formula": "(byte(0)*100)/255",
+      "valid": "(byte(0)*100)/255<=100",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 6 risposte vere (2020-2025)"
+     },
+     {
+      "label": "Mancate accensioni cil. 1",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "source": "OBDb Toyota-Highlander, 7 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Mancate accensioni cil. 2",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(1)",
+      "valid": "byte(1)<=255",
+      "source": "OBDb Toyota-Highlander, 7 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Mancate accensioni cil. 3",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(2)",
+      "valid": "byte(2)<=255",
+      "source": "OBDb Toyota-Highlander, 7 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Mancate accensioni cil. 4",
+      "unit": "",
+      "did": "10A7",
+      "formula": "byte(3)",
+      "valid": "byte(3)<=255",
+      "source": "OBDb Toyota-Highlander, 7 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Pressione olio motore",
+      "unit": "kPa",
+      "did": "1074",
+      "formula": "((byte(0)*256+byte(1))*10)/128",
+      "valid": "((byte(0)*256+byte(1))*10)/128<=5119.92",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 4 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1F46",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Highlander, 11 risposte vere (2020-2026)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "1002",
+      "formula": "((byte(0)*256+byte(1))*12.207)/10000",
+      "valid": "((byte(0)*256+byte(1))*12.207)/10000<=79",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 9 risposte vere (2020-2025)"
+     }
+    ],
+    "tx": "700",
+    "rx": "708"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Airbag",
+    "address": "780",
+    "params": [],
+    "source": "OBDb Toyota-Highlander: risponde su auto vere",
+    "tx": "780",
+    "rx": "788"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "ABS / VSC",
+    "address": "7B0",
+    "params": [],
+    "source": "OBDb Toyota-Highlander: risponde su auto vere",
+    "tx": "7B0",
+    "rx": "7B8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Sterzo",
+    "address": "7B3",
+    "params": [
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "1004",
+      "formula": "(s16(byte(0)*256+byte(1)))*1.5",
+      "valid": "(s16(byte(0)*256+byte(1)))*1.5>=-410 && (s16(byte(0)*256+byte(1)))*1.5<=410",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 4 risposte vere (2025-2025)"
+     }
+    ],
+    "tx": "7B3",
+    "rx": "7BB"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "7C0",
+    "params": [
+     {
+      "label": "Livello carburante",
+      "unit": "L",
+      "did": "1022",
+      "formula": "(byte(0)*256+byte(1))/100",
+      "valid": "(byte(0)*256+byte(1))/100<655.35 && (byte(0)*256+byte(1))/100<=655.35",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 21 risposte vere (2020-2025)"
+     }
+    ],
+    "tx": "7C0",
+    "rx": "7C8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "7C4",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "lid": "21",
+      "formula": "(byte(0)*63.75)/255-6.5",
+      "valid": "(byte(0)*63.75)/255-6.5>=-6.5 && (byte(0)*63.75)/255-6.5<=57.25",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 24 risposte vere (2010-2023)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "lid": "22",
+      "formula": "(byte(0)*89.25)/255-23.3",
+      "valid": "(byte(0)*89.25)/255-23.3>=-23.3 && (byte(0)*89.25)/255-23.3<=65.95",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 25 risposte vere (2010-2023)"
+     }
+    ],
+    "tx": "7C4",
+    "rx": "7CC"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Freno di stazionamento",
+    "address": "7D0",
+    "params": [],
+    "source": "OBDb Toyota-Highlander: risponde su auto vere",
+    "tx": "7D0",
+    "rx": "7D8"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Sistema Ibrido",
+    "address": "7D2",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "1F5B",
+      "formula": "(byte(0)*100)/255",
+      "valid": "(byte(0)*100)/255<=100",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 8 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Corrente batteria di trazione",
+      "unit": "A",
+      "did": "1F9A",
+      "formula": "(s16(byte(4)*256+byte(5)))/10",
+      "valid": "(s16(byte(4)*256+byte(5)))/10>=-3276.8 && (s16(byte(4)*256+byte(5)))/10<=3276.7",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 25 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1F46",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>-40 && byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Highlander, 6 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "1040",
+      "formula": "byte(2)-40",
+      "valid": "byte(2)-40>=-40 && byte(2)-40<=215",
+      "source": "OBDb Toyota-Highlander, 13 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "15EE",
+      "formula": "byte(0)*0.31448+0.0125",
+      "valid": "byte(0)*0.31448+0.0125<=80.2",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 11 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1F9A",
+      "formula": "((byte(2)*256+byte(3))*156.25)/10000",
+      "valid": "((byte(2)*256+byte(3))*156.25)/10000<=1023",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 25 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(0)*256+byte(1))/100-327.68",
+      "valid": "(byte(0)*256+byte(1))/100-327.68>=-327.68 && (byte(0)*256+byte(1))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 22 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(2)*256+byte(3))/100-327.68",
+      "valid": "(byte(2)*256+byte(3))/100-327.68>=-327.68 && (byte(2)*256+byte(3))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 22 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(4)*256+byte(5))/100-327.68",
+      "valid": "(byte(4)*256+byte(5))/100-327.68>=-327.68 && (byte(4)*256+byte(5))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 22 risposte vere (2021-2025)"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "did": "1075",
+      "formula": "(byte(6)*256+byte(7))/100-327.68",
+      "valid": "(byte(6)*256+byte(7))/100-327.68>=-327.68 && (byte(6)*256+byte(7))/100-327.68<=327.67",
+      "decimals": 1,
+      "source": "OBDb Toyota-Highlander, 22 risposte vere (2021-2025)"
+     }
+    ],
+    "tx": "7D2",
+    "rx": "7DA"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Sistema Ibrido",
+    "address": "7E2",
+    "params": [],
+    "source": "OBDb Toyota-Highlander: risponde su auto vere",
+    "tx": "7E2",
+    "rx": "7EA"
+   }
+  },
+  {
+   "brand": "Toyota",
+   "model": "Highlander (XU70)",
+   "ecu": {
+    "name": "Pressione pneumatici (TPMS)",
+    "address": "Y2A",
+    "params": [
+     {
+      "label": "Pressione gomma ant. DX",
+      "unit": "bar",
+      "lid": "30",
+      "formula": "(byte(1))/58-0.5",
+      "valid": "(byte(1))/58-0.5>0 && (byte(1))/58-0.5<3.896 && (byte(1))/58-0.5<=3.896",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 40 risposte vere (2014-2023)"
+     },
+     {
+      "label": "Pressione gomma ant. SX",
+      "unit": "bar",
+      "lid": "30",
+      "formula": "(byte(0))/58-0.5",
+      "valid": "(byte(0))/58-0.5>0 && (byte(0))/58-0.5<3.896 && (byte(0))/58-0.5<=3.896",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 38 risposte vere (2014-2023)"
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "lid": "30",
+      "formula": "(byte(3))/58-0.5",
+      "valid": "(byte(3))/58-0.5>0 && (byte(3))/58-0.5<3.896 && (byte(3))/58-0.5<=3.896",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 39 risposte vere (2014-2023)"
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "lid": "30",
+      "formula": "(byte(2))/58-0.5",
+      "valid": "(byte(2))/58-0.5>0 && (byte(2))/58-0.5<3.896 && (byte(2))/58-0.5<=3.896",
+      "decimals": 2,
+      "source": "OBDb Toyota-Highlander, 39 risposte vere (2014-2023)"
+     },
+     {
+      "label": "Temperatura gomma ant. DX",
+      "unit": "°C",
+      "lid": "16",
+      "formula": "byte(1)-40",
+      "valid": "byte(1)-40>-40 && byte(1)-40<215 && byte(1)-40>=-40 && byte(1)-40<=215",
+      "source": "OBDb Toyota-Highlander, 15 risposte vere (2015-2023)"
+     },
+     {
+      "label": "Temperatura gomma ant. SX",
+      "unit": "°C",
+      "lid": "16",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>-40 && byte(0)-40<215 && byte(0)-40>=-40 && byte(0)-40<=215",
+      "source": "OBDb Toyota-Highlander, 17 risposte vere (2015-2023)"
+     },
+     {
+      "label": "Temperatura gomma post. DX",
+      "unit": "°C",
+      "lid": "16",
+      "formula": "byte(3)-40",
+      "valid": "byte(3)-40>-40 && byte(3)-40<215 && byte(3)-40>=-40 && byte(3)-40<=215",
+      "source": "OBDb Toyota-Highlander, 16 risposte vere (2015-2023)"
+     },
+     {
+      "label": "Temperatura gomma post. SX",
+      "unit": "°C",
+      "lid": "16",
+      "formula": "byte(2)-40",
+      "valid": "byte(2)-40>-40 && byte(2)-40<215 && byte(2)-40>=-40 && byte(2)-40<=215",
+      "source": "OBDb Toyota-Highlander, 15 risposte vere (2015-2023)"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Toyota",
    "model": "Supra",
    "ecu": {
     "name": "Cambio",
@@ -45843,6 +50431,54 @@
       "source": "OBDb Volkswagen-Arteon, 13 risposte vere (2018-2021)"
      },
      {
+      "label": "Mancate accensioni ogni 1000 giri cil. 3",
+      "unit": "",
+      "did": "10F4",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Arteon, 3 risposte vere (2018-2018)"
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 1",
+      "unit": "°",
+      "did": "200A",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Arteon, 7 risposte vere (2018-2021)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Arteon, 9 risposte vere (2018-2021)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 3",
+      "unit": "°",
+      "did": "200C",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Arteon, 7 risposte vere (2018-2021)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 4",
+      "unit": "°",
+      "did": "200D",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Arteon, 11 risposte vere (2018-2021)",
+      "extra": true
+     },
+     {
       "label": "Temperatura carburante",
       "unit": "°C",
       "did": "203E",
@@ -45968,6 +50604,23 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Volkswagen-CC, 3 risposte vere (2013-2013)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 3",
+      "unit": "",
+      "did": "1148",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-CC, 2 risposte vere (2013-2013)"
+     },
+     {
+      "label": "Mancate accensioni totali",
+      "unit": "",
+      "did": "1146",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-CC, 4 risposte vere (2013-2013)",
+      "extra": true
      },
      {
       "label": "Pressione turbo",
@@ -46968,6 +51621,14 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Volkswagen-Jetta, 6 risposte vere (2016-2021)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Jetta, 9 risposte vere (2016-2021)"
      }
     ],
     "tx": "7E0",
@@ -47292,6 +51953,78 @@
       "formula": "byte(0)*256+byte(1)",
       "valid": "byte(0)*256+byte(1)<=65535",
       "source": "OBDb Volkswagen-Passat, 6 risposte vere (2011-2018)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 1",
+      "unit": "",
+      "did": "1147",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Passat, 2 risposte vere (2012-2012)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 2",
+      "unit": "",
+      "did": "114A",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Passat, 7 risposte vere (2011-2018)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 3",
+      "unit": "",
+      "did": "1148",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Passat, 13 risposte vere (2012-2019)"
+     },
+     {
+      "label": "Mancate accensioni ogni 1000 giri cil. 4",
+      "unit": "",
+      "did": "1149",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "source": "OBDb Volkswagen-Passat, 8 risposte vere (2012-2019)"
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 1",
+      "unit": "°",
+      "did": "200A",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Passat, 11 risposte vere (2015-2017)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 2",
+      "unit": "°",
+      "did": "200B",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Passat, 7 risposte vere (2015-2017)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 3",
+      "unit": "°",
+      "did": "200C",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Passat, 5 risposte vere (2015-2017)",
+      "extra": true
+     },
+     {
+      "label": "Ritardo anticipo per battito cil. 4",
+      "unit": "°",
+      "did": "200D",
+      "formula": "byte(0)*0.375-48",
+      "valid": "byte(0)*0.375-48>=-48 && byte(0)*0.375-48<=47.625",
+      "decimals": 1,
+      "source": "OBDb Volkswagen-Passat, 11 risposte vere (2015-2017)",
+      "extra": true
      },
      {
       "label": "Temperatura carburante",
@@ -48048,6 +52781,30 @@
      "source": "OBDb Volkswagen-T-Roc, 2 risposte vere (2022-2022)"
     },
     {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Volkswagen-T-Roc, 3 risposte vere (2022-2023)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 3",
+     "unit": "",
+     "did": "1148",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Volkswagen-T-Roc, 2 risposte vere (2021-2021)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 4",
+     "unit": "",
+     "did": "1149",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Volkswagen-T-Roc, 2 risposte vere (2021-2021)"
+    },
+    {
      "label": "Temperatura carburante",
      "unit": "°C",
      "did": "128A",
@@ -48393,6 +53150,14 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "source": "OBDb Volkswagen-Tiguan, 7 risposte vere (2016-2024)"
+    },
+    {
+     "label": "Mancate accensioni ogni 1000 giri cil. 2",
+     "unit": "",
+     "did": "114A",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "source": "OBDb Volkswagen-Tiguan, 8 risposte vere (2019-2024)"
     },
     {
      "label": "Temperatura carburante",
@@ -49692,6 +54457,39 @@
     "source": "OBDb Jaguar-F-TYPE: risponde su auto vere",
     "tx": "732",
     "rx": "73A"
+   }
+  },
+  {
+   "brand": "Lancia",
+   "model": "Thema",
+   "ecu": {
+    "name": "Motore: dati del costruttore",
+    "address": "7E0",
+    "params": [
+     {
+      "label": "Pressione olio motore",
+      "unit": "kPa",
+      "did": "022A",
+      "formula": "((byte(0)*29)/50)*6.89476",
+      "valid": "(byte(0)*29)/50<=147.8999",
+      "decimals": 1,
+      "source": "OBDb Chrysler-300, 2 risposte vere (2012-2012)"
+     }
+    ],
+    "tx": "7E0",
+    "rx": "7E8"
+   }
+  },
+  {
+   "brand": "Lancia",
+   "model": "Thema",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "params": [],
+    "source": "OBDb Chrysler-300: risponde su auto vere",
+    "tx": "7E1",
+    "rx": "7E9"
    }
   }
  ]
