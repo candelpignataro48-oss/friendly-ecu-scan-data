@@ -49,7 +49,7 @@
    },
    {
     "label": "Consumo carburante",
-    "unit": "l/h",
+    "unit": "L/h",
     "did": "113F",
     "formula": "(byte(0)*256+byte(1))/100",
     "decimals": 2
@@ -85,7 +85,7 @@
    },
    {
     "label": "Livello carburante",
-    "unit": "l",
+    "unit": "L",
     "did": "14B4",
     "formula": "(byte(0)*256+byte(1))/100",
     "decimals": 1
@@ -240,7 +240,7 @@
    },
    {
     "label": "Consumo carburante",
-    "unit": "l/h",
+    "unit": "L/h",
     "did": "111A",
     "formula": "s16(byte(0)*256+byte(1))/100",
     "decimals": 2
