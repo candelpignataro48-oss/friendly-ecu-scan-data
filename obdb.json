@@ -510,7 +510,15 @@
    "ecu": {
     "name": "Quadro Strumenti",
     "address": "714",
-    "params": [],
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1014",
+      "formula": "(byte(0))/2-50",
+      "valid": "(byte(0))/2-50>=-50 && (byte(0))/2-50<=77.5"
+     }
+    ],
     "tx": "714",
     "rx": "77E"
    }
