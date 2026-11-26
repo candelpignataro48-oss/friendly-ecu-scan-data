@@ -1,0 +1,1244 @@
+{
+ "note": "Letture confermate dai log veri di OBDb (registrazioni di guida su auto vere, CC BY-SA 4.0) per modelli che non le avevano: in ogni voce l'auto ha risposto allo stesso indirizzo e allo stesso identificatore di un modello della stessa marca che nell'app ha già la lettura, e con la stessa formula i valori registrati sono realistici. Questo file resta sotto CC BY-SA 4.0 (attribuzione: OBDb contributors).",
+ "license": "CC BY-SA 4.0",
+ "attribution": "OBDb contributors, https://github.com/OBDb",
+ "extras": [
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "17FC007B",
+    "tx": "17FC007B",
+    "rx": "17FE007B",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "028C",
+      "formula": "A/2.5",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1E3B",
+      "formula": "(A*256+B)/4",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "2A0B",
+      "formula": "A/2-40",
+      "decimals": 1
+     },
+     {
+      "label": "Limite di corrente di ricarica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(A*256+B)/5",
+      "decimals": 0
+     },
+     {
+      "label": "Pompa di circolazione della batteria",
+      "unit": "%",
+      "did": "743B",
+      "formula": "A",
+      "decimals": 0
+     },
+     {
+      "label": "Corrente del riscaldatore PTC",
+      "unit": "A",
+      "did": "1620",
+      "formula": "X",
+      "decimals": 0
+     },
+     {
+      "label": "Stato dell'auto",
+      "unit": "",
+      "did": "7448",
+      "formula": "A",
+      "values": {
+       "0": "Spenta",
+       "1": "In marcia",
+       "4": "Ricarica AC",
+       "6": "Ricarica DC"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Trazione elettrica: dati del costruttore",
+    "address": "17FC0076",
+    "tx": "17FC0076",
+    "rx": "17FE0076",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "295A",
+      "formula": "X",
+      "decimals": 0,
+      "slow": true,
+      "valid": "X<16777215"
+     },
+     {
+      "label": "Potenza delle utenze ad alta tensione",
+      "unit": "kW",
+      "did": "0364",
+      "formula": "X/10",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Gateway CAN",
+    "address": "710",
+    "params": [
+     {
+      "label": "Capacità della batteria di trazione",
+      "unit": "kWh",
+      "did": "2AB2",
+      "formula": "X/1310.77/1000",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Autonomia calcolata",
+      "unit": "km",
+      "did": "2AB6",
+      "formula": "A*256+B",
+      "decimals": 0
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "params": [
+     {
+      "label": "CO2 nell'abitacolo",
+      "unit": "ppm",
+      "did": "42DB",
+      "formula": "X*100",
+      "decimals": 0,
+      "valid": "X<1000"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Born",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "17FC007B",
+    "tx": "17FC007B",
+    "rx": "17FE007B",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "028C",
+      "formula": "A/2.5",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1E3B",
+      "formula": "(A*256+B)/4",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "2A0B",
+      "formula": "A/2-40",
+      "decimals": 1
+     },
+     {
+      "label": "Limite di corrente di ricarica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(A*256+B)/5",
+      "decimals": 0
+     },
+     {
+      "label": "Pompa di circolazione della batteria",
+      "unit": "%",
+      "did": "743B",
+      "formula": "A",
+      "decimals": 0
+     },
+     {
+      "label": "Corrente del riscaldatore PTC",
+      "unit": "A",
+      "did": "1620",
+      "formula": "X",
+      "decimals": 0
+     },
+     {
+      "label": "Stato dell'auto",
+      "unit": "",
+      "did": "7448",
+      "formula": "A",
+      "values": {
+       "0": "Spenta",
+       "1": "In marcia",
+       "4": "Ricarica AC",
+       "6": "Ricarica DC"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Born",
+   "ecu": {
+    "name": "Trazione elettrica: dati del costruttore",
+    "address": "17FC0076",
+    "tx": "17FC0076",
+    "rx": "17FE0076",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "295A",
+      "formula": "X",
+      "decimals": 0,
+      "slow": true,
+      "valid": "X<16777215"
+     },
+     {
+      "label": "Potenza delle utenze ad alta tensione",
+      "unit": "kW",
+      "did": "0364",
+      "formula": "X/10",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Born",
+   "ecu": {
+    "name": "Gateway CAN",
+    "address": "710",
+    "params": [
+     {
+      "label": "Capacità della batteria di trazione",
+      "unit": "kWh",
+      "did": "2AB2",
+      "formula": "X/1310.77/1000",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Autonomia calcolata",
+      "unit": "km",
+      "did": "2AB6",
+      "formula": "A*256+B",
+      "decimals": 0
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Born",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "2609",
+      "formula": "A/2-50",
+      "decimals": 1,
+      "valid": "A<255"
+     },
+     {
+      "label": "CO2 nell'abitacolo",
+      "unit": "ppm",
+      "did": "42DB",
+      "formula": "X*100",
+      "decimals": 0,
+      "valid": "X<1000"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Tavascan",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "17FC007B",
+    "tx": "17FC007B",
+    "rx": "17FE007B",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "028C",
+      "formula": "A/2.5",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1E3B",
+      "formula": "(A*256+B)/4",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "2A0B",
+      "formula": "A/2-40",
+      "decimals": 1
+     },
+     {
+      "label": "Limite di corrente di ricarica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(A*256+B)/5",
+      "decimals": 0
+     },
+     {
+      "label": "Pompa di circolazione della batteria",
+      "unit": "%",
+      "did": "743B",
+      "formula": "A",
+      "decimals": 0
+     },
+     {
+      "label": "Corrente del riscaldatore PTC",
+      "unit": "A",
+      "did": "1620",
+      "formula": "X",
+      "decimals": 0
+     },
+     {
+      "label": "Stato dell'auto",
+      "unit": "",
+      "did": "7448",
+      "formula": "A",
+      "values": {
+       "0": "Spenta",
+       "1": "In marcia",
+       "4": "Ricarica AC",
+       "6": "Ricarica DC"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Tavascan",
+   "ecu": {
+    "name": "Trazione elettrica: dati del costruttore",
+    "address": "17FC0076",
+    "tx": "17FC0076",
+    "rx": "17FE0076",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "295A",
+      "formula": "X",
+      "decimals": 0,
+      "slow": true,
+      "valid": "X<16777215"
+     },
+     {
+      "label": "Potenza delle utenze ad alta tensione",
+      "unit": "kW",
+      "did": "0364",
+      "formula": "X/10",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Tavascan",
+   "ecu": {
+    "name": "Gateway CAN",
+    "address": "710",
+    "params": [
+     {
+      "label": "Capacità della batteria di trazione",
+      "unit": "kWh",
+      "did": "2AB2",
+      "formula": "X/1310.77/1000",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Autonomia calcolata",
+      "unit": "km",
+      "did": "2AB6",
+      "formula": "A*256+B",
+      "decimals": 0
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Cupra",
+   "model": "Tavascan",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "2609",
+      "formula": "A/2-50",
+      "decimals": 1,
+      "valid": "A<255"
+     },
+     {
+      "label": "CO2 nell'abitacolo",
+      "unit": "ppm",
+      "did": "42DB",
+      "formula": "X*100",
+      "decimals": 0,
+      "valid": "X<1000"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Audi",
+   "model": "Q4 e-tron",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "17FC007B",
+    "tx": "17FC007B",
+    "rx": "17FE007B",
+    "params": [
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1E3B",
+      "formula": "(A*256+B)/4",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "2A0B",
+      "formula": "A/2-40",
+      "decimals": 1
+     },
+     {
+      "label": "Limite di corrente di ricarica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(A*256+B)/5",
+      "decimals": 0
+     },
+     {
+      "label": "Pompa di circolazione della batteria",
+      "unit": "%",
+      "did": "743B",
+      "formula": "A",
+      "decimals": 0
+     },
+     {
+      "label": "Corrente del riscaldatore PTC",
+      "unit": "A",
+      "did": "1620",
+      "formula": "X",
+      "decimals": 0
+     },
+     {
+      "label": "Stato dell'auto",
+      "unit": "",
+      "did": "7448",
+      "formula": "A",
+      "values": {
+       "0": "Spenta",
+       "1": "In marcia",
+       "4": "Ricarica AC",
+       "6": "Ricarica DC"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Audi",
+   "model": "Q4 e-tron",
+   "ecu": {
+    "name": "Trazione elettrica: dati del costruttore",
+    "address": "17FC0076",
+    "tx": "17FC0076",
+    "rx": "17FE0076",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "295A",
+      "formula": "X",
+      "decimals": 0,
+      "slow": true,
+      "valid": "X<16777215"
+     },
+     {
+      "label": "Potenza delle utenze ad alta tensione",
+      "unit": "kW",
+      "did": "0364",
+      "formula": "X/10",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Audi",
+   "model": "Q4 e-tron",
+   "ecu": {
+    "name": "Gateway CAN",
+    "address": "710",
+    "params": [
+     {
+      "label": "Capacità della batteria di trazione",
+      "unit": "kWh",
+      "did": "2AB2",
+      "formula": "X/1310.77/1000",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Autonomia calcolata",
+      "unit": "km",
+      "did": "2AB6",
+      "formula": "A*256+B",
+      "decimals": 0
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Audi",
+   "model": "Q4 e-tron",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "params": [
+     {
+      "label": "CO2 nell'abitacolo",
+      "unit": "ppm",
+      "did": "42DB",
+      "formula": "X*100",
+      "decimals": 0,
+      "valid": "X<1000"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "ID. Buzz",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "17FC007B",
+    "tx": "17FC007B",
+    "rx": "17FE007B",
+    "params": [
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "028C",
+      "formula": "A/2.5",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione batteria di trazione",
+      "unit": "V",
+      "did": "1E3B",
+      "formula": "(A*256+B)/4",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "2A0B",
+      "formula": "A/2-40",
+      "decimals": 1
+     },
+     {
+      "label": "Limite di corrente di ricarica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(A*256+B)/5",
+      "decimals": 0
+     },
+     {
+      "label": "Pompa di circolazione della batteria",
+      "unit": "%",
+      "did": "743B",
+      "formula": "A",
+      "decimals": 0
+     },
+     {
+      "label": "Corrente del riscaldatore PTC",
+      "unit": "A",
+      "did": "1620",
+      "formula": "X",
+      "decimals": 0
+     },
+     {
+      "label": "Stato dell'auto",
+      "unit": "",
+      "did": "7448",
+      "formula": "A",
+      "values": {
+       "0": "Spenta",
+       "1": "In marcia",
+       "4": "Ricarica AC",
+       "6": "Ricarica DC"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "ID. Buzz",
+   "ecu": {
+    "name": "Trazione elettrica: dati del costruttore",
+    "address": "17FC0076",
+    "tx": "17FC0076",
+    "rx": "17FE0076",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "295A",
+      "formula": "X",
+      "decimals": 0,
+      "slow": true,
+      "valid": "X<16777215"
+     },
+     {
+      "label": "Potenza delle utenze ad alta tensione",
+      "unit": "kW",
+      "did": "0364",
+      "formula": "X/10",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "ID. Buzz",
+   "ecu": {
+    "name": "Gateway CAN",
+    "address": "710",
+    "params": [
+     {
+      "label": "Capacità della batteria di trazione",
+      "unit": "kWh",
+      "did": "2AB2",
+      "formula": "X/1310.77/1000",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Autonomia calcolata",
+      "unit": "km",
+      "did": "2AB6",
+      "formula": "A*256+B",
+      "decimals": 0
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "ID. Buzz",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "2609",
+      "formula": "A/2-50",
+      "decimals": 1,
+      "valid": "A<255"
+     },
+     {
+      "label": "CO2 nell'abitacolo",
+      "unit": "ppm",
+      "did": "42DB",
+      "formula": "X*100",
+      "decimals": 0,
+      "valid": "X<1000"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Octavia",
+   "ecu": {
+    "name": "Gateway",
+    "address": "710",
+    "tx": "710",
+    "rx": "77A",
+    "params": [
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "2A07",
+      "formula": "(byte(0)*256+byte(1))/1000+4",
+      "valid": "(byte(0)*256+byte(1))/1000+4>=4 && (byte(0)*256+byte(1))/1000+4<=69.535",
+      "decimals": 2
+     },
+     {
+      "label": "Carica batteria 12 V",
+      "unit": "%",
+      "did": "2A0C",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=100"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Octavia",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "714",
+    "tx": "714",
+    "rx": "77E",
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1014",
+      "formula": "(byte(0))/2-50",
+      "valid": "(byte(0))/2-50>=-50 && (byte(0))/2-50<=77.5"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Octavia",
+   "engineParams": [
+    {
+     "label": "Temperatura olio motore",
+     "unit": "°C",
+     "did": "11BE",
+     "formula": "(byte(0)*256+byte(1))/10-273.1",
+     "valid": "(byte(0)*256+byte(1))/10-273.1>-40 && (byte(0)*256+byte(1))/10-273.1<500 && (byte(0)*256+byte(1))/10-273.1>=-40 && (byte(0)*256+byte(1))/10-273.1<=500",
+     "decimals": 1
+    }
+   ]
+  },
+  {
+   "brand": "Seat",
+   "model": "Alhambra",
+   "engineParams": [
+    {
+     "label": "Temperatura olio motore",
+     "unit": "°C",
+     "did": "11BE",
+     "formula": "(byte(0)*256+byte(1))/10-273.1",
+     "valid": "(byte(0)*256+byte(1))/10-273.1>-40 && (byte(0)*256+byte(1))/10-273.1<500 && (byte(0)*256+byte(1))/10-273.1>=-40 && (byte(0)*256+byte(1))/10-273.1<=500",
+     "decimals": 1
+    }
+   ]
+  },
+  {
+   "brand": "Seat",
+   "model": "Ateca",
+   "ecu": {
+    "name": "Gateway",
+    "address": "710",
+    "tx": "710",
+    "rx": "77A",
+    "params": [
+     {
+      "label": "Carica batteria 12 V",
+      "unit": "%",
+      "did": "2A0C",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=100"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Gateway",
+    "address": "710",
+    "tx": "710",
+    "rx": "77A",
+    "params": [
+     {
+      "label": "Carica batteria 12 V",
+      "unit": "%",
+      "did": "2AF7",
+      "formula": "byte(7)",
+      "valid": "byte(7)<=100"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Skoda",
+   "model": "Enyaq",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "746",
+    "tx": "746",
+    "rx": "7B0",
+    "params": [
+     {
+      "label": "Temperatura abitacolo",
+      "unit": "°C",
+      "did": "2613",
+      "formula": "(s16(byte(0)*256+byte(1)))/10",
+      "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7 && (s16(byte(0)*256+byte(1)))/10>=-40 && (s16(byte(0)*256+byte(1)))/10<=85",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "Taigo",
+   "engineParams": [
+    {
+     "label": "Contachilometri",
+     "unit": "km",
+     "did": "295A",
+     "formula": "byte(0)*65536+byte(1)*256+byte(2)",
+     "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
+     "slow": true
+    }
+   ]
+  },
+  {
+   "brand": "Ford",
+   "model": "Transit",
+   "ecu": {
+    "name": "Body Computer",
+    "address": "726",
+    "tx": "726",
+    "rx": "72E",
+    "params": [
+     {
+      "label": "Carica batteria 12 V",
+      "unit": "%",
+      "did": "4028",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=100"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Ford",
+   "model": "Transit",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "760",
+    "tx": "760",
+    "rx": "768",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "2B06",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200"
+     },
+     {
+      "label": "Velocità ruota ant. SX",
+      "unit": "km/h",
+      "did": "2B07",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200"
+     },
+     {
+      "label": "Velocità ruota post. DX",
+      "unit": "km/h",
+      "did": "2B08",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200"
+     },
+     {
+      "label": "Velocità ruota post. SX",
+      "unit": "km/h",
+      "did": "2B09",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=200"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Ford",
+   "model": "Transit",
+   "engineParams": [
+    {
+     "label": "Km dall'ultimo cambio olio",
+     "unit": "km",
+     "did": "0542",
+     "formula": "byte(0)*256+byte(1)",
+     "valid": "byte(0)*256+byte(1)<=65535",
+     "slow": true
+    },
+    {
+     "label": "Vita olio residua",
+     "unit": "%",
+     "did": "054B",
+     "formula": "byte(0)",
+     "valid": "byte(0)<=100",
+     "slow": true
+    },
+    {
+     "label": "Temperatura olio cambio",
+     "unit": "°C",
+     "did": "1E1C",
+     "formula": "(s16(byte(0)*256+byte(1)))/16",
+     "valid": "(s16(byte(0)*256+byte(1)))/16>=-500 && (s16(byte(0)*256+byte(1)))/16<=500",
+     "decimals": 1
+    },
+    {
+     "label": "Temperatura esterna",
+     "unit": "°C",
+     "did": "F446",
+     "formula": "byte(0)-40",
+     "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+    },
+    {
+     "label": "Temperatura olio motore",
+     "unit": "°C",
+     "did": "F45C",
+     "formula": "byte(0)-40",
+     "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+    }
+   ]
+  },
+  {
+   "brand": "Jeep",
+   "model": "Compass (MK)",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "tx": "7E1",
+    "rx": "7E9",
+    "params": [
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "04FE",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "model": "CLA",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "7E2",
+    "tx": "7E2",
+    "rx": "7EA",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "2001",
+      "formula": "(byte(2)*256+byte(3))/100",
+      "valid": "(byte(2)*256+byte(3))/100<655.34 && (byte(2)*256+byte(3))/100<=655.34",
+      "decimals": 1
+     },
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "2002",
+      "formula": "(s16(byte(9)*256+byte(10)))/10",
+      "valid": "(s16(byte(9)*256+byte(10)))/10>=-3276.8 && (s16(byte(9)*256+byte(10)))/10<=3276.7",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "model": "Classe A (W177)",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "7E2",
+    "tx": "7E2",
+    "rx": "7EA",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "2001",
+      "formula": "(byte(2)*256+byte(3))/100",
+      "valid": "(byte(2)*256+byte(3))/100<655.34 && (byte(2)*256+byte(3))/100<=655.34",
+      "decimals": 1
+     },
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "2002",
+      "formula": "(s16(byte(9)*256+byte(10)))/10",
+      "valid": "(s16(byte(9)*256+byte(10)))/10>=-3276.8 && (s16(byte(9)*256+byte(10)))/10<=3276.7",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "model": "Classe S",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "7E2",
+    "tx": "7E2",
+    "rx": "7EA",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "2001",
+      "formula": "(byte(2)*256+byte(3))/100",
+      "valid": "(byte(2)*256+byte(3))/100<655.34 && (byte(2)*256+byte(3))/100<=655.34",
+      "decimals": 1
+     },
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "2002",
+      "formula": "(s16(byte(9)*256+byte(10)))/10",
+      "valid": "(s16(byte(9)*256+byte(10)))/10>=-3276.8 && (s16(byte(9)*256+byte(10)))/10<=3276.7",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "model": "GLB",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "7E2",
+    "tx": "7E2",
+    "rx": "7EA",
+    "params": [
+     {
+      "label": "Velocità ruota ant. DX",
+      "unit": "km/h",
+      "did": "2001",
+      "formula": "(byte(2)*256+byte(3))/100",
+      "valid": "(byte(2)*256+byte(3))/100<655.34 && (byte(2)*256+byte(3))/100<=655.34",
+      "decimals": 1
+     },
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "2002",
+      "formula": "(s16(byte(9)*256+byte(10)))/10",
+      "valid": "(s16(byte(9)*256+byte(10)))/10>=-3276.8 && (s16(byte(9)*256+byte(10)))/10<=3276.7",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mercedes-Benz",
+   "model": "Classe C (W205)",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "7E2",
+    "tx": "7E2",
+    "rx": "7EA",
+    "params": [
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "2002",
+      "formula": "(s16(byte(9)*256+byte(10)))/10",
+      "valid": "(s16(byte(9)*256+byte(10)))/10>=-3276.8 && (s16(byte(9)*256+byte(10)))/10<=3276.7",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "Climatizzatore",
+    "address": "688",
+    "tx": "688",
+    "rx": "511",
+    "params": [
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "lid": "11",
+      "formula": "(byte(0))/2-40",
+      "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "6A0",
+    "tx": "6A0",
+    "rx": "514",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "lid": "AD",
+      "formula": "byte(2)*65536+byte(1)*256+byte(0)",
+      "valid": "byte(2)*65536+byte(1)*256+byte(0)<16777215 && byte(2)*65536+byte(1)*256+byte(0)<=16777215",
+      "slow": true
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Mitsubishi",
+   "model": "Lancer",
+   "engineParams": [
+    {
+     "label": "Tensione batteria 12 V",
+     "unit": "V",
+     "lid": "01",
+     "formula": "(byte(0)*18)/255",
+     "valid": "(byte(0)*18)/255<=18",
+     "decimals": 2
+    }
+   ]
+  },
+  {
+   "brand": "Nissan",
+   "model": "370Z",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "743",
+    "tx": "743",
+    "rx": "763",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "lid": "01",
+      "formula": "byte(7)*65536+byte(8)*256+byte(9)",
+      "valid": "byte(7)*65536+byte(8)*256+byte(9)<=16777215",
+      "slow": true
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Nissan",
+   "model": "Juke (F15)",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "743",
+    "tx": "743",
+    "rx": "763",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "lid": "01",
+      "formula": "byte(7)*65536+byte(8)*256+byte(9)",
+      "valid": "byte(7)*65536+byte(8)*256+byte(9)<=16777215",
+      "slow": true
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Renault",
+   "model": "Twingo",
+   "ecu": {
+    "name": "ABS / ESP",
+    "address": "740",
+    "tx": "740",
+    "rx": "760",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "4B06",
+      "formula": "(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))/100",
+      "valid": "(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))/100<=42949672.95",
+      "decimals": 1,
+      "slow": true
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Dacia",
+   "model": "Dokker",
+   "ecu": {
+    "name": "Quadro Strumenti",
+    "address": "743",
+    "tx": "743",
+    "rx": "763",
+    "params": [
+     {
+      "label": "Contachilometri",
+      "unit": "km",
+      "did": "0207",
+      "formula": "byte(0)*65536+byte(1)*256+byte(2)",
+      "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
+      "slow": true
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -389,6 +389,183 @@
     "decimals": 2,
     "valid": "(A*16777216+B*65536+C*256+D)/1000<=50"
    }
+  ],
+  "fca-edc17-mjt-diesel": [
+   {
+    "label": "Pressione carburante (rail)",
+    "unit": "bar",
+    "did": "1947",
+    "formula": "(byte(0)*256+byte(1))/20",
+    "valid": "(byte(0)*256+byte(1))/20<=3000 && (byte(0)*256+byte(1))/20<=400",
+    "decimals": 2,
+    "session": "03"
+   },
+   {
+    "label": "Temperatura carburante",
+    "unit": "°C",
+    "did": "1900",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=200",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Km con avviso acqua nel gasolio",
+    "unit": "km",
+    "did": "1009",
+    "formula": "byte(0)*256+byte(1)",
+    "valid": "byte(0)*256+byte(1)<=65535",
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Posizione geometria variabile turbo",
+    "unit": "%",
+    "did": "18A0",
+    "formula": "((byte(0)*256+byte(1))*100)/65535",
+    "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Posizione geometria variabile turbo richiesta",
+    "unit": "%",
+    "did": "189F",
+    "formula": "((byte(0)*256+byte(1))*100)/65535",
+    "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
+    "decimals": 1,
+    "extra": true,
+    "session": "03"
+   },
+   {
+    "label": "Temperatura aria al debimetro",
+    "unit": "°C",
+    "did": "193F",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=200",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Temperatura aria dopo intercooler",
+    "unit": "°C",
+    "did": "1935",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=200",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: rigenerazioni interrotte",
+    "unit": "",
+    "did": "18A5",
+    "formula": "byte(0)",
+    "valid": "byte(0)<=255",
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Rigenerazioni filtro antiparticolato interrotte di fila",
+    "unit": "",
+    "did": "18AE",
+    "formula": "byte(0)",
+    "valid": "byte(0)<=255",
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: resistenza al flusso",
+    "unit": "",
+    "did": "18E8",
+    "formula": "(byte(0)*256+byte(1))/10000",
+    "valid": "(byte(0)*256+byte(1))/10000<=10",
+    "decimals": 3,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: rigenerazioni",
+    "unit": "",
+    "did": "3912",
+    "formula": "byte(0)*256+byte(1)",
+    "valid": "byte(0)*256+byte(1)<=65535",
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: km medi tra rigenerazioni",
+    "unit": "km",
+    "did": "3809",
+    "formula": "(byte(0)*256+byte(1))*10",
+    "valid": "(byte(0)*256+byte(1))*10<=10000",
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: durata media rigenerazione",
+    "unit": "min",
+    "did": "380A",
+    "formula": "(byte(0)*256+byte(1))/60",
+    "valid": "(byte(0)*256+byte(1))/60<=30",
+    "decimals": 1,
+    "slow": true,
+    "session": "03"
+   },
+   {
+    "label": "Filtro antiparticolato: temperatura uscita",
+    "unit": "°C",
+    "did": "3915",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Temperatura ingresso catalizzatore",
+    "unit": "°C",
+    "did": "3914",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Temperatura gas EGR dopo il radiatore",
+    "unit": "°C",
+    "did": "3917",
+    "formula": "((byte(0)*256+byte(1))*2)/100-40",
+    "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Catalizzatore NOx: carico",
+    "unit": "%",
+    "did": "392B",
+    "formula": "((byte(0)*256+byte(1))*100)/65535",
+    "valid": "((byte(0)*256+byte(1))*100)/65535<=100 && ((byte(0)*256+byte(1))*100)/65535<99.998",
+    "decimals": 1,
+    "session": "03"
+   },
+   {
+    "label": "Degrado olio motore",
+    "unit": "%",
+    "did": "3813",
+    "formula": "((byte(0)*256+byte(1))*100)/65535",
+    "valid": "((byte(0)*256+byte(1))*100)/65535<=100 && ((byte(0)*256+byte(1))*100)/65535<100",
+    "decimals": 1,
+    "slow": true,
+    "session": "03"
+   }
+  ],
+  "fca-marcia-inserita": [
+   {
+    "label": "Marcia inserita",
+    "unit": "",
+    "did": "192D",
+    "formula": "byte(0)",
+    "valid": "byte(0)<=9 && byte(0)>=1 && byte(0)<=10",
+    "session": "03"
+   }
   ]
  },
  "extras": [
@@ -1484,17 +1661,6 @@
      },
      {
       "label": "Servofreno idraulico",
-      "unit": "",
-      "did": "1810",
-      "formula": "(floor(byte(0)/2)-floor(byte(0)/4)*2)",
-      "valid": "(floor(byte(0)/2)-floor(byte(0)/4)*2)<=1",
-      "values": {
-       "0": "No",
-       "1": "Sì"
-      }
-     },
-     {
-      "label": "Servofreno idraulico attivo",
       "unit": "",
       "did": "1810",
       "formula": "(floor(byte(0)/2)-floor(byte(0)/4)*2)",
@@ -36065,7 +36231,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura aria dopo intercooler",
@@ -36082,7 +36252,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Km con avviso acqua nel gasolio",
@@ -36091,7 +36265,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Rigenerazioni filtro antiparticolato interrotte di fila",
@@ -36100,7 +36278,11 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     }
    ],
    "engineAddress": "10"
@@ -36135,7 +36317,11 @@
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100 && ((byte(0)*256+byte(1))*100)/65535<100",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: km dall'ultima rigenerazione",
@@ -36145,7 +36331,11 @@
      "valid": "(byte(0)*65536+byte(1)*256+byte(2))/10<=10000",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: pressione differenziale",
@@ -36154,7 +36344,11 @@
      "formula": "(byte(0)*256+byte(1))/10-3276.8",
      "valid": "(byte(0)*256+byte(1))/10-3276.8>=-50 && (byte(0)*256+byte(1))/10-3276.8<=50",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazione in corso",
@@ -36163,7 +36357,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazioni interrotte",
@@ -36172,7 +36370,11 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: temperatura ingresso",
@@ -36181,7 +36383,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: temperatura uscita",
@@ -36190,7 +36396,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Posizione geometria variabile turbo",
@@ -36199,7 +36409,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Pressione carburante (rail)",
@@ -36208,7 +36422,11 @@
      "formula": "(byte(0)*256+byte(1))/20",
      "valid": "(byte(0)*256+byte(1))/20<=3000 && (byte(0)*256+byte(1))/20<=400",
      "decimals": 2,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Pressione turbo",
@@ -36226,7 +36444,11 @@
      "formula": "(s16(byte(0)*256+byte(1)))/50-40",
      "valid": "(s16(byte(0)*256+byte(1)))/50-40>=-695 && (s16(byte(0)*256+byte(1)))/50-40<=615",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura ingresso catalizzatore",
@@ -36235,7 +36457,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Tensione batteria 12 V",
@@ -36262,7 +36488,11 @@
      "valid": "(byte(0)*256+byte(1))/60<=30",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: km medi tra rigenerazioni",
@@ -36271,7 +36501,11 @@
      "formula": "(byte(0)*256+byte(1))*10",
      "valid": "(byte(0)*256+byte(1))*10<=10000",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Km con avviso acqua nel gasolio",
@@ -36280,7 +36514,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Posizione geometria variabile turbo richiesta",
@@ -36290,7 +36528,11 @@
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
      "extra": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Rigenerazioni filtro antiparticolato interrotte di fila",
@@ -36299,7 +36541,11 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura aria al debimetro",
@@ -36317,7 +36563,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     }
    ],
    "engineAddress": "10"
@@ -36619,7 +36869,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Marcia inserita",
@@ -36636,7 +36890,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Rigenerazioni filtro antiparticolato interrotte di fila",
@@ -36645,7 +36903,11 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura aria dopo intercooler",
@@ -63434,7 +63696,11 @@
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: fuliggine",
@@ -63443,7 +63709,11 @@
      "formula": "((byte(0)*256+byte(1))*1000)/65535",
      "valid": "((byte(0)*256+byte(1))*1000)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: km dall'ultima rigenerazione",
@@ -63453,7 +63723,11 @@
      "valid": "(byte(0)*65536+byte(1)*256+byte(2))/10<=10000",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: pressione differenziale",
@@ -63462,7 +63736,11 @@
      "formula": "(byte(0)*256+byte(1))/10-3276.8",
      "valid": "(byte(0)*256+byte(1))/10-3276.8>=-50 && (byte(0)*256+byte(1))/10-3276.8<=50",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazione in corso",
@@ -63471,7 +63749,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazioni",
@@ -63480,7 +63762,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazioni avviate",
@@ -63489,7 +63775,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: rigenerazioni interrotte",
@@ -63498,7 +63788,11 @@
      "formula": "byte(0)",
      "valid": "byte(0)<=255",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: temperatura ingresso",
@@ -63507,7 +63801,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: temperatura uscita",
@@ -63516,7 +63814,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Posizione geometria variabile turbo",
@@ -63525,7 +63827,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Pressione carburante (rail)",
@@ -63534,7 +63840,11 @@
      "formula": "(byte(0)*256+byte(1))/20",
      "valid": "(byte(0)*256+byte(1))/20<=3000 && (byte(0)*256+byte(1))/20<=400",
      "decimals": 2,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Pressione turbo",
@@ -63561,7 +63871,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=200",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura ingresso catalizzatore",
@@ -63570,7 +63884,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Tensione batteria 12 V",
@@ -63588,7 +63906,11 @@
      "formula": "((byte(0)*256+byte(1))*100)/65535",
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100 && ((byte(0)*256+byte(1))*100)/65535<99.998",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: resistenza al flusso",
@@ -63597,7 +63919,11 @@
      "formula": "(byte(0)*256+byte(1))/10000",
      "valid": "(byte(0)*256+byte(1))/10000<=10",
      "decimals": 3,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Marcia inserita",
@@ -63615,7 +63941,11 @@
      "valid": "(byte(0)*256+byte(1))/60<=30",
      "decimals": 1,
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Filtro antiparticolato: km medi tra rigenerazioni",
@@ -63624,7 +63954,11 @@
      "formula": "(byte(0)*256+byte(1))*10",
      "valid": "(byte(0)*256+byte(1))*10<=10000",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Km con avviso acqua nel gasolio",
@@ -63633,7 +63967,11 @@
      "formula": "byte(0)*256+byte(1)",
      "valid": "byte(0)*256+byte(1)<=65535",
      "slow": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Posizione geometria variabile turbo richiesta",
@@ -63643,7 +63981,11 @@
      "valid": "((byte(0)*256+byte(1))*100)/65535<=100",
      "decimals": 1,
      "extra": true,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     },
     {
      "label": "Temperatura aria al debimetro",
@@ -63661,7 +64003,11 @@
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
      "decimals": 1,
-     "session": "03"
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
     }
    ],
    "engineAddress": "10"
@@ -84131,14 +84477,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -86492,14 +86838,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -87167,14 +87513,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -88692,14 +89038,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -93676,13 +94022,6 @@
       "formula": "(byte(0)*256+byte(1))/10-780",
       "valid": "(byte(0)*256+byte(1))/10-780>=-780 && (byte(0)*256+byte(1))/10-780<=5773",
       "decimals": 1
-     },
-     {
-      "label": "Km registrati dalla centralina ESP",
-      "unit": "km",
-      "did": "DD01",
-      "formula": "byte(0)*65536+byte(1)*256+byte(2)",
-      "valid": "byte(0)*65536+byte(1)*256+byte(2)<16777215 && byte(0)*65536+byte(1)*256+byte(2)<=16777215"
      },
      {
       "label": "Km registrati dalla centralina freni",
@@ -99413,7 +99752,7 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "did": "0101",
       "formula": "(s16(byte(0)*256+byte(1)))/10",
       "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
@@ -99627,7 +99966,7 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "did": "0101",
       "formula": "(s16(byte(0)*256+byte(1)))/10",
       "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
@@ -142888,14 +143227,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -143435,14 +143774,14 @@
      },
      {
       "label": "Velocità di imbardata",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(0)-128",
       "valid": "byte(0)-128>=-128 && byte(0)-128<=127"
      },
      {
       "label": "Velocità di imbardata (2)",
-      "unit": "°",
+      "unit": "°/s",
       "lid": "06",
       "formula": "byte(1)-128",
       "valid": "byte(1)-128>=-128 && byte(1)-128<=127",
@@ -181043,7 +181382,7 @@
       "extra": true
      },
      {
-      "label": "Giri ventola batteria",
+      "label": "Comando ventola batteria",
       "unit": "%",
       "lid": "21",
       "formula": "byte(18)",
@@ -181812,6 +182151,59 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10<=25.5",
       "decimals": 2
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Fiat",
+   "model": "Tipo",
+   "ecu": {
+    "name": "Cambio",
+    "address": "18",
+    "params": [
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "04FE",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+      "manuale": true
+     },
+     {
+      "label": "Coppia motore (dal cambio)",
+      "unit": "Nm",
+      "did": "1018",
+      "formula": "(byte(0)*256+byte(1))-500",
+      "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
+      "extra": true,
+      "manuale": true
+     },
+     {
+      "label": "Giri in uscita dal cambio",
+      "unit": "giri/min",
+      "did": "2102",
+      "formula": "(byte(0)*256+byte(1))/4",
+      "valid": "(byte(0)*256+byte(1))/4<=16383",
+      "extra": true,
+      "manuale": true
+     },
+     {
+      "label": "Giri in ingresso al cambio",
+      "unit": "giri/min",
+      "did": "1D08",
+      "formula": "byte(0)*25",
+      "valid": "byte(0)*25<=6375",
+      "extra": true,
+      "manuale": true
+     },
+     {
+      "label": "Marcia inserita",
+      "unit": "",
+      "did": "1D12",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255 && byte(0)>=1 && byte(0)<=10",
+      "manuale": true
      }
     ]
    }

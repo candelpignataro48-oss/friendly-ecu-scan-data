@@ -10,4 +10,10 @@ Segnali e indirizzi di centralina con risposte registrate su auto vere (temperat
 - **Licenza:** Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0), https://creativecommons.org/licenses/by-sa/4.0/ . Il testo è nel file `LICENSE`.
 - **Modifiche:** i dati originali sono stati convertiti nel formato dell'app (un unico file JSON) e filtrati: restano solo i segnali con risposte vere registrate su auto vere.
 
+## obdb-log.json
+
+Letture confermate dai log di guida di OBDb registrati su auto vere, per modelli della stessa marca che nell'app avevano già la stessa lettura.
+
+- **Fonte, licenza e modifiche:** come per `obdb.json` (OBDb, © OBDb contributors, CC BY-SA 4.0; convertite nel formato dell'app).
+
 Chi riusa questi dati deve citare OBDb e mantenere la stessa licenza (CC BY-SA 4.0).
