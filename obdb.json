@@ -566,6 +566,46 @@
     "valid": "byte(0)<=9 && byte(0)>=1 && byte(0)<=10",
     "session": "03"
    }
+  ],
+  "fca-cambio-automatico": [
+   {
+    "label": "Temperatura olio cambio",
+    "unit": "°C",
+    "did": "04FE",
+    "formula": "byte(0)-40",
+    "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+   },
+   {
+    "label": "Coppia motore (dal cambio)",
+    "unit": "Nm",
+    "did": "1018",
+    "formula": "(byte(0)*256+byte(1))-500",
+    "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
+    "extra": true
+   },
+   {
+    "label": "Giri in uscita dal cambio",
+    "unit": "giri/min",
+    "did": "2102",
+    "formula": "(byte(0)*256+byte(1))/4",
+    "valid": "(byte(0)*256+byte(1))/4<=16383",
+    "extra": true
+   },
+   {
+    "label": "Giri in ingresso al cambio",
+    "unit": "giri/min",
+    "did": "1D08",
+    "formula": "byte(0)*25",
+    "valid": "byte(0)*25<=6375",
+    "extra": true
+   },
+   {
+    "label": "Marcia inserita",
+    "unit": "",
+    "did": "1D12",
+    "formula": "byte(0)",
+    "valid": "byte(0)<=255 && byte(0)>=1 && byte(0)<=10"
+   }
   ]
  },
  "extras": [
@@ -30821,6 +30861,119 @@
    }
   },
   {
+   "brand": "Chevrolet",
+   "model": "Spark",
+   "ecu": {
+    "name": "Body Computer",
+    "address": "241",
+    "tx": "241",
+    "rx": "641",
+    "params": [
+     {
+      "label": "Pressione gomma ant. DX",
+      "unit": "bar",
+      "did": "5006",
+      "formula": "((byte(0)*256+byte(1))/16)*0.01",
+      "valid": "(byte(0)*256+byte(1))/16<=4095.9375",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione gomma ant. SX",
+      "unit": "bar",
+      "did": "5005",
+      "formula": "((byte(0)*256+byte(1))/16)*0.01",
+      "valid": "(byte(0)*256+byte(1))/16<=4095.9375",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione gomma post. DX",
+      "unit": "bar",
+      "did": "5007",
+      "formula": "((byte(0)*256+byte(1))/16)*0.01",
+      "valid": "(byte(0)*256+byte(1))/16<=4095.9375",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione gomma post. SX",
+      "unit": "bar",
+      "did": "5008",
+      "formula": "((byte(0)*256+byte(1))/16)*0.01",
+      "valid": "(byte(0)*256+byte(1))/16<=4095.9375",
+      "decimals": 2
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Chevrolet",
+   "model": "Spark",
+   "ecu": {
+    "name": "Motore: dati del costruttore",
+    "address": "7E0",
+    "tx": "7E0",
+    "rx": "7E8",
+    "params": [
+     {
+      "label": "Livello carburante",
+      "unit": "%",
+      "did": "002F",
+      "formula": "(byte(0)*100)/255",
+      "valid": "(byte(0)*100)/255<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Mancate accensioni storiche cil. 3",
+      "unit": "",
+      "did": "1203",
+      "formula": "byte(0)*256+byte(1)",
+      "valid": "byte(0)*256+byte(1)<=65535",
+      "extra": true
+     },
+     {
+      "label": "Mancate accensioni totali",
+      "unit": "",
+      "did": "1200",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=255",
+      "extra": true
+     },
+     {
+      "label": "Pressione gas del clima",
+      "unit": "bar",
+      "did": "1564",
+      "formula": "(byte(0)*2.02)*0.0689476",
+      "valid": "byte(0)*2.02<=515.1",
+      "decimals": 2
+     },
+     {
+      "label": "Ritardo anticipo per battito",
+      "unit": "°",
+      "did": "11A6",
+      "formula": "(byte(0)*22)/100",
+      "valid": "(byte(0)*22)/100<=56.1",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Temperatura olio motore (calcolata)",
+      "unit": "°C",
+      "did": "1154",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+     },
+     {
+      "label": "Tensione sensore pressione clima alta",
+      "unit": "V",
+      "did": "1144",
+      "formula": "(byte(0))/50",
+      "valid": "(byte(0))/50<=5.1",
+      "decimals": 2,
+      "extra": true
+     }
+    ]
+   }
+  },
+  {
    "brand": "Citroën",
    "model": "C1",
    "ecu": {
@@ -59557,6 +59710,18 @@
       "did": "B009",
       "formula": "byte(4)",
       "valid": "byte(4)<=255",
+      "extra": true
+     },
+     {
+      "label": "Volante riscaldato acceso",
+      "unit": "",
+      "did": "B00C",
+      "formula": "(floor(byte(4)/32)-floor(byte(4)/64)*2)",
+      "valid": "(floor(byte(4)/32)-floor(byte(4)/64)*2)<=1",
+      "values": {
+       "0": "No",
+       "1": "Sì"
+      },
       "extra": true
      }
     ],
@@ -148156,6 +148321,17 @@
       "formula": "byte(2)-128",
       "valid": "byte(2)-128>=-128 && byte(2)-128<=127",
       "extra": true
+     },
+     {
+      "label": "Relè luci stop",
+      "unit": "",
+      "lid": "3C",
+      "formula": "floor(byte(0)/128)",
+      "valid": "floor(byte(0)/128)<=1",
+      "values": {
+       "0": "No",
+       "1": "Sì"
+      }
      }
     ],
     "tx": "7B0",
@@ -148757,6 +148933,31 @@
       "formula": "((byte(4)*256+byte(5))*7.99)/65535",
       "valid": "((byte(4)*256+byte(5))*7.99)/65535<=7.99",
       "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Giri in ingresso al cambio",
+      "unit": "giri/min",
+      "lid": "81",
+      "formula": "byte(0)*50",
+      "valid": "byte(0)*50<=12750",
+      "extra": true
+     },
+     {
+      "label": "Giri in uscita dal cambio",
+      "unit": "giri/min",
+      "lid": "81",
+      "formula": "byte(4)*50",
+      "valid": "byte(4)*50<=12750",
+      "extra": true
+     },
+     {
+      "label": "Riscaldatore sonda lambda bancata 1 sonda 1",
+      "unit": "%",
+      "lid": "3A",
+      "formula": "((byte(4)*256+byte(5))*25)/4096",
+      "valid": "((byte(4)*256+byte(5))*25)/4096<=399.9",
+      "decimals": 1,
       "extra": true
      }
     ],
@@ -162253,8 +162454,9 @@
      "unit": "",
      "did": "1724",
      "formula": "byte(0)*256+byte(1)",
-     "valid": "byte(0)*256+byte(1)<=65535",
-     "extra": true
+     "valid": "byte(0)*256+byte(1)<65535",
+     "extra": true,
+     "manuale": true
     },
     {
      "label": "Preaccensioni totali cil. 1",
@@ -182151,59 +182353,6 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10<=25.5",
       "decimals": 2
-     }
-    ]
-   }
-  },
-  {
-   "brand": "Fiat",
-   "model": "Tipo",
-   "ecu": {
-    "name": "Cambio",
-    "address": "18",
-    "params": [
-     {
-      "label": "Temperatura olio cambio",
-      "unit": "°C",
-      "did": "04FE",
-      "formula": "byte(0)-40",
-      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
-      "manuale": true
-     },
-     {
-      "label": "Coppia motore (dal cambio)",
-      "unit": "Nm",
-      "did": "1018",
-      "formula": "(byte(0)*256+byte(1))-500",
-      "valid": "(byte(0)*256+byte(1))-500>=-500 && (byte(0)*256+byte(1))-500<=1000",
-      "extra": true,
-      "manuale": true
-     },
-     {
-      "label": "Giri in uscita dal cambio",
-      "unit": "giri/min",
-      "did": "2102",
-      "formula": "(byte(0)*256+byte(1))/4",
-      "valid": "(byte(0)*256+byte(1))/4<=16383",
-      "extra": true,
-      "manuale": true
-     },
-     {
-      "label": "Giri in ingresso al cambio",
-      "unit": "giri/min",
-      "did": "1D08",
-      "formula": "byte(0)*25",
-      "valid": "byte(0)*25<=6375",
-      "extra": true,
-      "manuale": true
-     },
-     {
-      "label": "Marcia inserita",
-      "unit": "",
-      "did": "1D12",
-      "formula": "byte(0)",
-      "valid": "byte(0)<=255 && byte(0)>=1 && byte(0)<=10",
-      "manuale": true
      }
     ]
    }
