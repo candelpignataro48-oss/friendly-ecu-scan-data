@@ -650,6 +650,38 @@
       "did": "2A0D",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
+     },
+     {
+      "label": "Pressione sensore gomma 1",
+      "unit": "bar",
+      "did": "2A05",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 2",
+      "unit": "bar",
+      "did": "2A06",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 3",
+      "unit": "bar",
+      "did": "2A07",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 4",
+      "unit": "bar",
+      "did": "2A08",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
      }
     ],
     "tx": "720",
@@ -3178,6 +3210,24 @@
      "formula": "((s16(byte(0)*256+byte(1)))/5)*0.001",
      "valid": "(s16(byte(0)*256+byte(1)))/5>=-6553.6 && (s16(byte(0)*256+byte(1)))/5<=6553.4",
      "decimals": 3,
+     "extra": true
+    },
+    {
+     "label": "Temperatura gas di scarico (sensore 3)",
+     "unit": "°C",
+     "did": "11B2",
+     "formula": "(s16(byte(0)*256+byte(1)))/10-273.1",
+     "valid": "(s16(byte(0)*256+byte(1)))/10-273.1>=-3549 && (s16(byte(0)*256+byte(1)))/10-273.1<=3003",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Temperatura gas di scarico (sensore 4)",
+     "unit": "°C",
+     "did": "10F9",
+     "formula": "(s16(byte(0)*256+byte(1)))/10-273.1",
+     "valid": "(s16(byte(0)*256+byte(1)))/10-273.1>=-3549 && (s16(byte(0)*256+byte(1)))/10-273.1<=3003",
+     "decimals": 1,
      "extra": true
     }
    ]
@@ -8852,6 +8902,15 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "17FC007B",
@@ -19852,6 +19911,48 @@
       "did": "4506",
       "formula": "byte(0)",
       "valid": "byte(0)<=200"
+     },
+     {
+      "label": "Coppia motore",
+      "unit": "Nm",
+      "did": "58BA",
+      "formula": "(byte(0)*256+byte(1))/10",
+      "valid": "(byte(0)*256+byte(1))/10<=6553",
+      "decimals": 1
+     },
+     {
+      "label": "Corrente batteria 12 V",
+      "unit": "A",
+      "did": "402B",
+      "formula": "(byte(4)*256+byte(5))/12.5-200",
+      "valid": "(byte(4)*256+byte(5))/12.5-200<5042.8 && (byte(4)*256+byte(5))/12.5-200>=-200 && (byte(4)*256+byte(5))/12.5-200<=5042.8",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Pressione turbo",
+      "unit": "kPa",
+      "did": "4205",
+      "formula": "(byte(0)*256+byte(1))/128",
+      "valid": "(byte(0)*256+byte(1))/128<=511.99",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria 12 V",
+      "unit": "°C",
+      "did": "402B",
+      "formula": "(s16(byte(0)*256+byte(1)))/10",
+      "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "402B",
+      "formula": "(byte(2)*256+byte(3))/4000+6",
+      "valid": "(byte(2)*256+byte(3))/4000+6<22.3837 && (byte(2)*256+byte(3))/4000+6>=6 && (byte(2)*256+byte(3))/4000+6<=22.3837",
+      "decimals": 2
      }
     ]
    }
@@ -20988,6 +21089,114 @@
       "formula": "byte(3)",
       "valid": "byte(3)<=100",
       "slow": true
+     },
+     {
+      "label": "Capacità batteria di trazione",
+      "unit": "Ah",
+      "did": "DFA0",
+      "formula": "(byte(4)*256+byte(5))/100",
+      "valid": "(byte(4)*256+byte(5))/100<655.35 && (byte(4)*256+byte(5))/100<=655.35",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Carica batteria di trazione",
+      "unit": "%",
+      "did": "DDBC",
+      "formula": "(byte(0)*256+byte(1))/10",
+      "valid": "(byte(0)*256+byte(1))/10<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Carica cella più alta",
+      "unit": "%",
+      "did": "DFA0",
+      "formula": "(byte(26)*256+byte(27))/100",
+      "valid": "(byte(26)*256+byte(27))/100<655.35 && (byte(26)*256+byte(27))/100<=655.35",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Carica cella più bassa",
+      "unit": "%",
+      "did": "DFA0",
+      "formula": "(byte(24)*256+byte(25))/100",
+      "valid": "(byte(24)*256+byte(25))/100<655.35 && (byte(24)*256+byte(25))/100<=655.35",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Carica massima celle",
+      "unit": "%",
+      "did": "DDBC",
+      "formula": "(byte(2)*256+byte(3))/10",
+      "valid": "(byte(2)*256+byte(3))/10<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Carica minima celle",
+      "unit": "%",
+      "did": "DDBC",
+      "formula": "(byte(4)*256+byte(5))/10",
+      "valid": "(byte(4)*256+byte(5))/10<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Corrente batteria di trazione",
+      "unit": "A",
+      "did": "DD69",
+      "formula": "(s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100",
+      "valid": "(s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100>=-10000 && (s32(byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3)))/100<=10000",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria (max)",
+      "unit": "°C",
+      "did": "DFA0",
+      "formula": "(s16(byte(14)*256+byte(15)))/100",
+      "valid": "(s16(byte(14)*256+byte(15)))/100<327.67 && (s16(byte(14)*256+byte(15)))/100>=-327.68 && (s16(byte(14)*256+byte(15)))/100<=327.67",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria (min)",
+      "unit": "°C",
+      "did": "DFA0",
+      "formula": "(s16(byte(12)*256+byte(13)))/100",
+      "valid": "(s16(byte(12)*256+byte(13)))/100<327.67 && (s16(byte(12)*256+byte(13)))/100>=-327.68 && (s16(byte(12)*256+byte(13)))/100<=327.67",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "DFA0",
+      "formula": "(s16(byte(16)*256+byte(17)))/100",
+      "valid": "(s16(byte(16)*256+byte(17)))/100<327.67 && (s16(byte(16)*256+byte(17)))/100>=-327.68 && (s16(byte(16)*256+byte(17)))/100<=327.67",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione cella più alta",
+      "unit": "V",
+      "did": "DFA0",
+      "formula": "(byte(8)*256+byte(9))/10000",
+      "valid": "(byte(8)*256+byte(9))/10000<6.5535 && (byte(8)*256+byte(9))/10000<=6.5535",
+      "decimals": 2
+     },
+     {
+      "label": "Tensione cella più bassa",
+      "unit": "V",
+      "did": "DFA0",
+      "formula": "(byte(6)*256+byte(7))/10000",
+      "valid": "(byte(6)*256+byte(7))/10000<6.5535 && (byte(6)*256+byte(7))/10000<=6.5535",
+      "decimals": 2
+     },
+     {
+      "label": "Tensione media celle",
+      "unit": "V",
+      "did": "DFA0",
+      "formula": "(byte(10)*256+byte(11))/10000",
+      "valid": "(byte(10)*256+byte(11))/10000<6.5535 && (byte(10)*256+byte(11))/10000<=6.5535",
+      "decimals": 2,
+      "extra": true
      }
     ]
    }
@@ -30690,6 +30899,15 @@
       "did": "1154",
       "formula": "byte(0)-40",
       "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+     },
+     {
+      "label": "Ritardo anticipo per battito",
+      "unit": "°",
+      "did": "12D9",
+      "formula": "(byte(0)*45)/100",
+      "valid": "(byte(0)*45)/100<=114.75",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "7E0",
@@ -30969,6 +31187,14 @@
       "valid": "(byte(0))/50<=5.1",
       "decimals": 2,
       "extra": true
+     },
+     {
+      "label": "Tensione sonda lambda",
+      "unit": "V",
+      "did": "1145",
+      "formula": "(byte(0))*0.001",
+      "valid": "byte(0)<=255",
+      "decimals": 3
      }
     ]
    }
@@ -33139,6 +33365,23 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Carica batteria mostrata sul quadro",
+      "unit": "%",
+      "did": "028C",
+      "formula": "(byte(0)*20.4)/46-6.4",
+      "valid": "(byte(0)*20.4)/46-6.4<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "17FC007B",
@@ -35803,6 +36046,15 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "17FC007B",
@@ -36276,6 +36528,38 @@
       "did": "2A0D",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
+     },
+     {
+      "label": "Pressione sensore gomma 1",
+      "unit": "bar",
+      "did": "2A05",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 2",
+      "unit": "bar",
+      "did": "2A06",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 3",
+      "unit": "bar",
+      "did": "2A07",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 4",
+      "unit": "bar",
+      "did": "2A08",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
      }
     ],
     "tx": "720",
@@ -36715,6 +36999,19 @@
      "did": "3917",
      "formula": "((byte(0)*256+byte(1))*2)/100-40",
      "valid": "((byte(0)*256+byte(1))*2)/100-40>=-40 && ((byte(0)*256+byte(1))*2)/100-40<=900",
+     "decimals": 1,
+     "session": "03",
+     "fuels": [
+      "diesel",
+      "diesel mild hybrid"
+     ]
+    },
+    {
+     "label": "Filtro antiparticolato: fuliggine",
+     "unit": "%",
+     "did": "18E4",
+     "formula": "((byte(0)*256+byte(1))*1000)/65535",
+     "valid": "((byte(0)*256+byte(1))*1000)/65535<=100",
      "decimals": 1,
      "session": "03",
      "fuels": [
@@ -43285,6 +43582,22 @@
       "did": "280B",
       "formula": "byte(6)-40",
       "valid": "byte(6)-40<215 && byte(6)-40>=-40 && byte(6)-40<=215"
+     },
+     {
+      "label": "Pressione gomma post. DX esterna",
+      "unit": "bar",
+      "did": "2815",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<150 && (byte(0)*256+byte(1))/20<=150",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione gomma post. SX esterna",
+      "unit": "bar",
+      "did": "2816",
+      "formula": "((byte(0)*256+byte(1))/20)*0.0689476",
+      "valid": "(byte(0)*256+byte(1))/20<150 && (byte(0)*256+byte(1))/20<=150",
+      "decimals": 2
      }
     ],
     "tx": "726",
@@ -44305,6 +44618,38 @@
       "formula": "(byte(0)*256+byte(1))/100",
       "valid": "(byte(0)*256+byte(1))/100<=655",
       "decimals": 2
+     },
+     {
+      "label": "Carica batteria mostrata sul quadro",
+      "unit": "%",
+      "did": "4845",
+      "formula": "(byte(0))/2",
+      "valid": "(byte(0))/2<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Energia nella batteria di trazione",
+      "unit": "kWh",
+      "did": "4848",
+      "formula": "(byte(0)*256+byte(1))/500",
+      "valid": "(byte(0)*256+byte(1))/500<=131.07",
+      "decimals": 1
+     },
+     {
+      "label": "Salute batteria di trazione",
+      "unit": "%",
+      "did": "490C",
+      "formula": "(byte(0))/2",
+      "valid": "(byte(0))/2<=100",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "4800",
+      "formula": "byte(0)-50",
+      "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
      }
     ],
     "tx": "7E4",
@@ -50542,6 +50887,79 @@
       "formula": "(byte(35))/50",
       "valid": "(byte(35))/50<=5.1",
       "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Carica batteria mostrata sul quadro",
+      "unit": "%",
+      "lid": "05",
+      "formula": "(byte(31))/2",
+      "valid": "(byte(31))/2<=100",
+      "decimals": 1
+     },
+     {
+      "label": "Salute batteria di trazione",
+      "unit": "%",
+      "lid": "05",
+      "formula": "(byte(25)*256+byte(26))/10",
+      "valid": "(byte(25)*256+byte(26))/10<=100",
+      "decimals": 1,
+      "slow": true
+     },
+     {
+      "label": "Temperatura modulo 10",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(13))",
+      "valid": "s8(byte(13))>=-128 && s8(byte(13))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 11",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(14))",
+      "valid": "s8(byte(14))>=-128 && s8(byte(14))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 12",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(15))",
+      "valid": "s8(byte(15))>=-128 && s8(byte(15))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 6",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(9))",
+      "valid": "s8(byte(9))>=-128 && s8(byte(9))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 7",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(10))",
+      "valid": "s8(byte(10))>=-128 && s8(byte(10))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 8",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(11))",
+      "valid": "s8(byte(11))>=-128 && s8(byte(11))<=127",
+      "extra": true
+     },
+     {
+      "label": "Temperatura modulo 9",
+      "unit": "°C",
+      "lid": "05",
+      "formula": "s8(byte(12))",
+      "valid": "s8(byte(12))>=-128 && s8(byte(12))<=127",
       "extra": true
      }
     ],
@@ -90115,6 +90533,30 @@
       "formula": "(byte(0)*256+byte(1))/4",
       "valid": "(byte(0)*256+byte(1))/4>=300 && (byte(0)*256+byte(1))/4<=450",
       "decimals": 2
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "B056",
+      "formula": "(byte(0))/2-40",
+      "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
+      "decimals": 1
+     },
+     {
+      "label": "Temperatura liquido batteria di trazione",
+      "unit": "°C",
+      "did": "B05C",
+      "formula": "(byte(0))/2-40",
+      "valid": "(byte(0))/2-40>=-40 && (byte(0))/2-40<=87.5",
+      "decimals": 1
+     },
+     {
+      "label": "Tensione circuito alta tensione",
+      "unit": "V",
+      "did": "B041",
+      "formula": "(byte(0)*256+byte(1))/4",
+      "valid": "(byte(0)*256+byte(1))/4<=1000",
+      "decimals": 2
      }
     ],
     "tx": "781",
@@ -93493,6 +93935,38 @@
       "did": "2A0D",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
+     },
+     {
+      "label": "Pressione sensore gomma 1",
+      "unit": "bar",
+      "did": "2A05",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 2",
+      "unit": "bar",
+      "did": "2A06",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 3",
+      "unit": "bar",
+      "did": "2A07",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
+     },
+     {
+      "label": "Pressione sensore gomma 4",
+      "unit": "bar",
+      "did": "2A08",
+      "formula": "(byte(0)*1373)/100000",
+      "valid": "(byte(0)*1373)/100000<=3.5",
+      "decimals": 2
      }
     ],
     "tx": "720",
@@ -99764,6 +100238,28 @@
       "did": "1102",
       "formula": "byte(0)",
       "valid": "byte(0)<=255"
+     },
+     {
+      "label": "Corrente batteria 12 V",
+      "unit": "A",
+      "did": "1183",
+      "formula": "(s16(byte(0)*256+byte(1)))/256",
+      "valid": "(s16(byte(0)*256+byte(1)))/256>=-128 && (s16(byte(0)*256+byte(1)))/256<=128",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Marcia inserita",
+      "unit": "",
+      "did": "1156",
+      "formula": "byte(0)",
+      "values": {
+       "1": "P",
+       "2": "R",
+       "3": "N",
+       "4": "D",
+       "7": "Eco"
+      }
      }
     ],
     "tx": "797",
@@ -100793,6 +101289,13 @@
       "valid": "(byte(0))/50<=5.1",
       "decimals": 2,
       "extra": true
+     },
+     {
+      "label": "Temperatura batteria di trazione",
+      "unit": "°C",
+      "did": "434F",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
      }
     ],
     "tx": "7E4",
@@ -101646,6 +102149,22 @@
       "formula": "((byte(0)*256+byte(1))*1953)/250000",
       "valid": "((byte(0)*256+byte(1))*1953)/250000<=511",
       "decimals": 1
+     },
+     {
+      "label": "Coppia motore elettrico",
+      "unit": "Nm",
+      "did": "D8D0",
+      "formula": "(s16(byte(0)*256+byte(1)))/10",
+      "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276 && (s16(byte(0)*256+byte(1)))/10<=3276",
+      "decimals": 1
+     },
+     {
+      "label": "Velocità veicolo",
+      "unit": "km/h",
+      "did": "D402",
+      "formula": "(byte(0)*256+byte(1))/128",
+      "valid": "(byte(0)*256+byte(1))/128<=511",
+      "decimals": 1
      }
     ],
     "tx": "6A2",
@@ -102471,6 +102990,13 @@
       "did": "D711",
       "formula": "byte(0)",
       "valid": "byte(0)<=255"
+     },
+     {
+      "label": "Temperatura liquido motore",
+      "unit": "°C",
+      "did": "D555",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
      }
     ],
     "tx": "6A9",
@@ -104596,6 +105122,32 @@
       "formula": "((byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))*64)/65535",
       "valid": "((byte(0)*16777216+byte(1)*65536+byte(2)*256+byte(3))*64)/65535<=4194368",
       "decimals": 1
+     },
+     {
+      "label": "Carica batteria di trazione (corretta)",
+      "unit": "%",
+      "did": "D410",
+      "formula": "(byte(0)*256+byte(1))/512",
+      "valid": "(byte(0)*256+byte(1))/512<=100",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Energia nella batteria di trazione",
+      "unit": "kWh",
+      "did": "D865",
+      "formula": "(byte(0)*256+byte(1))/64",
+      "valid": "(byte(0)*256+byte(1))/64<=1023",
+      "decimals": 1
+     },
+     {
+      "label": "Salute batteria di trazione",
+      "unit": "%",
+      "did": "D860",
+      "formula": "(byte(1)*256+byte(2))/16",
+      "valid": "(byte(1)*256+byte(2))/16<=100",
+      "decimals": 1,
+      "slow": true
      }
     ],
     "tx": "6B4",
@@ -105112,6 +105664,13 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10<=25.5",
       "decimals": 2
+     },
+     {
+      "label": "Temperatura liquido motore",
+      "unit": "°C",
+      "did": "D555",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
      }
     ],
     "tx": "6A9",
@@ -105915,6 +106474,13 @@
       "did": "D711",
       "formula": "byte(0)",
       "valid": "byte(0)<=255"
+     },
+     {
+      "label": "Temperatura liquido motore",
+      "unit": "°C",
+      "did": "D555",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
      }
     ],
     "tx": "6A9",
@@ -116989,6 +117555,13 @@
       "valid": "(byte(0))/10+10.6>=10.6 && (byte(0))/10+10.6<=36.1",
       "decimals": 2,
       "extra": true
+     },
+     {
+      "label": "Carica batteria 12 V",
+      "unit": "%",
+      "did": "2A0C",
+      "formula": "byte(0)",
+      "valid": "byte(0)<=100"
      }
     ],
     "tx": "710",
@@ -122082,6 +122655,13 @@
       "did": "10ED",
       "formula": "byte(0)-50",
       "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
+     },
+     {
+      "label": "Temperatura olio variatore di fase",
+      "unit": "°C",
+      "lid": "51",
+      "formula": "byte(7)-40",
+      "valid": "byte(7)-40>=-40 && byte(7)-40<=215"
      }
     ],
     "tx": "7E0",
@@ -126427,6 +127007,14 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10>0 && (byte(0))/10<=20",
       "decimals": 2
+     },
+     {
+      "label": "Livello carburante",
+      "unit": "L",
+      "did": "1022",
+      "formula": "(byte(0)*256+byte(1))/100",
+      "valid": "(byte(0)*256+byte(1))/100<655 && (byte(0)*256+byte(1))/100<=655",
+      "decimals": 1
      }
     ],
     "tx": "7C0",
@@ -128810,6 +129398,42 @@
       "lid": "46",
       "formula": "byte(2)-128",
       "valid": "byte(2)-128>=-128 && byte(2)-128<=127",
+      "extra": true
+     },
+     {
+      "label": "Accelerazione ruota ant. DX",
+      "unit": "m/s²",
+      "lid": "42",
+      "formula": "s8(byte(0))*1.56906",
+      "valid": "s8(byte(0))*1.56906>=-200.83 && s8(byte(0))*1.56906<=199.27",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Accelerazione ruota ant. SX",
+      "unit": "m/s²",
+      "lid": "42",
+      "formula": "s8(byte(1))*1.56906",
+      "valid": "s8(byte(1))*1.56906>=-200.83 && s8(byte(1))*1.56906<=199.27",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Accelerazione ruota post. DX",
+      "unit": "m/s²",
+      "lid": "42",
+      "formula": "s8(byte(2))*1.56906",
+      "valid": "s8(byte(2))*1.56906>=-200.83 && s8(byte(2))*1.56906<=199.27",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Accelerazione ruota post. SX",
+      "unit": "m/s²",
+      "lid": "42",
+      "formula": "s8(byte(3))*1.56906",
+      "valid": "s8(byte(3))*1.56906>=-200.83 && s8(byte(3))*1.56906<=199.27",
+      "decimals": 1,
       "extra": true
      }
     ],
@@ -141751,6 +142375,140 @@
       "formula": "(byte(0))/2",
       "valid": "(byte(0))/2<=127.5",
       "decimals": 1
+     },
+     {
+      "label": "Temperatura inverter",
+      "unit": "°C",
+      "lid": "75",
+      "formula": "byte(3)-40",
+      "valid": "byte(3)-40>=-40 && byte(3)-40<=215",
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 1",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(0)*256+byte(1))*79.99)/65535",
+      "valid": "((byte(0)*256+byte(1))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 10",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(18)*256+byte(19))*79.99)/65535",
+      "valid": "((byte(18)*256+byte(19))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 11",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(20)*256+byte(21))*79.99)/65535",
+      "valid": "((byte(20)*256+byte(21))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 12",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(22)*256+byte(23))*79.99)/65535",
+      "valid": "((byte(22)*256+byte(23))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 13",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(24)*256+byte(25))*79.99)/65535",
+      "valid": "((byte(24)*256+byte(25))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 14",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(26)*256+byte(27))*79.99)/65535",
+      "valid": "((byte(26)*256+byte(27))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 2",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(2)*256+byte(3))*79.99)/65535",
+      "valid": "((byte(2)*256+byte(3))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 3",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(4)*256+byte(5))*79.99)/65535",
+      "valid": "((byte(4)*256+byte(5))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 4",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(6)*256+byte(7))*79.99)/65535",
+      "valid": "((byte(6)*256+byte(7))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 5",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(8)*256+byte(9))*79.99)/65535",
+      "valid": "((byte(8)*256+byte(9))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 6",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(10)*256+byte(11))*79.99)/65535",
+      "valid": "((byte(10)*256+byte(11))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 7",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(12)*256+byte(13))*79.99)/65535",
+      "valid": "((byte(12)*256+byte(13))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 8",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(14)*256+byte(15))*79.99)/65535",
+      "valid": "((byte(14)*256+byte(15))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Tensione modulo 9",
+      "unit": "V",
+      "lid": "81",
+      "formula": "((byte(16)*256+byte(17))*79.99)/65535",
+      "valid": "((byte(16)*256+byte(17))*79.99)/65535<=79.99",
+      "decimals": 2,
+      "extra": true
      }
     ],
     "tx": "7E2",
@@ -141784,6 +142542,140 @@
       "formula": "(byte(1)*256+byte(2))/100-327.68",
       "valid": "(byte(1)*256+byte(2))/100-327.68>=-327.68 && (byte(1)*256+byte(2))/100-327.68<=327.67",
       "decimals": 1
+     },
+     {
+      "label": "Limite potenza in carica",
+      "unit": "kW",
+      "lid": "CF",
+      "formula": "byte(4)-64",
+      "valid": "byte(4)-64>=-64 && byte(4)-64<=191",
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 1",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(15)",
+      "valid": "byte(15)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 10",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(24)",
+      "valid": "byte(24)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 11",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(25)",
+      "valid": "byte(25)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 12",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(26)",
+      "valid": "byte(26)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 13",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(27)",
+      "valid": "byte(27)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 14",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(28)",
+      "valid": "byte(28)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 2",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(16)",
+      "valid": "byte(16)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 3",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(17)",
+      "valid": "byte(17)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 4",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(18)",
+      "valid": "byte(18)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 5",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(19)",
+      "valid": "byte(19)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 6",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(20)",
+      "valid": "byte(20)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 7",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(21)",
+      "valid": "byte(21)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 8",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(22)",
+      "valid": "byte(22)<=255",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Resistenza interna modulo 9",
+      "unit": "mΩ",
+      "lid": "D0",
+      "formula": "byte(23)",
+      "valid": "byte(23)<=255",
+      "slow": true,
+      "extra": true
      }
     ],
     "tx": "7E3",
@@ -144801,6 +145693,14 @@
       "formula": "((byte(0)*256+byte(1))*13333)/10922500",
       "valid": "((byte(0)*256+byte(1))*13333)/10922500<=79.9979",
       "decimals": 2
+     },
+     {
+      "label": "Giri pompa acqua elettrica richiesti",
+      "unit": "giri/min",
+      "did": "1043",
+      "formula": "byte(0)*25",
+      "valid": "byte(0)*25<=6375",
+      "extra": true
      }
     ],
     "tx": "700",
@@ -146504,6 +147404,13 @@
       "lid": "16",
       "formula": "byte(2)-40",
       "valid": "byte(2)-40>-40 && byte(2)-40<215 && byte(2)-40>=-40 && byte(2)-40<=215"
+     },
+     {
+      "label": "Temperatura ruota di scorta",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "byte(4)-40",
+      "valid": "byte(4)-40>=-40 && byte(4)-40<=215"
      }
     ]
    }
@@ -148959,6 +149866,30 @@
       "valid": "((byte(4)*256+byte(5))*25)/4096<=399.9",
       "decimals": 1,
       "extra": true
+     },
+     {
+      "label": "Km dallo stacco della batteria",
+      "unit": "km",
+      "lid": "37",
+      "formula": "byte(12)*256+byte(13)",
+      "valid": "byte(12)*256+byte(13)<=65535",
+      "slow": true,
+      "extra": true
+     },
+     {
+      "label": "Temperatura aria aspirata all'avviamento",
+      "unit": "°C",
+      "lid": "37",
+      "formula": "(byte(1)*5)/8-40",
+      "valid": "(byte(1)*5)/8-40>=-40 && (byte(1)*5)/8-40<=119",
+      "decimals": 1
+     },
+     {
+      "label": "Tempo a quadro spento",
+      "unit": "min",
+      "lid": "37",
+      "formula": "(byte(10)*256+byte(11))*10",
+      "valid": "(byte(10)*256+byte(11))*10<=655350"
      }
     ],
     "tx": "7E0",
@@ -155104,6 +156035,15 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "17FC007B",
@@ -157112,6 +158052,15 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ],
     "tx": "17FC007B",
@@ -162857,6 +163806,74 @@
      "valid": "((s16(byte(0)*256+byte(1)))*12207)/1000000>=-399.9989 && ((s16(byte(0)*256+byte(1)))*12207)/1000000<=100",
      "decimals": 1,
      "extra": true
+    },
+    {
+     "label": "Comando ventola radiatore 1",
+     "unit": "%",
+     "did": "1116",
+     "formula": "(s16(byte(0)*256+byte(1)))/100",
+     "valid": "(s16(byte(0)*256+byte(1)))/100<=100",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Coppia motore",
+     "unit": "Nm",
+     "did": "1010",
+     "formula": "(s16(byte(0)*256+byte(1)))/10",
+     "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276.8 && (s16(byte(0)*256+byte(1)))/10<=3276.7",
+     "decimals": 1
+    },
+    {
+     "label": "Filtro antiparticolato: temperatura ingresso",
+     "unit": "°C",
+     "did": "11B2",
+     "formula": "(byte(0)*256+byte(1))/10-273.1",
+     "valid": "(byte(0)*256+byte(1))/10-273.1>=-273.1 && (byte(0)*256+byte(1))/10-273.1<=6280.4",
+     "decimals": 1
+    },
+    {
+     "label": "Filtro antiparticolato: temperatura uscita",
+     "unit": "°C",
+     "did": "10F9",
+     "formula": "(byte(0)*256+byte(1))/10-273.1",
+     "valid": "(byte(0)*256+byte(1))/10-273.1>=-273.1 && (byte(0)*256+byte(1))/10-273.1<=6280.4",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Marcia inserita",
+     "unit": "",
+     "did": "15AA",
+     "formula": "byte(0)",
+     "valid": "byte(0)<=255 && byte(0)>=1 && byte(0)<=10"
+    },
+    {
+     "label": "Temperatura aria all'uscita del turbo",
+     "unit": "°C",
+     "did": "1798",
+     "formula": "((s16(byte(0)*256+byte(1)))*1000)/10000-273.1",
+     "valid": "((s16(byte(0)*256+byte(1)))*1000)/10000-273.1>-273.1 && ((s16(byte(0)*256+byte(1)))*1000)/10000-273.1>=-273.1 && ((s16(byte(0)*256+byte(1)))*1000)/10000-273.1<=3003.6",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Temperatura gas di scarico (sensore 1)",
+     "unit": "°C",
+     "did": "10FB",
+     "formula": "(s16(byte(0)*256+byte(1)))/10-273.1",
+     "valid": "(s16(byte(0)*256+byte(1)))/10-273.1>=-3549.9 && (s16(byte(0)*256+byte(1)))/10-273.1<=3003.6",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Temperatura gas di scarico (sensore 2)",
+     "unit": "°C",
+     "did": "14F7",
+     "formula": "(s16(byte(0)*256+byte(1)))/10-273.1",
+     "valid": "(s16(byte(0)*256+byte(1)))/10-273.1>=-3549.9 && (s16(byte(0)*256+byte(1)))/10-273.1<=3003.6",
+     "decimals": 1,
+     "extra": true
     }
    ]
   },
@@ -165264,6 +166281,23 @@
       "valid": "(s16(byte(0)*256+byte(1)))/10>=-3276 && (s16(byte(0)*256+byte(1)))/10<=3276",
       "decimals": 1,
       "extra": true
+     },
+     {
+      "label": "Comando ventola radiatore 1",
+      "unit": "%",
+      "did": "1116",
+      "formula": "(s16(byte(0)*256+byte(1)))/100",
+      "valid": "(s16(byte(0)*256+byte(1)))/100<=100",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Temperatura esterna",
+      "unit": "°C",
+      "did": "1004",
+      "formula": "(s16(byte(0)*256+byte(1)))/128",
+      "valid": "(s16(byte(0)*256+byte(1)))/128>=-255 && (s16(byte(0)*256+byte(1)))/128<=255",
+      "decimals": 1
      }
     ],
     "tx": "7E0",
@@ -175201,6 +176235,15 @@
       "did": "F40D",
       "formula": "byte(0)",
       "valid": "byte(0)<255 && byte(0)<=255"
+     },
+     {
+      "label": "Limite corrente in carica",
+      "unit": "A",
+      "did": "1E1B",
+      "formula": "(byte(0)*256+byte(1))/5",
+      "valid": "(byte(0)*256+byte(1))/5<=2621.4",
+      "decimals": 1,
+      "extra": true
      }
     ]
    }
@@ -175383,6 +176426,14 @@
      "decimals": 1,
      "slow": true,
      "extra": true
+    },
+    {
+     "label": "Contachilometri",
+     "unit": "km",
+     "did": "295A",
+     "formula": "byte(0)*65536+byte(1)*256+byte(2)",
+     "valid": "byte(0)*65536+byte(1)*256+byte(2)<=16777215",
+     "slow": true
     }
    ]
   },
@@ -180416,6 +181467,14 @@
       "formula": "(byte(0)*256+byte(1))/10-40",
       "valid": "(byte(0)*256+byte(1))/10-40>=-40 && (byte(0)*256+byte(1))/10-40<=6513.5",
       "decimals": 1
+     },
+     {
+      "label": "Temperatura esterna (clima)",
+      "unit": "°C",
+      "did": "E01B",
+      "formula": "(byte(0)*256+byte(1))/10-40",
+      "valid": "(byte(0)*256+byte(1))/10-40>=-40 && (byte(0)*256+byte(1))/10-40<=6513.5",
+      "decimals": 1
      }
     ]
    }
@@ -180444,6 +181503,64 @@
       "formula": "(byte(0)*256+byte(1))/10",
       "valid": "(byte(0)*256+byte(1))/10<=6553.5",
       "decimals": 2
+     },
+     {
+      "label": "Convertitore DC/DC: corrente",
+      "unit": "A",
+      "did": "B583",
+      "formula": "(byte(0)*256+byte(1))/10",
+      "valid": "(byte(0)*256+byte(1))/10<=6553.5",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Convertitore DC/DC: tensione in uscita",
+      "unit": "V",
+      "did": "B584",
+      "formula": "(byte(0)*256+byte(1))/10",
+      "valid": "(byte(0)*256+byte(1))/10<=6553.5",
+      "decimals": 2,
+      "extra": true
+     },
+     {
+      "label": "Coppia motore elettrico",
+      "unit": "Nm",
+      "did": "B401",
+      "formula": "byte(0)*256+byte(1)-32767",
+      "valid": "byte(0)*256+byte(1)-32767>=-32767 && byte(0)*256+byte(1)-32767<=32768",
+      "extra": true
+     },
+     {
+      "label": "Corrente di carica massima ammessa",
+      "unit": "A",
+      "did": "B712",
+      "formula": "(byte(0)*256+byte(1))/10",
+      "valid": "(byte(0)*256+byte(1))/10<=6553.5",
+      "decimals": 1,
+      "extra": true
+     },
+     {
+      "label": "Giri motore elettrico",
+      "unit": "giri/min",
+      "did": "B402",
+      "formula": "byte(0)*256+byte(1)-32767",
+      "valid": "byte(0)*256+byte(1)-32767>=-32767 && byte(0)*256+byte(1)-32767<=32768",
+      "extra": true
+     },
+     {
+      "label": "Temperatura liquido motore elettrico",
+      "unit": "°C",
+      "did": "B309",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
+     },
+     {
+      "label": "Temperatura motore elettrico",
+      "unit": "°C",
+      "did": "B405",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215",
+      "extra": true
      }
     ]
    }
@@ -180639,6 +181756,58 @@
      "formula": "(byte(0)*256+byte(1))/1000",
      "valid": "(byte(0)*256+byte(1))/1000<=65.535",
      "decimals": 2
+    },
+    {
+     "label": "Angolo farfalla",
+     "unit": "°",
+     "did": "093C",
+     "formula": "(byte(0)*256+byte(1))/512",
+     "valid": "(byte(0)*256+byte(1))/512<=127.9",
+     "decimals": 1
+    },
+    {
+     "label": "Angolo farfalla richiesto",
+     "unit": "°",
+     "did": "091A",
+     "formula": "(byte(0)*256+byte(1))/512",
+     "valid": "(byte(0)*256+byte(1))/512<=127.9",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Comando eccitazione alternatore",
+     "unit": "%",
+     "did": "16E8",
+     "formula": "((byte(0)*256+byte(1))*200)/65535",
+     "valid": "((byte(0)*256+byte(1))*200)/65535<=200",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Fasatura albero a camme aspirazione",
+     "unit": "°",
+     "did": "16CD",
+     "formula": "(byte(0)*256+byte(1))/16",
+     "valid": "(byte(0)*256+byte(1))/16<=4095",
+     "decimals": 1
+    },
+    {
+     "label": "Ritardo anticipo per battito",
+     "unit": "°",
+     "did": "1746",
+     "formula": "(byte(0)*100)/284",
+     "valid": "(byte(0)*100)/284<=89.78",
+     "decimals": 1,
+     "extra": true
+    },
+    {
+     "label": "Tensione richiesta all'alternatore",
+     "unit": "V",
+     "did": "097C",
+     "formula": "(byte(0)*256+byte(1))/2048",
+     "valid": "(byte(0)*256+byte(1))/2048<=31.99",
+     "decimals": 2,
+     "extra": true
     }
    ]
   },
@@ -182353,6 +183522,153 @@
       "formula": "(byte(0))/10",
       "valid": "(byte(0))/10<=25.5",
       "decimals": 2
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Fiat",
+   "model": "500X",
+   "ecu": {
+    "name": "Centralina [18]",
+    "address": "18",
+    "params": [
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "1D09",
+      "formula": "byte(0)-50",
+      "valid": "byte(0)-50>=-50 && byte(0)-50<=205"
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Jeep",
+   "model": "Compass (MK)",
+   "ecu": {
+    "name": "Cambio",
+    "address": "7E1",
+    "tx": "7E1",
+    "rx": "7E9",
+    "params": [
+     {
+      "label": "Temperatura olio cambio",
+      "unit": "°C",
+      "did": "04FE",
+      "formula": "((byte(0)*9)/5-40)*0.5555555555555556-17.77777777777778",
+      "valid": "(byte(0)*9)/5-40>=-40 && (byte(0)*9)/5-40<=419",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Jeep",
+   "model": "Compass (MP)",
+   "ecu": {
+    "name": "Centralina [40]",
+    "address": "40",
+    "params": [
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "1004",
+      "formula": "(byte(0))/10",
+      "valid": "(byte(0))/10<=25",
+      "decimals": 2
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Jeep",
+   "model": "Renegade",
+   "ecu": {
+    "name": "Centralina [40]",
+    "address": "40",
+    "params": [
+     {
+      "label": "Tensione batteria 12 V",
+      "unit": "V",
+      "did": "1004",
+      "formula": "(byte(0))/10",
+      "valid": "(byte(0))/10<=25",
+      "decimals": 2
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Peugeot",
+   "model": "2008",
+   "ecu": {
+    "name": "Batteria di trazione (BMS)",
+    "address": "6B4",
+    "tx": "6B4",
+    "rx": "694",
+    "fuels": [
+     "diesel mild hybrid",
+     "elettrica",
+     "ibrida",
+     "mild hybrid",
+     "plug-in hybrid"
+    ],
+    "params": [
+     {
+      "label": "Carica batteria di trazione (corretta)",
+      "unit": "%",
+      "did": "D410",
+      "formula": "(byte(0)*256+byte(1))/512",
+      "valid": "(byte(0)*256+byte(1))/512<=100",
+      "decimals": 1,
+      "extra": true
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Suzuki",
+   "model": "Swace",
+   "ecu": {
+    "name": "Sterzo",
+    "address": "7B3",
+    "tx": "7B3",
+    "rx": "7BB",
+    "params": [
+     {
+      "label": "Angolo volante",
+      "unit": "°",
+      "did": "1004",
+      "formula": "(s16(byte(0)*256+byte(1)))*1.5",
+      "valid": "(s16(byte(0)*256+byte(1)))*1.5>=-410 && (s16(byte(0)*256+byte(1)))*1.5<=410",
+      "decimals": 1
+     }
+    ]
+   }
+  },
+  {
+   "brand": "Volkswagen",
+   "model": "up!",
+   "ecu": {
+    "name": "Centralina [744]",
+    "address": "744",
+    "tx": "744",
+    "rx": "7AE",
+    "fuels": [
+     "diesel mild hybrid",
+     "elettrica",
+     "ibrida",
+     "mild hybrid",
+     "plug-in hybrid"
+    ],
+    "params": [
+     {
+      "label": "Temperatura liquido caricatore",
+      "unit": "°C",
+      "did": "15E2",
+      "formula": "byte(0)-40",
+      "valid": "byte(0)-40>=-40 && byte(0)-40<=215"
      }
     ]
    }
