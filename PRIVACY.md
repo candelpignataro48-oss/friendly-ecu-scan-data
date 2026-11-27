@@ -1,6 +1,6 @@
 # Friendly ECU Scan – Privacy
 
-*Ultimo aggiornamento: 9 novembre 2026 · English version below*
+*Ultimo aggiornamento: 24 novembre 2026 · English version below*
 
 ## In breve
 Friendly ECU Scan non ha account, non raccoglie dati personali e non invia niente a server propri. Tutto quello che legge dall'auto resta sul telefono.
@@ -9,7 +9,7 @@ Friendly ECU Scan non ha account, non raccoglie dati personali e non invia nient
 VIN, codici errore, valori delle centraline e chilometri vengono letti tramite l'adattatore OBD e mostrati sullo schermo. Il telefono ricorda l'ultimo adattatore, l'ultima auto scelta e la lingua, per non doverli scegliere ogni volta.
 
 ## Garage
-Le auto che salvi (nome, targa, VIN, chilometri, scadenze e storico dei check-up) restano solo sul telefono. Gli avvisi delle scadenze sono programmati sul telefono stesso, senza internet. Se disinstalli l'app vengono cancellati.
+Le auto che salvi (nome, targa, VIN, chilometri, scadenze, interventi con costi e officina, promemoria, centraline trovate e storico dei check-up) restano solo sul telefono. Gli avvisi delle scadenze sono programmati sul telefono stesso, senza internet. Se disinstalli l'app vengono cancellati. Il backup del garage è un file che parte solo se lo passi tu a un'altra app (Drive, email...).
 
 ## Segnalazioni e resoconti
 Quando usi "Segnala un problema", condividi il resoconto del check-up o invii un contributo, il file viene passato all'app che scegli tu (email, WhatsApp...) e parte solo se lo invii. Nelle segnalazioni il VIN è parziale (es. ZFA·········01234) e viene allegato il log della comunicazione con l'auto, che serve a correggere i problemi. Il resoconto del check-up contiene il VIN completo, perché serve a chi lo riceve. Le segnalazioni ricevute servono solo a migliorare l'app e non vengono cedute a nessuno.
@@ -22,7 +22,7 @@ Se l'app ha un problema imprevisto, il messaggio di errore viene salvato sul tel
 
 ## Permessi
 - **Bluetooth**: per collegarsi all'adattatore.
-- **Posizione**: Android la richiede per cercare ed elencare i dispositivi Bluetooth; l'app non usa la tua posizione.
+- **Posizione**: solo fino ad Android 11 e solo per cercare gli adattatori Bluetooth LE, perché quelle versioni di Android la richiedono; da Android 12 non si chiede. L'app non usa la tua posizione.
 - **Rete**: per gli adattatori Wi-Fi, che creano una rete locale.
 - **Notifiche**: per gli avvisi delle scadenze; si possono spegnere nel «Garage».
 
@@ -33,16 +33,16 @@ Per domande sulla privacy: frulabs.support@gmail.com
 
 # Friendly ECU Scan – Privacy Policy
 
-*Last updated: 9 November 2026*
+*Last updated: 24 November 2026*
 
 ## In short
 Friendly ECU Scan has no accounts, collects no personal data and sends nothing to its own servers. Everything it reads from the car stays on the phone.
 
 ## Data read from the car
-VIN, trouble codes, module values and mileage are read through the OBD adapter and shown on screen. The phone remembers the last adapter, the last car selected and the language, so you don't have to choose them every time.
+VIN, fault codes, module values and mileage are read through the OBD adapter and shown on screen. The phone remembers the last adapter, the last car selected and the language, so you don't have to choose them every time.
 
-## My cars
-The cars you save (name, plate, VIN, mileage, deadlines and check-up history) stay on the phone only. Deadline reminders are scheduled on the phone itself, without internet. Uninstalling the app deletes them.
+## Garage
+The cars you save (name, plate, VIN, mileage, deadlines, services with costs and workshop, reminders, control units found and check-up history) stay on the phone only. Deadline reminders are scheduled on the phone itself, without internet. Uninstalling the app deletes them. The garage backup is a file that leaves the phone only if you pass it to another app yourself (Drive, email...).
 
 ## Reports and summaries
 When you use "Report a problem", share the check-up summary or send a contribution, the file is handed to the app you choose (email, WhatsApp...) and is sent only if you send it. Reports contain a partial VIN (e.g. ZFA·········01234) and the log of the communication with the car, which is needed to fix problems. The check-up summary contains the full VIN, because the recipient needs it. Reports received are used only to improve the app and are not shared with anyone.
@@ -55,9 +55,9 @@ If the app hits an unexpected problem, the error message is saved on the phone w
 
 ## Permissions
 - **Bluetooth**: to connect to the adapter.
-- **Location**: Android requires it to search for and list Bluetooth devices; the app does not use your location.
+- **Location**: only up to Android 11 and only to search for Bluetooth LE adapters, because those Android versions require it; from Android 12 it is not requested. The app does not use your location.
 - **Network**: for Wi-Fi adapters, which create a local network.
-- **Notifications**: for deadline reminders; they can be turned off in "My cars".
+- **Notifications**: for deadline reminders; they can be turned off in «Garage».
 
 ## Contact
 For privacy questions: frulabs.support@gmail.com
